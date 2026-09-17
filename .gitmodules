@@ -1,0 +1,18 @@
+[submodule ".agents/external/antigravity-awesome-skills"]
+	path = .agents/external/antigravity-awesome-skills
+	url = https://github.com/sickn33/antigravity-awesome-skills.git
+[submodule ".agents/external/antigravity-marketing"]
+	path = .agents/external/antigravity-marketing
+	url = https://github.com/nguyenphp/antigravity-marketing.git
+[submodule ".agents/external/Sales-Page-Copywriting-Skill"]
+	path = .agents/external/Sales-Page-Copywriting-Skill
+	url = https://github.com/yashaiguy-dev/Sales-Page-Copywriting-Skill.git
+[submodule ".agents/external/Creating-Oneshot-Hero-Landing-Pages"]
+	path = .agents/external/Creating-Oneshot-Hero-Landing-Pages
+	url = https://github.com/nroadley/Creating-Oneshot-Hero-Landing-Pages.git
+[submodule ".agents/external/open-agent-hub"]
+	path = .agents/external/open-agent-hub
+	url = https://github.com/guanyang/open-agent-hub.git
+[submodule ".agents/external/antigravity-skills"]
+	path = .agents/external/antigravity-skills
+	url = https://github.com/rmyndharis/antigravity-skills.git

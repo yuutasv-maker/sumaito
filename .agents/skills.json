@@ -1,0 +1,19 @@
+{
+  "entries": [
+    {
+      "path": ".agents/external/Sales-Page-Copywriting-Skill/skills"
+    },
+    {
+      "path": ".agents/external/antigravity-marketing/templates/.agent/skills"
+    },
+    {
+      "path": ".agents/external/antigravity-awesome-skills/skills"
+    },
+    {
+      "path": ".agents/external/antigravity-skills/skills"
+    },
+    {
+      "path": ".agents/external/open-agent-hub/skills"
+    }
+  ]
+}
