@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>すまいと｜愛媛の住まいの選択肢</title>
-  <meta name="description" content="愛媛で家を買う前に知ってほしいこと。新築・中古・土地の選択肢や注意点を中立な立場でアドバイスする住宅コンサルティング「すまいと」">
-  <!-- Google Fonts -->
+  <title>Production Lab | Web & Landing Page Showcase</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Fonts: Inter & Shippori Mincho -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -16,645 +18,255 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Noto Sans JP"', 'sans-serif'],
-            en: ['"Montserrat"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
             mincho: ['"Shippori Mincho"', 'serif'],
-          },
-          colors: {
-            brand: {
-              dark: '#18181b',
-              gray: '#71717a',
-              light: '#f4f4f5',
-              card: '#fafafa',
-              accent: '#27272a',
-            }
           }
         }
       }
     }
   </script>
-  <style>
-    body {
-      font-family: 'Noto Sans JP', sans-serif;
-      color: #18181b;
-      background-color: #ffffff;
-      letter-spacing: 0.05em;
-    }
-    .hero-slide {
-      transition: opacity 1.2s ease-in-out;
-    }
-    .hero-bg-zoom {
-      animation: slowZoom 8s infinite alternate ease-in-out;
-    }
-    @keyframes slowZoom {
-      0% { transform: scale(1.0); }
-      100% { transform: scale(1.05); }
-    }
-    /* テキストシャドウ */
-    .text-shadow-strong {
-      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.9);
-    }
-    .text-shadow-sub {
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-    }
-  </style>
 </head>
-<body class="antialiased selection:bg-zinc-800 selection:text-white">
+<body class="bg-zinc-50 text-zinc-900 font-sans antialiased min-h-screen flex flex-col selection:bg-zinc-900 selection:text-white">
 
-  <!-- ==============================================
-       1. グローバルヘッダー
-  =============================================== -->
-  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-zinc-100">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
-      <!-- ロゴ -->
-      <a href="#" class="flex flex-col group">
-        <span class="font-en text-2xl font-bold tracking-widest text-zinc-900 group-hover:text-zinc-600 transition-colors">sumaito</span>
-        <span class="text-[10px] tracking-wider text-zinc-400 font-normal -mt-1">愛媛の住まいの選択肢</span>
-      </a>
-
-      <!-- デスクトップ ナビゲーション -->
-      <nav class="hidden md:flex items-center space-x-8">
-        <a href="#concept" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">コンセプト</a>
-        <a href="#service" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">サービス</a>
-        <a href="#cases" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">ご紹介事例</a>
-        <a href="#faq" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">よくある質問</a>
-        <a href="#contact" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">LINE相談</a>
-      </nav>
-
-      <!-- ヘッダー右 CTA -->
-      <div class="hidden md:flex items-center space-x-3">
-        <a href="https://www.instagram.com/sumaito_house?stkn=cmk1aGNqbGpiMTYz" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center px-4 py-2 rounded-full text-xs font-medium tracking-widest text-zinc-700 hover:text-zinc-950 border border-zinc-200 hover:border-zinc-400 transition-all duration-300">
-          <svg class="w-3.5 h-3.5 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
-          Instagram
-        </a>
-        <a href="#contact"
-           class="inline-flex items-center px-5 py-2 rounded-full text-xs font-medium tracking-widest bg-zinc-900 text-white hover:bg-zinc-700 transition-all duration-300 shadow-sm hover:shadow-md">
-          <svg class="w-3.5 h-3.5 mr-2 fill-current" viewBox="0 0 24 24">
-            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.089.495.25l2.462 3.33v-2.95c0-.347.282-.63.63-.63.345 0 .625.283.625.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-          </svg>
-          LINE相談はこちら
-        </a>
+  <!-- ヘッダー -->
+  <header class="bg-white/90 backdrop-blur-md border-b border-zinc-200 sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 h-18 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <span class="font-mono text-sm tracking-widest font-bold uppercase text-zinc-900">STUDIO LAB</span>
+        <span class="text-[10px] px-2.5 py-0.5 rounded-full bg-zinc-100 text-zinc-600 font-mono tracking-wider border border-zinc-200">PROJECT HUB</span>
       </div>
-
-      <!-- モバイルメニューボタン -->
-      <button id="mobile-menu-btn" class="md:hidden p-2 text-zinc-800 focus:outline-none" aria-label="Menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-
-    <!-- モバイルメニュー展開部 -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-zinc-100 px-6 py-6 space-y-4">
-      <a href="#concept" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">コンセプト</a>
-      <a href="#service" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">サービス</a>
-      <a href="#cases" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">ご紹介事例</a>
-      <a href="#faq" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">よくある質問</a>
-      <a href="#contact" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">LINE無料相談</a>
-      <div class="pt-2 space-y-2">
-        <a href="#contact"
-           class="flex items-center justify-center w-full py-3 rounded-full text-xs font-medium tracking-widest bg-zinc-900 text-white hover:bg-zinc-800 transition-colors">
-          <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24">
-            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.089.495.25l2.462 3.33v-2.95c0-.347.282-.63.63-.63.345 0 .625.283.625.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+      <div class="flex items-center space-x-6 text-xs text-zinc-500">
+        <span class="hidden sm:inline-flex items-center gap-1.5 font-mono text-[11px]">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          GitHub Pages Live
+        </span>
+        <a href="https://github.com/yuutasv-maker/sumaito" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center text-zinc-500 hover:text-zinc-900 transition-colors">
+          <svg class="w-4 h-4 mr-1.5 fill-current" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
           </svg>
-          LINEで相談する
-        </a>
-        <a href="https://www.instagram.com/sumaito_house?stkn=cmk1aGNqbGpiMTYz" target="_blank" rel="noopener noreferrer"
-           class="flex items-center justify-center w-full py-3 rounded-full text-xs font-medium tracking-widest border border-zinc-200 text-zinc-700 hover:border-zinc-400 transition-colors">
-          <svg class="w-3.5 h-3.5 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
-          Instagramを見る
+          Repository
         </a>
       </div>
     </div>
   </header>
 
+  <!-- メインコンテンツ -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-6 sm:px-8 py-12 md:py-16">
 
-  <!-- ==============================================
-       2. ファーストビュー：紙芝居スライダー（3枚）
-  =============================================== -->
-  <section class="relative h-screen w-full overflow-hidden bg-black flex items-center justify-center">
-    <!-- スライドコンテナ -->
-    <div id="slider-container" class="absolute inset-0">
-      
-      <!-- Slide 1: 吹き抜けモダンLDK -->
-      <div class="hero-slide absolute inset-0 opacity-100 z-10 transition-opacity duration-1000">
-        <div class="absolute inset-0 bg-cover bg-center hero-bg-zoom" style="background-image: url('images/hero_slide_01.jpg');"></div>
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="relative h-full flex flex-col items-center justify-center text-center px-6 text-white">
-          <span class="text-xs md:text-sm font-en tracking-[0.3em] uppercase mb-4 opacity-90">Concept 01</span>
-          <h2 class="font-mincho text-3xl md:text-5xl lg:text-6xl font-normal leading-relaxed tracking-widest text-shadow-strong mb-6">
-            キャッチコピー１
+    <!-- ヒーロー / ポータル概要 -->
+    <div class="mb-14 max-w-3xl">
+      <span class="text-xs font-mono font-semibold tracking-[0.25em] text-zinc-400 uppercase block mb-3">
+        Client Works & Production Hub
+      </span>
+      <h1 class="font-mincho text-3xl sm:text-4xl text-zinc-900 font-medium tracking-wider mb-4 leading-tight">
+        Web制作 & LPプロジェクト<br class="hidden sm:inline">ポータルダッシュボード
+      </h1>
+      <p class="text-xs sm:text-sm text-zinc-500 leading-relaxed font-light">
+        手掛けたWebサイト・ランディングページの制作案件やプロトタイプを一覧・検証できる総合ハブです。クライアントへのプレビュー提示、バリエーション比較、仕様確認をワンストップで行えます。
+      </p>
+    </div>
+
+    <!-- 案件一覧セクション -->
+    <section class="mb-20">
+      <div class="flex items-center justify-between pb-4 mb-8 border-b border-zinc-200">
+        <div class="flex items-center space-x-3">
+          <h2 class="text-xs font-mono font-semibold tracking-widest text-zinc-900 uppercase">
+            All Projects
           </h2>
-          <p class="text-xs md:text-base tracking-widest opacity-90 text-shadow-sub max-w-xl">
-            ここにサブキャッチコピーを書く
-          </p>
+          <span class="text-[11px] px-2 py-0.5 rounded-full bg-zinc-200 text-zinc-700 font-mono">1 Active</span>
+        </div>
+        <div class="text-xs font-mono text-zinc-400">
+          Showing 1 - 2 of 2
         </div>
       </div>
 
-      <!-- Slide 2: 家族が集う明るいLDK -->
-      <div class="hero-slide absolute inset-0 opacity-0 z-0 transition-opacity duration-1000">
-        <div class="absolute inset-0 bg-cover bg-center hero-bg-zoom" style="background-image: url('images/hero_slide_03.jpg');"></div>
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="relative h-full flex flex-col items-center justify-center text-center px-6 text-white">
-          <span class="text-xs md:text-sm font-en tracking-[0.3em] uppercase mb-4 opacity-90">Concept 02</span>
-          <h2 class="font-mincho text-3xl md:text-5xl lg:text-6xl font-normal leading-relaxed tracking-widest text-shadow-strong mb-6">
-            キャッチコピー２
-          </h2>
-          <p class="text-xs md:text-base tracking-widest opacity-90 text-shadow-sub max-w-xl">
-            ここにサブキャッチコピーを書く
-          </p>
-        </div>
-      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-      <!-- Slide 3: 夕景のモダン外観 -->
-      <div class="hero-slide absolute inset-0 opacity-0 z-0 transition-opacity duration-1000">
-        <div class="absolute inset-0 bg-cover bg-center hero-bg-zoom" style="background-image: url('images/hero_slide_05.jpg');"></div>
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="relative h-full flex flex-col items-center justify-center text-center px-6 text-white">
-          <span class="text-xs md:text-sm font-en tracking-[0.3em] uppercase mb-4 opacity-90">Concept 03</span>
-          <h2 class="font-mincho text-3xl md:text-5xl lg:text-6xl font-normal leading-relaxed tracking-widest text-shadow-strong mb-6">
-            キャッチコピー３
-          </h2>
-          <p class="text-xs md:text-base tracking-widest opacity-90 text-shadow-sub max-w-xl">
-            ここにサブキャッチコピーを書く
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- スライダー インジケータードット -->
-    <div class="absolute bottom-10 left-0 right-0 z-30 flex justify-center items-center space-x-3">
-      <button class="slider-dot w-8 h-1 rounded-full bg-white transition-all duration-300" data-index="0" aria-label="Slide 1"></button>
-      <button class="slider-dot w-2 h-1 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" data-index="1" aria-label="Slide 2"></button>
-      <button class="slider-dot w-2 h-1 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" data-index="2" aria-label="Slide 3"></button>
-    </div>
-
-    <!-- スクロール促進インジケーター -->
-    <div class="absolute bottom-4 right-8 z-30 hidden sm:flex flex-col items-center text-white/70">
-      <span class="text-[10px] font-en tracking-[0.2em] uppercase rotate-90 origin-right translate-y-2">Scroll</span>
-      <div class="w-[1px] h-10 bg-white/40 mt-8 animate-pulse"></div>
-    </div>
-  </section>
-
-
-  <!-- ==============================================
-       3. コンセプトセクション
-  =============================================== -->
-  <section id="concept" class="py-28 md:py-36 bg-white">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center">
-      <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-4">Concept</span>
-      <h2 class="font-mincho text-2xl md:text-4xl font-normal leading-relaxed tracking-widest text-zinc-900 mb-12">
-        ここにコンセプトの見出しを書く
-      </h2>
-      <div class="space-y-6 text-zinc-600 leading-loose text-sm md:text-base font-light max-w-2xl mx-auto mb-14">
-        <p>ここにコンセプトの本文を書く</p>
-        <p>愛媛での家づくり・住まい選びに対する想いや、sumaitoのビジョンを記載します。</p>
-      </div>
-      <div>
-        <a href="#contact"
-           class="inline-flex items-center px-8 py-4 rounded-full text-xs font-medium tracking-widest bg-zinc-900 text-white hover:bg-zinc-700 transition-all duration-300 shadow-sm hover:shadow-lg">
-          LINEで無料相談してみる
-          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-  <!-- ==============================================
-       5. サービス内容 & ご相談の流れ
-  =============================================== -->
-  <section id="service" class="py-24 md:py-32 bg-white">
-    <div class="max-w-5xl mx-auto px-6 sm:px-8">
-      <div class="text-center mb-14">
-        <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Service & Flow</span>
-        <h2 class="font-mincho text-2xl md:text-4xl font-normal tracking-widest text-zinc-900">サービス内容 & ご相談の流れ</h2>
-      </div>
-
-      <!-- 相談風景画像 -->
-      <div class="mb-16 rounded-2xl overflow-hidden shadow-md border border-zinc-100 max-w-4xl mx-auto aspect-[16/9]">
-        <img src="images/service_consultation.jpg" alt="住宅相談・打ち合わせ風景" class="w-full h-full object-cover">
-      </div>
-
-      <!-- ステップ（3ステップ） -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- STEP 01 -->
-        <div class="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 flex flex-col justify-between">
+        <!-- ==============================================
+             PROJECT 01: すまいと（sumaito）
+        =============================================== -->
+        <article class="bg-white border border-zinc-200 rounded-3xl overflow-hidden hover:border-zinc-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          
           <div>
-            <div class="font-en text-2xl font-bold tracking-widest text-zinc-300 mb-4">STEP 01</div>
-            <h3 class="text-base font-bold text-zinc-900 tracking-wider mb-3">ここにSTEP01のタイトルを書く</h3>
-            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-              ここにSTEP01の詳しい相談手順や準備内容を書く
-            </p>
-          </div>
-        </div>
+            <!-- アイキャッチ画像プレビュー -->
+            <div class="relative h-60 sm:h-72 w-full overflow-hidden bg-zinc-900">
+              <img src="sumaito/images/hero_slide_01.jpg" alt="すまいと LPプレビュー"
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
+              <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/20 to-transparent"></div>
+              
+              <!-- バッジ・メタ情報 -->
+              <div class="absolute top-5 left-5 right-5 flex items-center justify-between">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-mono font-medium tracking-wide bg-white/90 backdrop-blur-md text-zinc-900 shadow-sm">
+                  PROJECT #01
+                </span>
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-mono tracking-wide bg-emerald-500/90 text-white backdrop-blur-md font-medium">
+                  ● Active / Ready
+                </span>
+              </div>
 
-        <!-- STEP 02 -->
-        <div class="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 flex flex-col justify-between">
-          <div>
-            <div class="font-en text-2xl font-bold tracking-widest text-zinc-300 mb-4">STEP 02</div>
-            <h3 class="text-base font-bold text-zinc-900 tracking-wider mb-3">ここにSTEP02のタイトルを書く</h3>
-            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-              ここにSTEP02の詳しいヒアリング内容や進め方を書く
-            </p>
-          </div>
-        </div>
+              <!-- 案件名（画像内） -->
+              <div class="absolute bottom-5 left-6 right-6 text-white">
+                <span class="text-[11px] font-mono tracking-widest text-zinc-300 uppercase block mb-1">Residential Concierge LP</span>
+                <h3 class="font-mincho text-2xl sm:text-3xl font-medium tracking-wider text-white">
+                  すまいと（sumaito）
+                </h3>
+              </div>
+            </div>
 
-        <!-- STEP 03 -->
-        <div class="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 flex flex-col justify-between">
-          <div>
-            <div class="font-en text-2xl font-bold tracking-widest text-zinc-300 mb-4">STEP 03</div>
-            <h3 class="text-base font-bold text-zinc-900 tracking-wider mb-3">ここにSTEP03のタイトルを書く</h3>
-            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-              ここにSTEP03の建築会社・物件ご紹介やサポート内容を書く
-            </p>
+            <!-- 案件詳細説明 -->
+            <div class="p-7 sm:p-8">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-600 font-medium">住宅・工務店紹介</span>
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-600 font-medium">愛媛エリア特化</span>
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-600 font-medium">公式LINE相談誘導</span>
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-600 font-medium">下層ページ完備</span>
+              </div>
+
+              <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light mb-6">
+                愛媛で理想の住まいを建てる施主と優良工務店・ハウスメーカーを中立につなぐ住宅相談サービスLP。カナマルHOUSEをリファレンスに、4つの提供価値枠、無料の仕組み、ご紹介ステップ（丸型アイコン）の枠組みを実装。
+              </p>
+
+              <!-- 成果物リンク（枠組み版 / 初期サンプル / 下層ページ） -->
+              <div class="space-y-3 pt-4 border-t border-zinc-100">
+                <span class="text-[11px] font-mono text-zinc-400 uppercase tracking-wider block">Deliverables & Variants</span>
+                
+                <!-- 枠組み版LPボタン -->
+                <a href="sumaito/index.html"
+                   class="flex items-center justify-between p-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white transition-all duration-200 group/btn shadow-sm">
+                  <div class="flex items-center space-x-3">
+                    <span class="text-xs font-medium tracking-widest">枠組み版 LP（カナマルHOUSE最新構成）</span>
+                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">sumaito/</span>
+                  </div>
+                  <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </a>
+
+                <!-- 仮説ドラフト版LPボタン -->
+                <a href="sumaito_sample/index.html"
+                   class="flex items-center justify-between p-3.5 rounded-xl bg-zinc-50 hover:bg-zinc-100 text-zinc-700 border border-zinc-200 transition-all duration-200 group/btn">
+                  <div class="flex items-center space-x-3">
+                    <span class="text-xs font-medium">仮説ドラフト版（赤入れレビュー用・8割完成サンプル）</span>
+                    <span class="text-[10px] font-mono text-zinc-400">sumaito_sample/</span>
+                  </div>
+                  <svg class="w-4 h-4 text-zinc-400 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+
+                <!-- 下層ページ直通リンク -->
+                <div class="grid grid-cols-2 gap-2 pt-1">
+                  <a href="sumaito/company.html" class="text-center py-2.5 px-3 rounded-lg border border-zinc-200 hover:border-zinc-400 text-zinc-600 hover:text-zinc-900 text-xs transition-colors">
+                    運営会社概要 ↗
+                  </a>
+                  <a href="sumaito/privacy.html" class="text-center py-2.5 px-3 rounded-lg border border-zinc-200 hover:border-zinc-400 text-zinc-600 hover:text-zinc-900 text-xs transition-colors">
+                    プライバシーポリシー ↗
+                  </a>
+                </div>
+
+              </div>
+            </div>
           </div>
-        </div>
+
+          <!-- カードフッター情報 -->
+          <div class="bg-zinc-50/70 border-t border-zinc-100 px-7 py-3.5 flex items-center justify-between text-[11px] text-zinc-400 font-mono">
+            <span>Stack: HTML5 / Tailwind / JS</span>
+            <span>Client: sumaito (愛媛)</span>
+          </div>
+
+        </article>
+
+
+        <!-- ==============================================
+             PROJECT 02: Coming Soon / 新規案件スロット
+        =============================================== -->
+        <article class="bg-zinc-100/50 border-2 border-dashed border-zinc-300 rounded-3xl p-8 sm:p-10 flex flex-col justify-between items-center text-center min-h-[500px]">
+          
+          <div class="flex flex-col items-center justify-center my-auto">
+            <div class="w-16 h-16 rounded-2xl bg-zinc-200/80 border border-zinc-300 flex items-center justify-center text-zinc-400 mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+              </svg>
+            </div>
+            
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-mono tracking-wide bg-zinc-200 text-zinc-600 font-medium mb-4">
+              PROJECT #02
+            </span>
+            
+            <h3 class="font-mincho text-2xl font-medium tracking-wider text-zinc-700 mb-3">
+              次期制作案件スロット
+            </h3>
+            
+            <p class="text-xs sm:text-sm text-zinc-400 max-w-sm leading-relaxed mb-6 font-light">
+              新規LP・Webサイト制作案件に着手次第、ディレクトリを追加してここにプレビューカードを配置・拡張できます。
+            </p>
+
+            <span class="text-[11px] font-mono text-zinc-400 px-4 py-2 rounded-xl bg-white/60 border border-zinc-200">
+              Ready for Next Project
+            </span>
+          </div>
+
+          <div class="w-full pt-6 border-t border-dashed border-zinc-200 text-[11px] text-zinc-400 font-mono">
+            Directory structure: /project-name/
+          </div>
+
+        </article>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- ==============================================
-       6. メリットセクション（1つの文章ブロック）
-  =============================================== -->
-  <section class="py-20 bg-zinc-50 border-t border-zinc-100">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8">
-      <div class="bg-white rounded-3xl p-8 sm:p-12 md:p-16 border border-zinc-200/80 shadow-sm text-center">
-        <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Advantage</span>
-        <h2 class="font-mincho text-2xl md:text-3xl font-normal tracking-widest text-zinc-900 mb-8">
-          sumaitoを選ぶ理由
+    <!-- 制作体制・開発共通リソース -->
+    <section class="border-t border-zinc-200 pt-14">
+      <div class="max-w-3xl mb-8">
+        <h2 class="text-xs font-mono font-semibold tracking-widest text-zinc-500 uppercase mb-2">
+          Architecture & Guidelines
         </h2>
-        <div class="text-zinc-600 text-sm md:text-base leading-loose font-light max-w-2xl mx-auto">
-          <p>
-            ここにメリットの説明文章を一つの文章として書く。中立的な立場からのアドバイス、客観的な比較、押し売りをしない安心感、住んだ後の暮らしやすさまで見据えたサポートの強みなどをここにまとめます。
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ==============================================
-       7. ご紹介事例（2事例・詳細リンクなし）
-  =============================================== -->
-  <section id="cases" class="py-24 md:py-32 bg-white">
-    <div class="max-w-6xl mx-auto px-6 sm:px-8">
-      <div class="text-center mb-16">
-        <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Cases</span>
-        <h2 class="font-mincho text-2xl md:text-4xl font-normal tracking-widest text-zinc-900">ご紹介事例</h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12">
-        <!-- 事例 1: 中庭平屋 -->
-        <div class="group flex flex-col">
-          <div class="aspect-[16/9] rounded-2xl overflow-hidden mb-6 bg-zinc-100 border border-zinc-100">
-            <img src="images/case_study_courtyard.jpg" alt="事例1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-          </div>
-          <h3 class="text-lg font-bold text-zinc-900 tracking-wider mb-2">ここに事例１のタイトルを書く</h3>
-          <p class="text-xs sm:text-sm text-zinc-500 leading-relaxed font-light">
-            ここに事例１の敷地条件・延床面積・こだわりの概要を書く
-          </p>
-        </div>
-
-        <!-- 事例 2: 吹き抜けスケルトン階段 -->
-        <div class="group flex flex-col">
-          <div class="aspect-[16/9] rounded-2xl overflow-hidden mb-6 bg-zinc-100 border border-zinc-100">
-            <img src="images/hero_slide_02.jpg" alt="事例2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-          </div>
-          <h3 class="text-lg font-bold text-zinc-900 tracking-wider mb-2">ここに事例２のタイトルを書く</h3>
-          <p class="text-xs sm:text-sm text-zinc-500 leading-relaxed font-light">
-            ここに事例２の敷地条件・延床面積・こだわりの概要を書く
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ==============================================
-       8. ご紹介したお客様の声
-  =============================================== -->
-  <section class="py-20 md:py-28 bg-zinc-50 border-y border-zinc-100">
-    <div class="max-w-5xl mx-auto px-6 sm:px-8">
-      <div class="text-center mb-16">
-        <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Voice</span>
-        <h2 class="font-mincho text-2xl md:text-3xl font-normal tracking-widest text-zinc-900">ご紹介したお客様の声</h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- お客様の声 1 -->
-        <div class="p-8 rounded-2xl bg-white border border-zinc-200/80 shadow-sm space-y-4">
-          <div class="flex items-center justify-between border-b border-zinc-100 pb-3">
-            <span class="font-bold text-zinc-900 text-sm">ここに声１の相談者様属性を書く</span>
-            <span class="text-xs text-zinc-400">愛媛県</span>
-          </div>
-          <h3 class="font-bold text-zinc-800 text-sm">ここに声１のタイトルを書く</h3>
-          <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-            ここに声１の本文を書く
-          </p>
-        </div>
-
-        <!-- お客様の声 2 -->
-        <div class="p-8 rounded-2xl bg-white border border-zinc-200/80 shadow-sm space-y-4">
-          <div class="flex items-center justify-between border-b border-zinc-100 pb-3">
-            <span class="font-bold text-zinc-900 text-sm">ここに声２の相談者様属性を書く</span>
-            <span class="text-xs text-zinc-400">愛媛県</span>
-          </div>
-          <h3 class="font-bold text-zinc-800 text-sm">ここに声２のタイトルを書く</h3>
-          <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-            ここに声２の本文を書く
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ==============================================
-       9. よくある質問（FAQ 3項目・アコーディオン）
-  =============================================== -->
-  <section id="faq" class="py-24 md:py-32 bg-white">
-    <div class="max-w-3xl mx-auto px-6 sm:px-8">
-      <div class="text-center mb-16">
-        <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">FAQ</span>
-        <h2 class="font-mincho text-2xl md:text-3xl font-normal tracking-widest text-zinc-900">よくある質問</h2>
-      </div>
-
-      <div class="space-y-4">
-        <!-- Q1 -->
-        <div class="faq-item border border-zinc-200 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-btn w-full p-6 text-left flex items-center justify-between bg-zinc-50/50 hover:bg-zinc-50 transition-colors focus:outline-none">
-            <span class="font-medium text-zinc-900 text-sm sm:text-base pr-4">
-              <span class="font-en font-bold text-zinc-400 mr-3">Q1</span>ここに質問１を書く
-            </span>
-            <span class="faq-icon text-zinc-400 transition-transform duration-300 text-lg">＋</span>
-          </button>
-          <div class="faq-answer hidden px-6 pb-6 pt-2 bg-white border-t border-zinc-100">
-            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-              <span class="font-en font-bold text-zinc-400 mr-3">A1</span>ここに回答１を書く
-            </p>
-          </div>
-        </div>
-
-        <!-- Q2 -->
-        <div class="faq-item border border-zinc-200 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-btn w-full p-6 text-left flex items-center justify-between bg-zinc-50/50 hover:bg-zinc-50 transition-colors focus:outline-none">
-            <span class="font-medium text-zinc-900 text-sm sm:text-base pr-4">
-              <span class="font-en font-bold text-zinc-400 mr-3">Q2</span>ここに質問２を書く
-            </span>
-            <span class="faq-icon text-zinc-400 transition-transform duration-300 text-lg">＋</span>
-          </button>
-          <div class="faq-answer hidden px-6 pb-6 pt-2 bg-white border-t border-zinc-100">
-            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-              <span class="font-en font-bold text-zinc-400 mr-3">A2</span>ここに回答２を書く
-            </p>
-          </div>
-        </div>
-
-        <!-- Q3 -->
-        <div class="faq-item border border-zinc-200 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-btn w-full p-6 text-left flex items-center justify-between bg-zinc-50/50 hover:bg-zinc-50 transition-colors focus:outline-none">
-            <span class="font-medium text-zinc-900 text-sm sm:text-base pr-4">
-              <span class="font-en font-bold text-zinc-400 mr-3">Q3</span>ここに質問３を書く
-            </span>
-            <span class="faq-icon text-zinc-400 transition-transform duration-300 text-lg">＋</span>
-          </button>
-          <div class="faq-answer hidden px-6 pb-6 pt-2 bg-white border-t border-zinc-100">
-            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-              <span class="font-en font-bold text-zinc-400 mr-3">A3</span>ここに回答３を書く
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ==============================================
-       9. LINE無料相談 セクション
-  =============================================== -->
-  <section id="contact" class="py-24 md:py-32 bg-white">
-    <div class="max-w-3xl mx-auto px-6 sm:px-8">
-      <div class="text-center mb-12">
-        <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Line Consultation</span>
-        <h2 class="font-mincho text-2xl md:text-4xl font-normal tracking-widest text-zinc-900 mb-4">LINEで無料相談</h2>
-        <p class="text-xs sm:text-sm text-zinc-500 max-w-lg mx-auto leading-relaxed">
-          ここにLINE相談の案内文を書く
+        <p class="text-xs text-zinc-400 font-light">
+          当スタジオ・リポジトリで制作するすべての案件に共通する品質基準とアーキテクチャ。
         </p>
       </div>
 
-      <!-- LINE相談カード -->
-      <div class="bg-zinc-50 border border-zinc-200/80 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-sm">
-        <div class="inline-flex items-center space-x-1 px-3 py-1 rounded-full bg-zinc-200/80 text-zinc-700 text-[11px] font-medium tracking-wider mb-5">
-          <span>RECOMMENDED</span>
-          <span>・</span>
-          <span>手軽に相談</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white border border-zinc-200 rounded-2xl p-6">
+          <span class="text-[10px] font-mono text-zinc-400 uppercase tracking-wider block mb-2">01 / Design Principle</span>
+          <h4 class="text-sm font-semibold text-zinc-800 mb-2">ミニマル & 洗練されたUI</h4>
+          <p class="text-xs text-zinc-500 leading-relaxed font-light">
+            余計なノイズを排除し、タイポグラフィと余白で魅せるデザイン設計。ユーザー心理に沿った自然なCTA動線を構築。
+          </p>
         </div>
-        <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 tracking-wide mb-3">
-          公式LINEで気軽にメッセージ
-        </h3>
-        <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed max-w-xl mx-auto mb-8 font-light">
-          ここにLINE相談の説明文を書く
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="https://line.me" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center justify-center px-9 py-4 rounded-full text-xs sm:text-sm font-medium tracking-widest bg-zinc-900 text-white hover:bg-zinc-700 transition-all duration-300 shadow-sm hover:shadow-md w-full sm:w-auto">
-            <svg class="w-5 h-5 fill-current mr-2.5" viewBox="0 0 24 24">
-              <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.089.495.25l2.462 3.33v-2.95c0-.347.282-.63.63-.63.345 0 .625.283.625.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-            </svg>
-            LINEで無料相談してみる
-          </a>
+
+        <div class="bg-white border border-zinc-200 rounded-2xl p-6">
+          <span class="text-[10px] font-mono text-zinc-400 uppercase tracking-wider block mb-2">02 / Modern Architecture</span>
+          <h4 class="text-sm font-semibold text-zinc-800 mb-2">独立ポータブル構成</h4>
+          <p class="text-xs text-zinc-500 leading-relaxed font-light">
+            各案件ディレクトリ（`sumaito/`等）は画像・下層ページを相対パスで自己完結。任意のドメインやサーバーへ即座に移管可能。
+          </p>
         </div>
-        <p class="text-[11px] text-zinc-400 mt-5">※ここに補足説明を書く</p>
+
+        <div class="bg-white border border-zinc-200 rounded-2xl p-6">
+          <span class="text-[10px] font-mono text-zinc-400 uppercase tracking-wider block mb-2">03 / GitHub Pages CI/CD</span>
+          <h4 class="text-sm font-semibold text-zinc-800 mb-2">即時プレビュー検証</h4>
+          <p class="text-xs text-zinc-500 leading-relaxed font-light">
+            Gitプッシュと連動して最新の成果物を自動デプロイ。クライアントや関係者がいつでも実機で確認できる開発体制を維持。
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+  </main>
 
-  <!-- ==============================================
-       10. クロージングCTAセクション
-  =============================================== -->
-  <section class="py-24 md:py-32 bg-zinc-950 text-white text-center">
-    <div class="max-w-4xl mx-auto px-6 sm:px-8">
-      <span class="text-xs font-en font-medium tracking-[0.3em] text-zinc-400 uppercase block mb-4">Official Instagram</span>
-      <h2 class="font-mincho text-2xl md:text-4xl font-normal leading-relaxed tracking-widest mb-6">
-        ここに最終案内のキャッチコピーを書く
-      </h2>
-      <p class="text-xs md:text-sm tracking-widest text-zinc-400 max-w-lg mx-auto mb-10 leading-loose">
-        ここにInstagramへの案内文を書く。<br class="hidden sm:inline">愛媛での住まい選びに役立つ最新情報を随時配信しています。
-      </p>
-      <div>
-        <a href="https://www.instagram.com/sumaito_house?stkn=cmk1aGNqbGpiMTYz" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center px-10 py-5 rounded-full text-xs font-medium tracking-widest bg-white text-zinc-950 hover:bg-zinc-200 transition-all duration-300 shadow-lg hover:shadow-2xl">
-          <svg class="w-4 h-4 mr-2.5 text-zinc-900" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
-          公式Instagram（@sumaito_house）を見る
-        </a>
+  <!-- フッター -->
+  <footer class="bg-white border-t border-zinc-200 py-8">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
+      <div class="flex items-center space-x-3">
+        <span class="font-mono font-semibold text-zinc-700">STUDIO LAB</span>
+        <span>•</span>
+        <span>Web Production & LP Showcase</span>
       </div>
-    </div>
-  </section>
-
-
-  <!-- ==============================================
-       11. フッター
-  =============================================== -->
-  <footer class="py-14 bg-white border-t border-zinc-100 text-center">
-    <div class="max-w-6xl mx-auto px-6 sm:px-8 space-y-6">
-      <!-- ロゴ -->
-      <a href="#" class="inline-flex flex-col items-center">
-        <span class="font-en text-2xl font-bold tracking-widest text-zinc-900">sumaito</span>
-        <span class="text-[10px] tracking-wider text-zinc-400 font-normal -mt-1">愛媛の住まいの選択肢</span>
-      </a>
-
-      <!-- ナビゲーションリンク -->
-      <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-xs tracking-wider text-zinc-500">
-        <a href="#concept" class="hover:text-zinc-900 transition-colors">コンセプト</a>
-        <a href="#service" class="hover:text-zinc-900 transition-colors">サービス</a>
-        <a href="#cases" class="hover:text-zinc-900 transition-colors">ご紹介事例</a>
-        <a href="#faq" class="hover:text-zinc-900 transition-colors">よくある質問</a>
-        <a href="#contact" class="hover:text-zinc-900 transition-colors">LINE相談</a>
-      </div>
-
-      <!-- Instagramリンク -->
-      <div class="pt-2">
-        <a href="https://www.instagram.com/sumaito_house?stkn=cmk1aGNqbGpiMTYz" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center text-xs tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">
-          <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
-          @sumaito_house
-        </a>
-      </div>
-
-      <!-- コピーライト -->
-      <p class="text-[11px] tracking-widest text-zinc-400 pt-4">
-        &copy; 2026 sumaito. All Rights Reserved.
-      </p>
+      <p class="font-mono text-[11px]">Deploy target: GitHub Pages (root)</p>
     </div>
   </footer>
 
-
-  <!-- ==============================================
-       12. JavaScript（スライダー・FAQ・メニュー制御）
-  =============================================== -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1. スライダー（紙芝居3枚・クロスフェード）
-      const slides = document.querySelectorAll('.hero-slide');
-      const dots = document.querySelectorAll('.slider-dot');
-      let currentIndex = 0;
-      let slideInterval;
-
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          if (i === index) {
-            slide.classList.remove('opacity-0', 'z-0');
-            slide.classList.add('opacity-100', 'z-10');
-          } else {
-            slide.classList.remove('opacity-100', 'z-10');
-            slide.classList.add('opacity-0', 'z-0');
-          }
-        });
-
-        dots.forEach((dot, i) => {
-          if (i === index) {
-            dot.classList.remove('w-2', 'bg-white/40');
-            dot.classList.add('w-8', 'bg-white');
-          } else {
-            dot.classList.remove('w-8', 'bg-white');
-            dot.classList.add('w-2', 'bg-white/40');
-          }
-        });
-
-        currentIndex = index;
-      }
-
-      function nextSlide() {
-        const next = (currentIndex + 1) % slides.length;
-        showSlide(next);
-      }
-
-      function startSlider() {
-        slideInterval = setInterval(nextSlide, 5000);
-      }
-
-      function stopSlider() {
-        clearInterval(slideInterval);
-      }
-
-      // ドットクリック操作
-      dots.forEach(dot => {
-        dot.addEventListener('click', (e) => {
-          stopSlider();
-          const targetIndex = parseInt(e.currentTarget.getAttribute('data-index'), 10);
-          showSlide(targetIndex);
-          startSlider();
-        });
-      });
-
-      startSlider();
-
-
-      // 2. モバイルメニュー開閉
-      const menuBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-        });
-        // リンククリックでメニューを閉じる
-        mobileMenu.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-          });
-        });
-      }
-
-
-      // 3. よくある質問（FAQアコーディオン）
-      const faqItems = document.querySelectorAll('.faq-item');
-      faqItems.forEach(item => {
-        const btn = item.querySelector('.faq-btn');
-        const answer = item.querySelector('.faq-answer');
-        const icon = item.querySelector('.faq-icon');
-
-        btn.addEventListener('click', () => {
-          const isOpen = !answer.classList.contains('hidden');
-
-          // 他を閉じる場合はここで処理（独立開閉でも可）
-          faqItems.forEach(otherItem => {
-            if (otherItem !== item) {
-              otherItem.querySelector('.faq-answer').classList.add('hidden');
-              otherItem.querySelector('.faq-icon').textContent = '＋';
-              otherItem.querySelector('.faq-icon').classList.remove('rotate-45');
-            }
-          });
-
-          if (isOpen) {
-            answer.classList.add('hidden');
-            icon.textContent = '＋';
-            icon.classList.remove('rotate-45');
-          } else {
-            answer.classList.remove('hidden');
-            icon.textContent = '✕';
-            icon.classList.add('rotate-45');
-          }
-        });
-      });
-    });
-  </script>
 </body>
 </html>

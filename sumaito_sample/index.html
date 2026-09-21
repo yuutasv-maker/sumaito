@@ -59,12 +59,36 @@
     }
   </style>
 </head>
-<body class="antialiased selection:bg-zinc-800 selection:text-white">
+<body class="antialiased selection:bg-zinc-800 selection:text-white pt-10">
+
+  <!-- ==============================================
+       ★ クライアント向け「仮説ドラフト（8割完成版）＆赤入れ用レビューバー」
+  =============================================== -->
+  <aside id="review-bar" class="fixed top-0 left-0 right-0 z-[60] bg-zinc-950 text-white border-b border-zinc-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-10 flex items-center justify-between text-xs">
+      <div class="flex items-center space-x-2.5">
+        <span class="inline-flex items-center px-2 py-0.5 rounded bg-amber-400/20 text-amber-300 font-medium font-mono text-[11px] border border-amber-400/30">
+          📝 仮説ドラフト（8割完成版）
+        </span>
+        <span class="text-zinc-300 hidden md:inline font-light text-[11px]">
+          先行成功事例をもとに仮説文章を埋めたたたき台です。「事実と異なる箇所」「貴社の表現に直したい箇所」の赤入れをお願いします。
+        </span>
+      </div>
+      <div class="flex items-center space-x-2">
+        <button id="toggle-tips-btn" class="px-2.5 py-1 rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-[11px] transition-colors flex items-center">
+          <span class="mr-1">💡</span>確認ポイント表示中
+        </button>
+        <button id="open-feedback-modal-btn" class="px-3 py-1 rounded bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium text-[11px] transition-colors flex items-center shadow-sm">
+          <span>赤入れフォーマット</span>
+        </button>
+      </div>
+    </div>
+  </aside>
 
   <!-- ==============================================
        1. グローバルヘッダー
   =============================================== -->
-  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-zinc-100">
+  <header id="header" class="fixed top-10 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-zinc-100">
     <div class="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
       <!-- ロゴ -->
       <a href="#" class="flex flex-col group">
@@ -208,6 +232,16 @@
   =============================================== -->
   <section id="concept" class="py-28 md:py-36 bg-white">
     <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center">
+
+      <!-- レビュー用 確認ポイント注記 -->
+      <div class="review-tip bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs text-amber-900 mb-10 max-w-2xl mx-auto flex items-start space-x-3 text-left">
+        <span class="text-base leading-none">💡</span>
+        <div class="space-y-1 font-light">
+          <span class="font-bold text-amber-950 block">【赤入れポイント：コンセプト・想いのすり合わせ】</span>
+          <p class="leading-relaxed">先行成功事例に倣い、「建物の性能や価格」よりも「愉しい暮らし・中立な安心感」を前面にした仮説文です。貴社が一番伝えたい想いやメッセージに合わせて文言の差し替え・追記をお願いします。</p>
+        </div>
+      </div>
+
       <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-4">Concept</span>
       <h2 class="font-mincho text-2xl md:text-4xl font-normal leading-relaxed tracking-widest text-zinc-900 mb-12">
         届けたいのは、「いい家」ではなく<br class="hidden sm:inline">「愉しい暮らし」
@@ -241,9 +275,23 @@
   =============================================== -->
   <section id="service" class="py-24 md:py-32 bg-white">
     <div class="max-w-5xl mx-auto px-6 sm:px-8">
-      <div class="text-center mb-14">
-        <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Service & Flow</span>
-        <h2 class="font-mincho text-2xl md:text-4xl font-normal tracking-widest text-zinc-900">サービス内容 & ご相談の流れ</h2>
+      <div class="text-center mb-16">
+        <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Service</span>
+        <h2 class="font-mincho text-2xl md:text-4xl font-normal tracking-widest text-zinc-900 mb-4">
+          sumaitoが提供できること
+        </h2>
+        <p class="text-xs sm:text-sm text-zinc-500 max-w-lg mx-auto leading-relaxed font-light">
+          中立な第三者の立場から、後悔のない理想の家づくりをトータルで伴走いたします。
+        </p>
+      </div>
+
+      <!-- レビュー用 確認ポイント注記 -->
+      <div class="review-tip bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs text-amber-900 mb-10 max-w-3xl mx-auto flex items-start space-x-3 text-left">
+        <span class="text-base leading-none">💡</span>
+        <div class="space-y-1 font-light">
+          <span class="font-bold text-amber-950 block">【赤入れポイント：提供メニューの整合性チェック】</span>
+          <p class="leading-relaxed">①厳選紹介、②中立比較、③引渡しまで伴走、④担当者変更代行の4項目を仮設配置しています。貴社で実際に提供しているメニュー（例：土地探し支援、住宅ローン資金計画、プラン比較等）に合わせて項目の入れ替えや名称変更をご指示ください。</p>
+        </div>
       </div>
 
       <!-- 相談風景画像 -->
@@ -251,40 +299,73 @@
         <img src="images/service_consultation.jpg" alt="住宅相談・打ち合わせ風景" class="w-full h-full object-cover">
       </div>
 
-      <!-- ステップ（3ステップ） -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- STEP 01 -->
-        <div class="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 flex flex-col justify-between">
+      <!-- 具体的な4項目のサービス内容 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-24">
+        
+        <!-- 01: 全国・愛媛のハウスメーカー＆工務店のご紹介 -->
+        <div class="p-8 rounded-2xl bg-zinc-50 border border-zinc-200/80 hover:border-zinc-300 transition-all duration-300 flex flex-col justify-between">
           <div>
-            <div class="font-en text-2xl font-bold tracking-widest text-zinc-300 mb-4">STEP 01</div>
-            <h3 class="text-base font-bold text-zinc-900 tracking-wider mb-3">公式LINEで友だち追加 & 相談</h3>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-en text-3xl font-bold tracking-wider text-zinc-300">01</span>
+              <span class="text-[11px] font-medium tracking-wider text-zinc-500 bg-white px-3 py-1 rounded-full border border-zinc-200/60">厳選紹介</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-zinc-900 tracking-wide mb-3">
+              おすすめのハウスメーカー・地域工務店をご紹介
+            </h3>
             <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-              まずは公式LINEをお友だち追加してください。住まいに関する疑問やご希望条件をトーク画面でお送りいただくだけで、専門アドバイザーが中立にお答えします。
+              大手ハウスメーカーから愛媛の地域特化工務店まで、幅広く無料でお繋ぎします。各社の強みだけでなく、相性の良い優秀な担当者を厳選してご紹介いたします。
             </p>
           </div>
         </div>
 
-        <!-- STEP 02 -->
-        <div class="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 flex flex-col justify-between">
+        <!-- 02: ハウスメーカー・工務店の客観的な比較相談 -->
+        <div class="p-8 rounded-2xl bg-zinc-50 border border-zinc-200/80 hover:border-zinc-300 transition-all duration-300 flex flex-col justify-between">
           <div>
-            <div class="font-en text-2xl font-bold tracking-widest text-zinc-300 mb-4">STEP 02</div>
-            <h3 class="text-base font-bold text-zinc-900 tracking-wider mb-3">無料ヒアリング & 資金・条件整理</h3>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-en text-3xl font-bold tracking-wider text-zinc-300">02</span>
+              <span class="text-[11px] font-medium tracking-wider text-zinc-500 bg-white px-3 py-1 rounded-full border border-zinc-200/60">中立な比較</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-zinc-900 tracking-wide mb-3">
+              中立な立場での住宅会社選び・比較アドバイス
+            </h3>
             <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-              ご予算、ご家族の将来設計、希望エリアをお聞きし、新築・中古・リノベのどれが最適か、無理のない住宅ローン借入額をシミュレーションします。
+              「どこの建築会社が自分たちに合うのか分からない」という方へ。価格帯・性能・デザイン傾向など、営業トークではない客観的な視点で比較・選び方を伝授します。
             </p>
           </div>
         </div>
 
-        <!-- STEP 03 -->
-        <div class="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 flex flex-col justify-between">
+        <!-- 03: 引渡しまでの無料伴走サポート -->
+        <div class="p-8 rounded-2xl bg-zinc-50 border border-zinc-200/80 hover:border-zinc-300 transition-all duration-300 flex flex-col justify-between">
           <div>
-            <div class="font-en text-2xl font-bold tracking-widest text-zinc-300 mb-4">STEP 03</div>
-            <h3 class="text-base font-bold text-zinc-900 tracking-wider mb-3">相性の良い建築会社・担当者紹介</h3>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-en text-3xl font-bold tracking-wider text-zinc-300">03</span>
+              <span class="text-[11px] font-medium tracking-wider text-zinc-500 bg-white px-3 py-1 rounded-full border border-zinc-200/60">安心伴走</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-zinc-900 tracking-wide mb-3">
+              ご希望の方は「お引渡しまで」無料サポート
+            </h3>
             <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-              愛媛県内の厳選したハウスメーカー・工務店から、価値観と予算に合致する「信頼できる優秀な担当者」をご紹介。契約まで中立に伴走サポートします。
+              紹介して終わりではなく、ご希望に応じて打ち合わせ期間や着工後、お引渡しまで継続サポート。LINE等でいつでも第三者目線のフラットなセカンドオピニオンを受けられます。
             </p>
           </div>
         </div>
+
+        <!-- 04: 担当者変更の代行受付 -->
+        <div class="p-8 rounded-2xl bg-zinc-50 border border-zinc-200/80 hover:border-zinc-300 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-en text-3xl font-bold tracking-wider text-zinc-300">04</span>
+              <span class="text-[11px] font-medium tracking-wider text-zinc-500 bg-white px-3 py-1 rounded-full border border-zinc-200/60">変更代行</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-zinc-900 tracking-wide mb-3">
+              相性が合わない場合の担当者変更も代行受付
+            </h3>
+            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
+              家づくりは担当者との相性が命です。もしご紹介後に「少し合わないかも…」と感じた場合も、直接言いにくい変更のお申し出をsumaitoが責任を持って代行いたします。
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -311,11 +392,129 @@
 
 
   <!-- ==============================================
+       6-2. 無料でご紹介できる仕組み（Why Free?）
+  =============================================== -->
+  <section id="why-free" class="py-24 md:py-32 bg-white border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8">
+      
+      <!-- セクションタイトル -->
+      <div class="text-center mb-16">
+        
+        <!-- レビュー用 確認ポイント注記 -->
+        <div class="review-tip bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs text-amber-900 mb-10 max-w-3xl mx-auto flex items-start space-x-3 text-left">
+          <span class="text-base leading-none">💡</span>
+          <div class="space-y-1 font-light">
+            <span class="font-bold text-amber-950 block">【赤入れポイント：ビジネスモデル・無料理由の説明表現】</span>
+            <p class="leading-relaxed">提携建築会社からの紹介料（広告費）で運営されている旨を明記しています。提携先様との規約や貴社のポリシーに照らして、表現の修正や補足したい安心要素（「建築費に上乗せなし」等）があればご指定ください。</p>
+          </div>
+        </div>
+
+        <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Why Free</span>
+        <h2 class="font-mincho text-2xl md:text-4xl font-normal tracking-widest text-zinc-900 mb-4">
+          無料でご紹介できる仕組み
+        </h2>
+        <p class="text-xs sm:text-sm text-zinc-500 max-w-xl mx-auto leading-relaxed font-light">
+          「なぜ手厚いサポートが完全無料なのか？」「建築費に上乗せされないのか？」<br class="hidden sm:inline">
+          初めてご相談いただく方が安心してご利用いただけるよう、仕組みをご説明します。
+        </p>
+      </div>
+
+      <!-- 仕組み解説ボックス -->
+      <div class="bg-zinc-50 border border-zinc-200/80 rounded-3xl p-8 sm:p-12 mb-16 text-center">
+        <div class="max-w-2xl mx-auto space-y-4">
+          <span class="inline-block text-[11px] font-medium tracking-wider text-zinc-500 bg-white px-4 py-1.5 rounded-full border border-zinc-200/80 mb-2">
+            仕組みのご説明
+          </span>
+          <h3 class="text-lg sm:text-xl font-bold text-zinc-900 tracking-wide leading-snug">
+            提携建築会社様からの紹介費用（広告費）で運営されています
+          </h3>
+          <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
+            sumaitoは、提携している各ハウスメーカー・工務店様より、成約に至った際のご紹介料・広告費を頂戴して運営しております。そのため、ご相談者様から相談料や仲介料などの費用をいただくことは一切ございません。
+          </p>
+        </div>
+      </div>
+
+      <!-- 3つの安心ポイント -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        
+        <!-- 安心 1 -->
+        <div class="p-8 rounded-2xl bg-white border border-zinc-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-900 font-en font-bold text-sm mb-5">
+              01
+            </div>
+            <h4 class="text-base font-bold text-zinc-900 tracking-wide mb-3">
+              何度相談しても完全無料
+            </h4>
+            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
+              最初のご相談から、建築会社のご紹介、打ち合わせへの同席・アドバイス、お引渡しまで、追加料金等は一切発生いたしません。
+            </p>
+          </div>
+        </div>
+
+        <!-- 安心 2 -->
+        <div class="p-8 rounded-2xl bg-white border border-zinc-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-900 font-en font-bold text-sm mb-5">
+              02
+            </div>
+            <h4 class="text-base font-bold text-zinc-900 tracking-wide mb-3">
+              建築費用への上乗せはゼロ
+            </h4>
+            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
+              ご紹介料がお客様のお見積もりに上乗せされることは一切ありません。直接住宅展示場等に行かれた場合と同額、もしくは提携特典により優遇されるケースもございます。
+            </p>
+          </div>
+        </div>
+
+        <!-- 安心 3 -->
+        <div class="p-8 rounded-2xl bg-white border border-zinc-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-900 font-en font-bold text-sm mb-5">
+              03
+            </div>
+            <h4 class="text-base font-bold text-zinc-900 tracking-wide mb-3">
+              無理な営業・偏った推薦なし
+            </h4>
+            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
+              特定の1社を無理に勧めることは一切ございません。第三者のフラットな視点でお客様のご希望・予算に本当に見合う会社のみをご提案します。
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 無料相談CTAボタン -->
+      <div class="text-center">
+        <a href="#contact"
+           class="inline-flex items-center justify-center px-9 py-4 rounded-full text-xs sm:text-sm font-medium tracking-widest bg-zinc-900 text-white hover:bg-zinc-700 transition-all duration-300 shadow-sm hover:shadow-md">
+          <svg class="w-4 h-4 mr-2.5 fill-current" viewBox="0 0 24 24">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.089.495.25l2.462 3.33v-2.95c0-.347.282-.63.63-.63.345 0 .625.283.625.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+          </svg>
+          LINEで無料相談する
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================================
        7. ご紹介事例（2事例・詳細リンクなし）
   =============================================== -->
-  <section id="cases" class="py-24 md:py-32 bg-white">
+  <section id="cases" class="py-24 md:py-32 bg-zinc-50 border-t border-zinc-100">
     <div class="max-w-6xl mx-auto px-6 sm:px-8">
       <div class="text-center mb-16">
+        
+        <!-- レビュー用 確認ポイント注記 -->
+        <div class="review-tip bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs text-amber-900 mb-10 max-w-3xl mx-auto flex items-start space-x-3 text-left">
+          <span class="text-base leading-none">💡</span>
+          <div class="space-y-1 font-light">
+            <span class="font-bold text-amber-950 block">【赤入れポイント：建築実例の写真・スペックの差し替え】</span>
+            <p class="leading-relaxed">平屋とモダン2階建てのモデル実例です。実際に紹介・成約された物件の写真（外観・内観）や、敷地面積・延床面積・家族構成などの実例情報をご提供いただければそのまま差し替えます。</p>
+          </div>
+        </div>
+
         <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Cases</span>
         <h2 class="font-mincho text-2xl md:text-4xl font-normal tracking-widest text-zinc-900">ご紹介事例</h2>
       </div>
@@ -353,6 +552,16 @@
   <section class="py-20 md:py-28 bg-zinc-50 border-y border-zinc-100">
     <div class="max-w-5xl mx-auto px-6 sm:px-8">
       <div class="text-center mb-16">
+        
+        <!-- レビュー用 確認ポイント注記 -->
+        <div class="review-tip bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs text-amber-900 mb-10 max-w-3xl mx-auto flex items-start space-x-3 text-left">
+          <span class="text-base leading-none">💡</span>
+          <div class="space-y-1 font-light">
+            <span class="font-bold text-amber-950 block">【赤入れポイント：相談者ペルソナ・実際のエピソード】</span>
+            <p class="leading-relaxed">松山市30代ファミリー・東温市20代ご夫婦の仮説です。過去に実際に相談に来られたお客様の「当初の悩み」や「相談して良かった点」のリアルなエピソードがあれば差し替えます。</p>
+          </div>
+        </div>
+
         <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Voice</span>
         <h2 class="font-mincho text-2xl md:text-3xl font-normal tracking-widest text-zinc-900">ご紹介したお客様の声</h2>
       </div>
@@ -387,11 +596,158 @@
 
 
   <!-- ==============================================
-       9. よくある質問（FAQ 3項目・アコーディオン）
+       9. ご紹介までの流れ & LINEで無料相談
   =============================================== -->
-  <section id="faq" class="py-24 md:py-32 bg-white">
+  <section id="contact" class="py-24 md:py-32 bg-white">
+    <div class="max-w-4xl mx-auto px-6 sm:px-8">
+      
+      <!-- セクション見出し -->
+      <div class="text-center mb-16 sm:mb-20">
+        
+        <!-- レビュー用 確認ポイント注記 -->
+        <div class="review-tip bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs text-amber-900 mb-10 max-w-2xl mx-auto flex items-start space-x-3 text-left">
+          <span class="text-base leading-none">💡</span>
+          <div class="space-y-1 font-light">
+            <span class="font-bold text-amber-950 block">【赤入れポイント：ご相談からご紹介までの実務ステップ】</span>
+            <p class="leading-relaxed">STEP 01: LINE登録 → STEP 02: ヒアリング → STEP 03: ご紹介の3ステップです。実際の対面/オンライン面談の形式や所要時間など、実務の流れに合わせて微調整が可能です。</p>
+          </div>
+        </div>
+
+        <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Flow</span>
+        <h2 class="font-mincho text-2xl md:text-4xl font-normal tracking-widest text-zinc-900 mb-4">
+          ご紹介までの流れ
+        </h2>
+        <p class="text-xs sm:text-sm text-zinc-500 max-w-lg mx-auto leading-relaxed font-light">
+          公式LINEでの友だち追加から、中立なヒアリング、最適な建築会社のご紹介までスムーズに伴走します。
+        </p>
+      </div>
+
+      <!-- ステップリスト（縦並び） -->
+      <div class="space-y-12 sm:space-y-16 max-w-2xl mx-auto mb-16 sm:mb-20">
+        
+        <!-- STEP 01: 公式LINEを登録 -->
+        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8 text-center sm:text-left">
+          <!-- 丸アイコン -->
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-zinc-100 flex items-center justify-center flex-shrink-0">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-zinc-900 flex items-center justify-center text-white shadow-sm">
+              <svg class="w-8 h-8 sm:w-9 sm:h-9 fill-current" viewBox="0 0 24 24">
+                <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.089.495.25l2.462 3.33v-2.95c0-.347.282-.63.63-.63.345 0 .625.283.625.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+              </svg>
+            </div>
+          </div>
+          <!-- テキストコンテンツ -->
+          <div class="pt-1 sm:pt-2">
+            <span class="font-en text-xs font-semibold tracking-widest text-zinc-400 block mb-1">STEP01</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 tracking-wide mb-2.5">
+              公式LINEを登録
+            </h3>
+            <p class="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed mb-3">
+              まずは公式LINEにご登録ください。
+            </p>
+            <div>
+              <a href="https://line.me" target="_blank" rel="noopener noreferrer"
+                 class="text-xs sm:text-sm text-zinc-900 underline underline-offset-4 hover:text-zinc-600 font-medium inline-flex items-center transition-colors">
+                公式LINEはこちら
+                <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 02: ご相談・ヒアリング -->
+        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8 text-center sm:text-left">
+          <!-- 丸アイコン -->
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-zinc-100 flex items-center justify-center flex-shrink-0">
+            <!-- 2人の対話・ヒアリングSVG -->
+            <svg class="w-12 h-12 sm:w-14 sm:h-14 text-zinc-900" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <!-- 人物1（上） -->
+              <circle cx="13" cy="14" r="4" fill="currentColor"/>
+              <path d="M7 23c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="currentColor"/>
+              <!-- 吹き出し1 -->
+              <rect x="23" y="9" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2.4" fill="none"/>
+              <line x1="27" y1="13" x2="37" y2="13" stroke-width="2"/>
+              <line x1="27" y1="17" x2="33" y2="17" stroke-width="2"/>
+              <!-- 吹き出し2 -->
+              <rect x="7" y="27" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2.4" fill="none"/>
+              <line x1="11" y1="31" x2="21" y2="31" stroke-width="2"/>
+              <line x1="11" y1="35" x2="17" y2="35" stroke-width="2"/>
+              <!-- 人物2（下） -->
+              <circle cx="35" cy="35" r="4" fill="currentColor"/>
+              <path d="M29 44c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="currentColor"/>
+            </svg>
+          </div>
+          <!-- テキストコンテンツ -->
+          <div class="pt-1 sm:pt-2">
+            <span class="font-en text-xs font-semibold tracking-widest text-zinc-400 block mb-1">STEP02</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 tracking-wide mb-2.5">
+              ご相談・ヒアリング
+            </h3>
+            <p class="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed max-w-lg">
+              LINEやオンラインにてご相談させていただき、お客様の家づくりにおける希望や夢をお聞きさせていただきます。
+            </p>
+          </div>
+        </div>
+
+        <!-- STEP 03: お客様にぴったりなHM&工務店をご紹介 -->
+        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8 text-center sm:text-left">
+          <!-- 丸アイコン -->
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-zinc-100 flex items-center justify-center flex-shrink-0">
+            <!-- 握手・パートナーシップSVG -->
+            <svg class="w-12 h-12 sm:w-14 sm:h-14 text-zinc-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m11 17 2 2a1 1 0 0 0 1.4 0l4.6-4.6a2 2 0 0 0 0-2.8l-3.2-3.2a2 2 0 0 0-2.8 0L11 10.4"/>
+              <path d="m13 15-2-2-4.6 4.6a2 2 0 0 0 0 2.8l3.2 3.2a2 2 0 0 0 2.8 0l1.6-1.6"/>
+              <path d="m18 11 3-3-4-4-3 3"/>
+              <path d="m6 13-3 3 4 4 3-3"/>
+            </svg>
+          </div>
+          <!-- テキストコンテンツ -->
+          <div class="pt-1 sm:pt-2">
+            <span class="font-en text-xs font-semibold tracking-widest text-zinc-400 block mb-1">STEP03</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 tracking-wide mb-2.5">
+              お客様にぴったりなHM&工務店をご紹介
+            </h3>
+            <p class="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed max-w-lg">
+              誰と家づくりをするかは重要です。施主様に合った建築会社をご紹介いたします。<br class="hidden sm:inline">
+              ただご紹介するだけでなく、sumaitoも一緒にサポートさせて頂く事によって、“住んだあとも満足できる家づくり”の実現をさせていただきます。
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LINE無料相談 CTAボタン -->
+      <div class="text-center pt-4">
+        <a href="https://line.me" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center px-10 py-5 rounded-full text-xs sm:text-sm font-medium tracking-widest bg-zinc-900 text-white hover:bg-zinc-700 transition-all duration-300 shadow-md hover:shadow-xl w-full sm:w-auto">
+          <svg class="w-5 h-5 fill-current mr-3" viewBox="0 0 24 24">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.089.495.25l2.462 3.33v-2.95c0-.347.282-.63.63-.63.345 0 .625.283.625.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+          </svg>
+          LINEで無料相談してみる
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================================
+       10. よくある質問（FAQ 3項目・アコーディオン）
+  =============================================== -->
+  <section id="faq" class="py-24 md:py-32 bg-zinc-50 border-t border-zinc-100">
     <div class="max-w-3xl mx-auto px-6 sm:px-8">
       <div class="text-center mb-16">
+        
+        <!-- レビュー用 確認ポイント注記 -->
+        <div class="review-tip bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs text-amber-900 mb-10 max-w-2xl mx-auto flex items-start space-x-3 text-left">
+          <span class="text-base leading-none">💡</span>
+          <div class="space-y-1 font-light">
+            <span class="font-bold text-amber-950 block">【赤入れポイント：相談前の頻出質問トップ3】</span>
+            <p class="leading-relaxed">Q1: 無料の理由 / Q2: 初期検討段階での相談可否 / Q3: 合わなかった場合のお断り代行。日頃お客様から実際によく受ける質問や、解消しておきたい不安があればQ&Aの差し替えをご指示ください。</p>
+          </div>
+        </div>
+
         <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">FAQ</span>
         <h2 class="font-mincho text-2xl md:text-3xl font-normal tracking-widest text-zinc-900">よくある質問</h2>
       </div>
@@ -447,50 +803,7 @@
 
 
   <!-- ==============================================
-       9. LINE無料相談 セクション
-  =============================================== -->
-  <section id="contact" class="py-24 md:py-32 bg-white">
-    <div class="max-w-3xl mx-auto px-6 sm:px-8">
-      <div class="text-center mb-12">
-        <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Line Consultation</span>
-        <h2 class="font-mincho text-2xl md:text-4xl font-normal tracking-widest text-zinc-900 mb-4">LINEで無料相談</h2>
-        <p class="text-xs sm:text-sm text-zinc-500 max-w-lg mx-auto leading-relaxed">
-          家づくりのこと、資金計画のこと、土地探しのこと。<br class="hidden sm:inline">
-          完全中立な立場で、お客様の疑問や不安に寄り添います。
-        </p>
-      </div>
-
-      <!-- LINE相談カード -->
-      <div class="bg-zinc-50 border border-zinc-200/80 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-sm">
-        <div class="inline-flex items-center space-x-1 px-3 py-1 rounded-full bg-zinc-200/80 text-zinc-700 text-[11px] font-medium tracking-wider mb-5">
-          <span>RECOMMENDED</span>
-          <span>・</span>
-          <span>手軽に相談</span>
-        </div>
-        <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 tracking-wide mb-3">
-          公式LINEで気軽にメッセージ
-        </h3>
-        <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed max-w-xl mx-auto mb-8 font-light">
-          友だち追加後、トーク画面からメッセージをお送りいただくだけで相談可能です。<br class="hidden sm:inline">
-          営業電話等は一切ございません。「まだ検討を始めたばかり」という方もお気軽にご利用ください。
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="https://line.me" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center justify-center px-9 py-4 rounded-full text-xs sm:text-sm font-medium tracking-widest bg-zinc-900 text-white hover:bg-zinc-700 transition-all duration-300 shadow-sm hover:shadow-md w-full sm:w-auto">
-            <svg class="w-5 h-5 fill-current mr-2.5" viewBox="0 0 24 24">
-              <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.089.495.25l2.462 3.33v-2.95c0-.347.282-.63.63-.63.345 0 .625.283.625.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-            </svg>
-            LINEで無料相談してみる
-          </a>
-        </div>
-        <p class="text-[11px] text-zinc-400 mt-5">※アカウント名「すまいと公式」</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ==============================================
-       10. クロージングCTAセクション
+       11. クロージングCTAセクション
   =============================================== -->
   <section class="py-24 md:py-32 bg-zinc-950 text-white text-center">
     <div class="max-w-4xl mx-auto px-6 sm:px-8">
@@ -532,6 +845,8 @@
         <a href="#cases" class="hover:text-zinc-900 transition-colors">ご紹介事例</a>
         <a href="#faq" class="hover:text-zinc-900 transition-colors">よくある質問</a>
         <a href="#contact" class="hover:text-zinc-900 transition-colors">LINE相談</a>
+        <a href="company.html" class="hover:text-zinc-900 transition-colors">運営会社について</a>
+        <a href="privacy.html" class="hover:text-zinc-900 transition-colors">プライバシーポリシー</a>
       </div>
 
       <!-- Instagramリンク -->
@@ -652,14 +967,125 @@
             answer.classList.add('hidden');
             icon.textContent = '＋';
             icon.classList.remove('rotate-45');
-          } else {
-            answer.classList.remove('hidden');
-            icon.textContent = '✕';
-            icon.classList.add('rotate-45');
           }
         });
       });
+
+      // 4. レビュー用機能（確認ポイントのトグル＆赤入れモーダル制御）
+      const toggleTipsBtn = document.getElementById('toggle-tips-btn');
+      const reviewTips = document.querySelectorAll('.review-tip');
+      let tipsVisible = true;
+
+      if (toggleTipsBtn) {
+        toggleTipsBtn.addEventListener('click', () => {
+          tipsVisible = !tipsVisible;
+          reviewTips.forEach(tip => {
+            if (tipsVisible) {
+              tip.classList.remove('hidden');
+            } else {
+              tip.classList.add('hidden');
+            }
+          });
+          toggleTipsBtn.innerHTML = tipsVisible ? '<span class="mr-1">💡</span>確認ポイント表示中' : '<span class="mr-1">💡</span>確認ポイント非表示中';
+        });
+      }
+
+      // モーダル開閉
+      const feedbackModal = document.getElementById('feedback-modal');
+      const openModalBtn = document.getElementById('open-feedback-modal-btn');
+      const closeModalBtn = document.getElementById('close-modal-btn');
+      const copyTemplateBtn = document.getElementById('copy-template-btn');
+      const feedbackTextarea = document.getElementById('feedback-template-text');
+
+      if (openModalBtn && feedbackModal) {
+        openModalBtn.addEventListener('click', () => {
+          feedbackModal.classList.remove('hidden');
+        });
+      }
+
+      if (closeModalBtn && feedbackModal) {
+        closeModalBtn.addEventListener('click', () => {
+          feedbackModal.classList.add('hidden');
+        });
+      }
+
+      // 枠外クリックで閉じる
+      if (feedbackModal) {
+        feedbackModal.addEventListener('click', (e) => {
+          if (e.target === feedbackModal) {
+            feedbackModal.classList.add('hidden');
+          }
+        });
+      }
+
+      // テンプレートのコピー
+      if (copyTemplateBtn && feedbackTextarea) {
+        copyTemplateBtn.addEventListener('click', () => {
+          feedbackTextarea.select();
+          navigator.clipboard.writeText(feedbackTextarea.value).then(() => {
+            const originalText = copyTemplateBtn.innerHTML;
+            copyTemplateBtn.innerHTML = '<span class="text-emerald-400 font-bold mr-1">✓</span> コピーしました！';
+            setTimeout(() => {
+              copyTemplateBtn.innerHTML = originalText;
+            }, 2000);
+          });
+        });
+      }
     });
   </script>
+
+  <!-- ==============================================
+       ★ 赤入れ用フィードバックテンプレート モーダル
+  =============================================== -->
+  <div id="feedback-modal" class="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-zinc-200 space-y-4">
+      <div class="flex items-center justify-between pb-3 border-b border-zinc-100">
+        <h3 class="text-base font-bold text-zinc-900 flex items-center">
+          <span class="mr-2">📝</span>赤入れ・修正用テンプレート
+        </h3>
+        <button id="close-modal-btn" class="text-zinc-400 hover:text-zinc-700 text-lg leading-none p-1">
+          ✕
+        </button>
+      </div>
+      <p class="text-xs text-zinc-500 leading-relaxed font-light">
+        以下のテンプレートをコピーし、LINEやチャット、メールに貼り付けてご返信ください。全てを埋める必要はなく、<strong class="text-zinc-800">事実と異なる箇所や、修正したい部分のみ</strong>ご記入いただければ大丈夫です。
+      </p>
+
+      <textarea id="feedback-template-text" rows="12" class="w-full text-xs font-mono p-3.5 bg-zinc-50 border border-zinc-200 rounded-xl leading-relaxed text-zinc-800 focus:outline-none focus:border-zinc-400" readonly>【すまいとLP 赤入れ・修正点】
+
+■ 1. コンセプト・想い
+[修正点・貴社のキャッチコピー等があれば記入]
+
+■ 2. サービス4項目（提供メニュー）
+・01 厳選紹介：
+・02 中立比較：
+・03 安心伴走：
+・04 変更代行：
+[入れ替えたいサービスや、修正したい文言]
+
+■ 3. 無料の仕組み
+[表現の変更点や追加したい安心ポイント]
+
+■ 4. ご紹介事例
+[掲載したい物件の写真やスペック情報]
+
+■ 5. お客様の声
+[実際のお客様の属性・相談内容・感謝の声]
+
+■ 6. よくある質問（FAQ）
+[追加・変更したい質問と回答]
+
+■ 7. その他ご要望・メモ
+</textarea>
+
+      <div class="flex items-center justify-between pt-2">
+        <button id="copy-template-btn" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-medium tracking-wider transition-colors shadow">
+          <span>📋 テンプレートをコピーする</span>
+        </button>
+        <span class="text-[11px] text-zinc-400">ワンクリックでコピー可能</span>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
