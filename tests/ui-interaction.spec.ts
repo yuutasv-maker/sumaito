@@ -100,6 +100,19 @@ test.describe('サンプル版 LP (sumaito_sample/index.html) の UI 操作テ�
     await menuBtn.click();
     await expect(mobileMenu).toBeVisible();
 
+    // メニュー内の主要リンクが最新構成（仕組み・ご紹介の流れ・運営会社）を含みページ順であること
+    const menuLinks = mobileMenu.locator('a');
+    const linkTexts = await menuLinks.allTextContents();
+    const cleanedTexts = linkTexts.map(t => t.trim()).filter(t => t.length > 0);
+
+    expect(cleanedTexts).toContain('コンセプト');
+    expect(cleanedTexts).toContain('サービス');
+    expect(cleanedTexts).toContain('sumaitoの仕組み');
+    expect(cleanedTexts).toContain('ご紹介事例');
+    expect(cleanedTexts).toContain('ご紹介の流れ');
+    expect(cleanedTexts).toContain('よくある質問');
+    expect(cleanedTexts).toContain('運営会社について');
+
     // メニュー内のリンクをクリック: 閉じる
     await mobileMenu.locator('a').first().click();
     await expect(mobileMenu).toBeHidden();
