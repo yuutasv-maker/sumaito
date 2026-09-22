@@ -964,6 +964,10 @@
             answer.classList.add('hidden');
             icon.textContent = '＋';
             icon.classList.remove('rotate-45');
+          } else {
+            answer.classList.remove('hidden');
+            icon.textContent = '✕';
+            icon.classList.add('rotate-45');
           }
         });
       });
