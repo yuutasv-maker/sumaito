@@ -1,0 +1,14 @@
+{
+  "name": "sumaito-lp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sumaito LP & Client Review Portal",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0"
+  }
+}
