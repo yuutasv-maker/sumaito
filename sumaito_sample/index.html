@@ -59,33 +59,12 @@
     }
   </style>
 </head>
-<body class="antialiased selection:bg-zinc-800 selection:text-white pt-10">
-
-  <!-- ==============================================
-       ★ クライアント向け「仮説ドラフト（8割完成版）＆赤入れ用レビューバー」
-  =============================================== -->
-  <aside id="review-bar" class="fixed top-0 left-0 right-0 z-[60] bg-zinc-950 text-white border-b border-zinc-800 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-10 flex items-center justify-between text-xs">
-      <div class="flex items-center space-x-2">
-        <span class="text-zinc-300 hidden md:inline font-light text-[11px]">
-          ※参考サイトをもとに文章を配置したプレビューです。事実と異なる点や表現の違いがあれば、メモ程度にお気軽にお知らせください。
-        </span>
-      </div>
-      <div class="flex items-center space-x-2">
-        <button id="toggle-tips-btn" class="px-2.5 py-1 rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-[11px] transition-colors flex items-center">
-          <span class="mr-1">💡</span>確認ポイント表示中
-        </button>
-        <button id="open-feedback-modal-btn" class="px-3 py-1 rounded bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium text-[11px] transition-colors flex items-center shadow-sm">
-          <span>赤入れフォーマット</span>
-        </button>
-      </div>
-    </div>
-  </aside>
+<body class="antialiased selection:bg-zinc-800 selection:text-white">
 
   <!-- ==============================================
        1. グローバルヘッダー
   =============================================== -->
-  <header id="header" class="fixed top-10 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-zinc-100">
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-zinc-100">
     <div class="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
       <!-- ロゴ -->
       <a href="#" class="flex flex-col group">
@@ -1005,125 +984,8 @@
         });
       });
 
-      // 4. レビュー用機能（確認ポイントのトグル＆赤入れモーダル制御）
-      const toggleTipsBtn = document.getElementById('toggle-tips-btn');
-      const reviewTips = document.querySelectorAll('.review-tip');
-      let tipsVisible = true;
-
-      if (toggleTipsBtn) {
-        toggleTipsBtn.addEventListener('click', () => {
-          tipsVisible = !tipsVisible;
-          reviewTips.forEach(tip => {
-            if (tipsVisible) {
-              tip.classList.remove('hidden');
-            } else {
-              tip.classList.add('hidden');
-            }
-          });
-          toggleTipsBtn.innerHTML = tipsVisible ? '<span class="mr-1">💡</span>確認ポイント表示中' : '<span class="mr-1">💡</span>確認ポイント非表示中';
-        });
-      }
-
-      // モーダル開閉
-      const feedbackModal = document.getElementById('feedback-modal');
-      const openModalBtn = document.getElementById('open-feedback-modal-btn');
-      const closeModalBtn = document.getElementById('close-modal-btn');
-      const copyTemplateBtn = document.getElementById('copy-template-btn');
-      const feedbackTextarea = document.getElementById('feedback-template-text');
-
-      if (openModalBtn && feedbackModal) {
-        openModalBtn.addEventListener('click', () => {
-          feedbackModal.classList.remove('hidden');
-        });
-      }
-
-      if (closeModalBtn && feedbackModal) {
-        closeModalBtn.addEventListener('click', () => {
-          feedbackModal.classList.add('hidden');
-        });
-      }
-
-      // 枠外クリックで閉じる
-      if (feedbackModal) {
-        feedbackModal.addEventListener('click', (e) => {
-          if (e.target === feedbackModal) {
-            feedbackModal.classList.add('hidden');
-          }
-        });
-      }
-
-      // テンプレートのコピー
-      if (copyTemplateBtn && feedbackTextarea) {
-        copyTemplateBtn.addEventListener('click', () => {
-          feedbackTextarea.select();
-          navigator.clipboard.writeText(feedbackTextarea.value).then(() => {
-            const originalText = copyTemplateBtn.innerHTML;
-            copyTemplateBtn.innerHTML = '<span class="text-emerald-400 font-bold mr-1">✓</span> コピーしました！';
-            setTimeout(() => {
-              copyTemplateBtn.innerHTML = originalText;
-            }, 2000);
-          });
-        });
-      }
     });
   </script>
-
-  <!-- ==============================================
-       ★ 赤入れ用フィードバックテンプレート モーダル
-  =============================================== -->
-  <div id="feedback-modal" class="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-zinc-200 space-y-4">
-      <div class="flex items-center justify-between pb-3 border-b border-zinc-100">
-        <h3 class="text-base font-bold text-zinc-900 flex items-center">
-          <span class="mr-2">📝</span>赤入れ・修正用テンプレート
-        </h3>
-        <button id="close-modal-btn" class="text-zinc-400 hover:text-zinc-700 text-lg leading-none p-1">
-          ✕
-        </button>
-      </div>
-      <p class="text-xs text-zinc-500 leading-relaxed font-light">
-        以下のテンプレートをコピーし、LINEやチャット、メールに貼り付けてご返信ください。綺麗な文章を書く必要は一切ありません！<strong class="text-zinc-800">「ここは事実と違う」「普段はこう言っている」といった箇条書きやメモ書きのままで大丈夫</strong>です。文章化はこちらで行います。
-      </p>
-
-      <textarea id="feedback-template-text" rows="16" class="w-full text-xs font-mono p-3.5 bg-zinc-50 border border-zinc-200 rounded-xl leading-relaxed text-zinc-800 focus:outline-none focus:border-zinc-400" readonly>【すまいとLP 赤入れ・修正点】
-
-■ 1. コンセプト・理念（創業の想い・独自ポリシー）
-・創業のきっかけ・原体験：
-・絶対にやらないと決めている方針：
-[違和感のある点や、普段お客様に伝えている想いをメモ書きで記入]
-
-■ 2. サービス4項目（提供メニュー）
-・01 厳選紹介：
-・02 中立比較：
-・03 安心伴走：
-・04 変更代行：
-[入れ替えたいサポートや、普段行っている内容を箇条書きで記入]
-
-■ 3. 料金体系・ビジネスモデル
-[完全無料 / 初回無料+一部有料 / 有料コンサル / まだ未定・検討中 など想定のスタンス]
-
-■ 4. ご紹介事例・お客様の声
-[掲載したい物件・エピソードや、実際のお客様の感想をメモ書きで記入]
-
-■ 5. よくある質問（FAQ）
-[追加・変更したい質問と回答トップ3]
-
-■ 6. 写真・画像素材（あるだけ大歓迎 / 撮影相談可）
-・共有方法（Googleドライブ / LINE / ギガファイル便等）：
-・撮影希望（希望する ※別途見積もり / 手元の写真素材で進める）：
-[相談風景、手元、お人柄スナップ、お施主様の暮らし写真など]
-
-■ 7. その他ご要望・メモ
-</textarea>
-
-      <div class="flex items-center justify-between pt-2">
-        <button id="copy-template-btn" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-medium tracking-wider transition-colors shadow">
-          <span>📋 テンプレートをコピーする</span>
-        </button>
-        <span class="text-[11px] text-zinc-400">ワンクリックでコピー可能</span>
-      </div>
-    </div>
-  </div>
 
 </body>
 </html>

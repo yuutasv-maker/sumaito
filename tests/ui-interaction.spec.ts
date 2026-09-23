@@ -44,49 +44,6 @@ test.describe('サンプル版 LP (sumaito_sample/index.html) の UI 操作テ�
     await expect(secondAnswer).toBeVisible();
   });
 
-  test('レビュー用「確認ポイント注記」の表示・非表示トグルが機能すること', async ({ page }) => {
-    const toggleBtn = page.locator('#toggle-tips-btn');
-    const firstTip = page.locator('.review-tip').first();
-
-    // 初期状態: 表示中
-    await expect(toggleBtn).toContainText('表示中');
-    await expect(firstTip).toBeVisible();
-
-    // クリック: 非表示になる
-    await toggleBtn.click();
-    await expect(toggleBtn).toContainText('非表示');
-    await expect(firstTip).toBeHidden();
-
-    // 再度クリック: 再表示される
-    await toggleBtn.click();
-    await expect(toggleBtn).toContainText('表示中');
-    await expect(firstTip).toBeVisible();
-  });
-
-  test('赤入れモーダルの開閉とテンプレートテキストが正常であること', async ({ page }) => {
-    const openModalBtn = page.locator('#open-feedback-modal-btn');
-    const modal = page.locator('#feedback-modal');
-    const closeModalBtn = page.locator('#close-modal-btn');
-    const templateTextarea = page.locator('#feedback-template-text');
-
-    // 初期状態: モーダル非表示
-    await expect(modal).toBeHidden();
-
-    // モーダルを開く
-    await openModalBtn.click();
-    await expect(modal).toBeVisible();
-
-    // テンプレート内に理念や料金体系の項目が含まれていること
-    const text = await templateTextarea.inputValue();
-    expect(text).toContain('■ 1. コンセプト・理念');
-    expect(text).toContain('■ 3. 料金体系・ビジネスモデル');
-    expect(text).toContain('■ 6. 写真・画像素材');
-
-    // 閉じるボタンで閉じる
-    await closeModalBtn.click();
-    await expect(modal).toBeHidden();
-  });
-
   test('モバイルメニューが展開・収納されること', async ({ page, isMobile }) => {
     test.skip(!isMobile, 'モバイル端末でのみ実行');
 
