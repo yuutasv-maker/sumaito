@@ -105,7 +105,7 @@ test.describe('サンプル版 LP (sumaito_sample/index.html) の UI 操作テ�
     const linkTexts = await menuLinks.allTextContents();
     const cleanedTexts = linkTexts.map(t => t.trim()).filter(t => t.length > 0);
 
-    expect(cleanedTexts).toContain('コンセプト');
+    expect(cleanedTexts).toContain('理念');
     expect(cleanedTexts).toContain('サービス');
     expect(cleanedTexts).toContain('sumaitoの仕組み');
     expect(cleanedTexts).toContain('ご紹介事例');
