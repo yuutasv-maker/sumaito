@@ -65,7 +65,6 @@ test.describe('サンプル版 LP (sumaito_sample/index.html) の UI 操作テ�
     expect(cleanedTexts).toContain('理念');
     expect(cleanedTexts).toContain('サービス');
     expect(cleanedTexts).toContain('sumaitoの仕組み');
-    expect(cleanedTexts).toContain('ご紹介事例');
     expect(cleanedTexts).toContain('ご紹介の流れ');
     expect(cleanedTexts).toContain('よくある質問');
     expect(cleanedTexts).toContain('運営会社について');
@@ -77,12 +76,45 @@ test.describe('サンプル版 LP (sumaito_sample/index.html) の UI 操作テ�
 });
 
 // ==========================================
-// 2. 枠組み版 (sumaito/index.html) のテスト
+// 2. 本番クリーン版 (sumaito/index.html) のテスト
 // ==========================================
-test.describe('枠組み版 LP (sumaito/index.html) の UI 操作テスト', () => {
+test.describe('本番クリーン版 LP (sumaito/index.html) の UI・整合性テスト', () => {
 
   test.beforeEach(async ({ page }) => {
     await page.goto('/sumaito/index.html');
+  });
+
+  test('FAQアコーディオンがクリックで開閉すること', async ({ page }) => {
+    const faqItems = page.locator('.faq-item');
+    await expect(faqItems).toHaveCount(3);
+
+    const firstBtn = faqItems.nth(0).locator('.faq-btn');
+    const firstAnswer = faqItems.nth(0).locator('.faq-answer');
+
+    await expect(firstAnswer).toBeHidden();
+    await firstBtn.click();
+    await expect(firstAnswer).toBeVisible();
+    await firstBtn.click();
+    await expect(firstAnswer).toBeHidden();
+  });
+
+  test('レビュー用注記（赤入れポイント・修正反映済みボックス）が本番版に混入していないこと', async ({ page }) => {
+    const reviewTips = page.locator('.review-tip');
+    await expect(reviewTips).toHaveCount(0);
+
+    const bodyText = await page.locator('body').innerText();
+    expect(bodyText).not.toContain('赤入れポイント');
+    expect(bodyText).not.toContain('修正反映済み');
+  });
+});
+
+// ==========================================
+// 3. 枠組み版 (sumaito_frame/index.html) のテスト
+// ==========================================
+test.describe('住宅系LP枠組みテンプレート (_templates/housing_lp_frame/index.html) の UI 操作テスト', () => {
+
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/_templates/housing_lp_frame/index.html');
   });
 
   test('FAQアコーディオンがクリックで開閉すること', async ({ page }) => {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>運営会社について｜すまいと（sumaito）</title>
-  <meta name="description" content="すまいと（sumaito）の運営会社概要ページです。愛媛県での中立的な住まい選び・建築会社ご紹介サービスを提供しています。">
+  <meta name="description" content="すまいと（sumaito）の運営会社概要ページです。中立的な住まい選び・建築会社ご紹介サービスを提供しています。">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -33,6 +33,27 @@
       color: #1a1a1a;
       background-color: #fafafa;
     }
+    /* 確認用 インライン差分ハイライト */
+    .diff-del {
+      color: #e11d48;
+      text-decoration: line-through;
+      background-color: rgba(255, 228, 230, 0.8);
+      padding: 0.1em 0.3em;
+      border-radius: 0.25rem;
+      margin: 0 0.15em;
+      font-size: 0.9em;
+      display: inline-block;
+    }
+    .diff-ins {
+      color: #065f46;
+      font-weight: 700;
+      background-color: rgba(209, 250, 229, 0.9);
+      padding: 0.1em 0.3em;
+      border-radius: 0.25rem;
+      margin: 0 0.15em;
+      text-decoration: none;
+      display: inline-block;
+    }
   </style>
 </head>
 <body class="antialiased selection:bg-zinc-800 selection:text-white flex flex-col min-h-screen">
@@ -45,7 +66,7 @@
       <!-- ロゴ -->
       <a href="index.html" class="flex flex-col group">
         <span class="font-en text-2xl font-bold tracking-widest text-zinc-900 group-hover:text-zinc-600 transition-colors">sumaito</span>
-        <span class="text-[10px] tracking-wider text-zinc-400 font-normal -mt-1">愛媛の住まいの選択肢</span>
+        <span class="text-[10px] tracking-wider text-zinc-400 font-normal -mt-1"><del class="diff-del">愛媛の住まいの選択肢</del><ins class="diff-ins">後悔しない住まいの選択肢</ins></span>
       </a>
 
       <!-- デスクトップ ナビゲーション -->
@@ -53,7 +74,6 @@
         <a href="index.html#philosophy" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">理念</a>
         <a href="index.html#service" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">サービス</a>
         <a href="index.html#why-free" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">仕組み</a>
-        <a href="index.html#cases" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">ご紹介事例</a>
         <a href="index.html#contact" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">ご紹介の流れ</a>
         <a href="index.html#faq" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">よくある質問</a>
         <a href="company.html" class="text-xs font-medium tracking-widest text-zinc-950 font-bold transition-colors">運営会社</a>
@@ -90,7 +110,6 @@
       <a href="index.html#philosophy" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">理念</a>
       <a href="index.html#service" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">サービス</a>
       <a href="index.html#why-free" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">sumaitoの仕組み</a>
-      <a href="index.html#cases" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">ご紹介事例</a>
       <a href="index.html#contact" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">ご紹介の流れ</a>
       <a href="index.html#faq" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">よくある質問</a>
       <a href="company.html" class="block text-sm font-medium tracking-wider text-zinc-950 font-bold py-1">運営会社について</a>
@@ -144,7 +163,7 @@
           <div class="py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
             <dt class="font-medium text-zinc-900 tracking-wider mb-1 sm:mb-0">サービス名</dt>
             <dd class="text-zinc-600 sm:col-span-2 font-light">
-              すまいと（sumaito）｜愛媛の住まいの選択肢
+              すまいと（sumaito）｜<del class="diff-del">愛媛の住まいの選択肢</del><ins class="diff-ins">後悔しない住まいの選択肢</ins>
             </dd>
           </div>
 
@@ -205,7 +224,7 @@
               <p>公式LINEまたは公式Instagramのダイレクトメッセージよりお問い合わせください。</p>
               
               <!-- 赤入れ・確認ポイント -->
-              <div class="mt-2.5 p-3.5 bg-rose-50/80 border border-rose-200 rounded-xl text-xs text-rose-800 leading-relaxed font-normal">
+              <div class="review-tip mt-2.5 p-3.5 bg-rose-50/80 border border-rose-200 rounded-xl text-xs text-rose-800 leading-relaxed font-normal">
                 <span class="font-bold text-rose-600 flex items-center gap-1.5 mb-1">
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
@@ -248,7 +267,7 @@
       <!-- ロゴ -->
       <a href="index.html" class="inline-flex flex-col items-center">
         <span class="font-en text-2xl font-bold tracking-widest text-zinc-900">sumaito</span>
-        <span class="text-[10px] tracking-wider text-zinc-400 font-normal -mt-1">愛媛の住まいの選択肢</span>
+        <span class="text-[10px] tracking-wider text-zinc-400 font-normal -mt-1"><del class="diff-del">愛媛の住まいの選択肢</del><ins class="diff-ins">後悔しない住まいの選択肢</ins></span>
       </a>
 
       <!-- ナビゲーションリンク -->
@@ -256,7 +275,6 @@
         <a href="index.html#philosophy" class="hover:text-zinc-900 transition-colors">理念</a>
         <a href="index.html#service" class="hover:text-zinc-900 transition-colors">サービス</a>
         <a href="index.html#why-free" class="hover:text-zinc-900 transition-colors">sumaitoの仕組み</a>
-        <a href="index.html#cases" class="hover:text-zinc-900 transition-colors">ご紹介事例</a>
         <a href="index.html#contact" class="hover:text-zinc-900 transition-colors">ご紹介の流れ</a>
         <a href="index.html#faq" class="hover:text-zinc-900 transition-colors">よくある質問</a>
         <a href="company.html" class="text-zinc-900 font-medium">運営会社について</a>

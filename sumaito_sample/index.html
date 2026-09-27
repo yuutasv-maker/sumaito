@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>すまいと｜愛媛の住まいの選択肢</title>
-  <meta name="description" content="愛媛で家を買う前に知ってほしいこと。新築・中古・土地の選択肢や注意点を中立な立場でアドバイスする住宅コンサルティング「すまいと」">
+  <title>すまいと｜後悔しない住まいの選択肢</title>
+  <meta name="description" content="家を買う前に知ってほしいこと。新築・中古・土地の選択肢や注意点を中立な立場でアドバイスする住宅コンサルティング「すまいと」">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,6 +57,27 @@
     .text-shadow-sub {
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     }
+    /* 確認用 インライン差分ハイライト */
+    .diff-del {
+      color: #e11d48;
+      text-decoration: line-through;
+      background-color: rgba(255, 228, 230, 0.8);
+      padding: 0.1em 0.3em;
+      border-radius: 0.25rem;
+      margin: 0 0.15em;
+      font-size: 0.9em;
+      display: inline-block;
+    }
+    .diff-ins {
+      color: #065f46;
+      font-weight: 700;
+      background-color: rgba(209, 250, 229, 0.9);
+      padding: 0.1em 0.3em;
+      border-radius: 0.25rem;
+      margin: 0 0.15em;
+      text-decoration: none;
+      display: inline-block;
+    }
   </style>
 </head>
 <body class="antialiased selection:bg-zinc-800 selection:text-white">
@@ -69,7 +90,7 @@
       <!-- ロゴ -->
       <a href="#" class="flex flex-col group">
         <span class="font-en text-2xl font-bold tracking-widest text-zinc-900 group-hover:text-zinc-600 transition-colors">sumaito</span>
-        <span class="text-[10px] tracking-wider text-zinc-400 font-normal -mt-1">愛媛の住まいの選択肢</span>
+        <span class="text-[10px] tracking-wider text-zinc-400 font-normal -mt-1"><del class="diff-del">愛媛の住まいの選択肢</del><ins class="diff-ins">後悔しない住まいの選択肢</ins></span>
       </a>
 
       <!-- デスクトップ ナビゲーション -->
@@ -77,7 +98,6 @@
         <a href="#philosophy" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">理念</a>
         <a href="#service" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">サービス</a>
         <a href="#why-free" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">仕組み</a>
-        <a href="#cases" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">ご紹介事例</a>
         <a href="#contact" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">ご紹介の流れ</a>
         <a href="#faq" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">よくある質問</a>
         <a href="company.html" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">運営会社</a>
@@ -114,7 +134,6 @@
       <a href="#philosophy" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">理念</a>
       <a href="#service" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">サービス</a>
       <a href="#why-free" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">sumaitoの仕組み</a>
-      <a href="#cases" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">ご紹介事例</a>
       <a href="#contact" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">ご紹介の流れ</a>
       <a href="#faq" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">よくある質問</a>
       <a href="company.html" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">運営会社について</a>
@@ -155,7 +174,7 @@
             建てる事がゴールじゃない、<br class="hidden sm:inline">住んでから愉しむ事。
           </h2>
           <p class="text-xs md:text-base tracking-widest opacity-90 text-shadow-sub max-w-xl">
-            家族の笑顔と自然光が調和する、愛媛での理想の暮らしづくり。
+            家族の笑顔と自然光が調和する、<del class="diff-del">愛媛での</del><ins class="diff-ins">理想の</ins>暮らしづくり。
           </p>
         </div>
       </div>
@@ -213,11 +232,26 @@
   <section id="philosophy" class="py-28 md:py-36 bg-white">
     <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center">
 
+      <!-- 修正反映済み 確認ポイント注記 -->
+      <div class="review-tip bg-emerald-50/90 border border-emerald-300 rounded-xl p-4 text-xs text-emerald-950 mb-6 max-w-2xl mx-auto flex items-start space-x-3 text-left shadow-sm">
+        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-600 text-white text-[11px] font-bold shrink-0 mt-0.5">✓</span>
+        <div class="space-y-1.5 font-normal w-full">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="font-bold text-emerald-900">【修正反映済み：地域特化（愛媛）表記の削除・汎用化】</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-200">Updated</span>
+          </div>
+          <div class="bg-white/80 rounded-lg p-2.5 border border-emerald-200/70 space-y-1 text-[11px] leading-relaxed">
+            <p class="text-zinc-500"><span class="font-semibold text-zinc-700">ご要望：</span>「愛媛は推さない方向でお願いしたい」</p>
+            <p class="text-emerald-950 font-medium"><span class="font-semibold text-emerald-700">修正後（反映内容）：</span>ロゴサブコピー、FVスライド、サービス紹介、フッター等から「愛媛」の表記を外し、汎用的な表現へ修正いたしました。</p>
+          </div>
+        </div>
+      </div>
+
       <!-- レビュー用 確認ポイント注記 -->
-      <div class="review-tip bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs text-amber-900 mb-10 max-w-2xl mx-auto flex items-start space-x-3 text-left">
+      <div class="review-tip bg-rose-50/90 border border-rose-200/80 rounded-xl p-4 text-xs text-rose-900 mb-10 max-w-2xl mx-auto flex items-start space-x-3 text-left">
         <span class="text-base leading-none">💡</span>
         <div class="space-y-1 font-light">
-          <span class="font-bold text-amber-950 block">【赤入れポイント：理念・創業の想い・独自ポリシー】</span>
+          <span class="font-bold text-rose-950 block">【赤入れポイント：理念・創業の想い・独自ポリシー】</span>
           <p class="leading-relaxed">公式Instagramの「新築・中古・土地を分かりやすく」「良いところだけでなく注意点も紹介」という誠実な発信スタンスを核に構成しています。創業のきっかけやポリシーの文言調整があれば、お気軽にお知らせください。</p>
         </div>
       </div>
@@ -269,10 +303,10 @@
       </div>
 
       <!-- レビュー用 確認ポイント注記 -->
-      <div class="review-tip bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs text-amber-900 mb-10 max-w-3xl mx-auto flex items-start space-x-3 text-left">
+      <div class="review-tip bg-rose-50/90 border border-rose-200/80 rounded-xl p-4 text-xs text-rose-900 mb-10 max-w-3xl mx-auto flex items-start space-x-3 text-left">
         <span class="text-base leading-none">💡</span>
         <div class="space-y-1 font-light">
-          <span class="font-bold text-amber-950 block">【赤入れポイント：提供メニューの整合性チェック】</span>
+          <span class="font-bold text-rose-950 block">【赤入れポイント：提供メニューの整合性チェック】</span>
           <p class="leading-relaxed">公式Instagramの発信（新築・中古・土地／住宅ローン・諸費用／注意点の紹介）に合わせ、①新築工務店比較、②土地探し調査、③中古・リノベ相談、④諸費用・資金計画の4本柱に整理しています。手厚いサポート（伴走・担当者変更代行）も含めて掲載していますので、表現の加筆・調整があればお知らせください。</p>
         </div>
       </div>
@@ -293,10 +327,10 @@
               <span class="text-[11px] font-medium tracking-wider text-zinc-500 bg-white px-3 py-1 rounded-full border border-zinc-200/60">新築・工務店</span>
             </div>
             <h3 class="text-base sm:text-lg font-bold text-zinc-900 tracking-wide mb-3">
-              ハウスメーカー・地域工務店の中立比較
+              ハウスメーカー・<del class="diff-del">愛媛の地元</del><ins class="diff-ins">地域</ins>工務店の中立比較
             </h3>
             <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-              大手ハウスメーカーから愛媛の地域工務店まで、客観的な立場で比較・ご紹介します。各社の強みや坪単価だけでなく、営業マンが言わない「注意点・コストの落とし穴」まで正直にお伝えします。
+              大手ハウスメーカーから<del class="diff-del">愛媛</del><ins class="diff-ins">地域</ins>密着の優良工務店まで、客観的な立場で比較・ご紹介します。各社の強みや坪単価だけでなく、営業マンが言わない「注意点・コストの落とし穴」まで正直にお伝えします。
             </p>
           </div>
         </div>
@@ -312,7 +346,7 @@
               後悔しないための土地探し・周辺環境調査
             </h3>
             <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-              「いい土地が見つからない」「相場が妥当か分からない」という方へ。愛媛のエリア相場、地盤やハザード情報、水道引き込み等の追加費用まで、第三者目線で落とし穴を事前にチェックします。
+              「いい土地が見つからない」「相場が妥当か分からない」という方へ。<del class="diff-del">愛媛県内</del><ins class="diff-ins">ご希望エリア</ins>の相場、地盤やハザード情報、水道引き込み等の追加費用まで、第三者目線で落とし穴を事前にチェックします。
             </p>
           </div>
         </div>
@@ -405,12 +439,18 @@
       <!-- セクションタイトル -->
       <div class="text-center mb-16">
         
-        <!-- レビュー用 確認ポイント注記 -->
-        <div class="review-tip bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs text-amber-900 mb-10 max-w-3xl mx-auto flex items-start space-x-3 text-left">
-          <span class="text-base leading-none">💡</span>
-          <div class="space-y-1 font-light">
-            <span class="font-bold text-amber-950 block">【赤入れポイント：料金体系・ビジネスモデルの想定】</span>
-            <p class="leading-relaxed">現在は「完全無料モデル」を仮説配置していますが、初回無料＋一部有料オプション制、有料コンサルティング制、あるいは現在検討中など、貴社の想定スタンスに合わせてセクション構成ごと調整可能です。現時点でのお考えをメモ程度にお知らせください（文章化はこちらで行います）。</p>
+        <!-- 修正反映済み 確認ポイント注記 -->
+        <div class="review-tip bg-emerald-50/90 border border-emerald-300 rounded-xl p-4 text-xs text-emerald-950 mb-10 max-w-3xl mx-auto flex items-start space-x-3 text-left shadow-sm">
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-600 text-white text-[11px] font-bold shrink-0 mt-0.5">✓</span>
+          <div class="space-y-1.5 font-normal w-full">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="font-bold text-emerald-900">【修正反映済み：仲介手数料および注文住宅紹介の料金体系明確化】</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-200">Updated</span>
+            </div>
+            <div class="bg-white/80 rounded-lg p-2.5 border border-emerald-200/70 space-y-1 text-[11px] leading-relaxed">
+              <p class="text-zinc-500"><span class="font-semibold text-zinc-700">ご要望：</span>「土地、建売、中古物件は仲介手数料は発生するので、明確にしたほうが良いかと思います！発生しないのは注文住宅の場合にハウスメーカー紹介に対してお客さんがこちらに払う費用です！」</p>
+              <p class="text-emerald-950 font-medium"><span class="font-semibold text-emerald-700">修正後（反映内容）：</span>注文住宅の相談・ハウスメーカーご紹介は完全無料であることを明確にしつつ、土地や建売・中古物件のご購入（不動産売買仲介）時には法令所定の仲介手数料が発生する旨を注記・明確化しました。</p>
+            </div>
           </div>
         </div>
 
@@ -420,7 +460,7 @@
         </h2>
         <p class="text-xs sm:text-sm text-zinc-500 max-w-xl mx-auto leading-relaxed font-light">
           料金体系やご相談の流れ、安心してご利用いただくためのサポート体制をご説明します。<br class="hidden sm:inline">
-          （※以下は「完全無料モデル」を想定したサンプル構成です）
+          <del class="diff-del">（※以下は「完全無料モデル」を想定したサンプル構成です）</del><ins class="diff-ins">（注文住宅のご紹介・ご相談は完全無料／土地・物件売買は所定の仲介手数料が発生します）</ins>
         </p>
       </div>
 
@@ -434,7 +474,7 @@
             提携建築会社様からの紹介費用（広告費）で運営されています
           </h3>
           <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-            sumaitoは、提携している各ハウスメーカー・工務店様より、成約に至った際のご紹介料・広告費を頂戴して運営しております。そのため、ご相談者様から相談料や仲介料などの費用をいただくことは一切ございません。
+            sumaitoは、提携している各ハウスメーカー・工務店様より、成約に至った際のご紹介料・広告費を頂戴して運営しております。<del class="diff-del">そのため、ご相談者様から相談料や仲介料などの費用をいただくことは一切ございません。</del><ins class="diff-ins">そのため、注文住宅のご相談や建築会社のご紹介に関して、ご相談者様から費用をいただくことは一切ございません。<br class="hidden sm:inline"><span class="text-[11px] text-zinc-500 mt-1 block font-normal">※土地探しや建売・中古物件のご購入（不動産売買仲介）の際は、宅地建物取引業法に基づき所定の仲介手数料が発生いたします。</span></ins>
           </p>
         </div>
       </div>
@@ -449,10 +489,10 @@
               01
             </div>
             <h4 class="text-base font-bold text-zinc-900 tracking-wide mb-3">
-              何度相談しても完全無料
+              <del class="diff-del">何度相談しても完全無料</del><ins class="diff-ins">注文住宅の相談・ご紹介は無料</ins>
             </h4>
             <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-              最初のご相談から、建築会社のご紹介、打ち合わせへの同席・アドバイス、お引渡しまで、追加料金等は一切発生いたしません。
+              <del class="diff-del">最初のご相談から、建築会社のご紹介、打ち合わせへの同席・アドバイス、お引渡しまで、追加料金等は一切発生いたしません。</del><ins class="diff-ins">住まいのご相談から、建築会社のご紹介、打ち合わせへの同席・アドバイスまで、お客様への費用請求は一切ございません（※土地・建売・中古売買時の仲介手数料を除く）。</ins>
             </p>
           </div>
         </div>
@@ -501,107 +541,29 @@
       </div>
 
     </div>
-  </section>
-
-
   <!-- ==============================================
-       7. ご紹介事例（2事例・詳細リンクなし）
+       7. ご紹介事例・お客様の声（非表示対応）
   =============================================== -->
-  <section id="cases" class="py-24 md:py-32 bg-zinc-50 border-t border-zinc-100">
-    <div class="max-w-6xl mx-auto px-6 sm:px-8">
-      <div class="text-center mb-16">
-        
-        <!-- レビュー用 確認ポイント注記 -->
-        <div class="review-tip bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs text-amber-900 mb-10 max-w-3xl mx-auto flex items-start space-x-3 text-left">
-          <span class="text-base leading-none">💡</span>
-          <div class="space-y-1 font-light">
-            <span class="font-bold text-amber-950 block">【赤入れポイント：建築実例・写真素材の差し替え（撮影も可）】</span>
-            <p class="leading-relaxed">平屋とモダン2階建てのモデル実例です。実際に紹介・成約された物件の写真（外観・内観）がございましたら差し替えいたします。完成写真だけでなく「ご家族が寛ぐ日常スナップ」や「相談風景」など写真はあるだけ大歓迎です（手元になければ撮影にお伺いすることも可能です ※別途費用・お見積り）。</p>
-          </div>
+  <!-- 修正反映済み 確認ポイント注記 -->
+  <div class="review-tip max-w-4xl mx-auto px-6 sm:px-8 my-8">
+    <div class="bg-emerald-50/90 border border-emerald-300 rounded-2xl p-5 text-xs text-emerald-950 shadow-sm flex items-start space-x-3 text-left">
+      <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-600 text-white text-[11px] font-bold shrink-0 mt-0.5">✓</span>
+      <div class="space-y-1.5 font-normal w-full">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="font-bold text-emerald-900 text-sm">【修正反映済み：ご紹介事例・お客様の声セクションの非表示対応】</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-200">Updated</span>
         </div>
-
-        <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Cases</span>
-        <h2 class="font-mincho text-2xl md:text-4xl font-normal tracking-widest text-zinc-900">ご紹介事例</h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12">
-        <!-- 事例 1: 中庭平屋 -->
-        <div class="group flex flex-col">
-          <div class="aspect-[16/9] rounded-2xl overflow-hidden mb-6 bg-zinc-100 border border-zinc-100">
-            <img src="images/case_study_courtyard.jpg" alt="中庭のある平屋住宅" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-          </div>
-          <h3 class="text-lg font-bold text-zinc-900 tracking-wider mb-2">中庭の木々を愛でる、光と風が通り抜ける平屋の住まい</h3>
-          <p class="text-xs sm:text-sm text-zinc-500 leading-relaxed font-light">
-            敷地面積 78坪 / 延床面積 28坪。プライバシーを守りつつ、どの部屋からも緑を感じられる設計。住宅ローンと建築費のバランスを徹底追求した実例です。
-          </p>
-        </div>
-
-        <!-- 事例 2: 吹き抜けスケルトン階段 -->
-        <div class="group flex flex-col">
-          <div class="aspect-[16/9] rounded-2xl overflow-hidden mb-6 bg-zinc-100 border border-zinc-100">
-            <img src="images/hero_slide_02.jpg" alt="吹き抜けリビング" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-          </div>
-          <h3 class="text-lg font-bold text-zinc-900 tracking-wider mb-2">何十年経っても飽きのこない、洗練されたシンプルモダン空間</h3>
-          <p class="text-xs sm:text-sm text-zinc-500 leading-relaxed font-light">
-            敷地面積 62坪 / 延床面積 32坪。スリット天窓と鉄骨スケルトン階段による開放的なリビング。メンテナンス性と断熱性能にも配慮したこだわりの邸宅。
-          </p>
+        <div class="bg-white/80 rounded-lg p-3 border border-emerald-200/70 space-y-1.5 text-[11px] leading-relaxed">
+          <p class="text-zinc-500"><span class="font-semibold text-zinc-700">ご要望：</span>「紹介事例、お客様の声はまだなくて載せれないそうなのでセクションごと削除して（実績ができたら後日載せる可能性あり）」</p>
+          <p class="text-emerald-950 font-medium"><span class="font-semibold text-emerald-700">修正後（反映内容）：</span>「ご紹介事例」および「ご紹介したお客様の声」の2セクション、ならびにヘッダー・フッター・モバイルメニューのナビゲーションリンクを非表示化いたしました。今後実績ができた際には、該当コードをスムーズに再有効化（掲載）できるよう準備しております。</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
 
   <!-- ==============================================
-       8. ご紹介したお客様の声
-  =============================================== -->
-  <section class="py-20 md:py-28 bg-zinc-50 border-y border-zinc-100">
-    <div class="max-w-5xl mx-auto px-6 sm:px-8">
-      <div class="text-center mb-16">
-        
-        <!-- レビュー用 確認ポイント注記 -->
-        <div class="review-tip bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs text-amber-900 mb-10 max-w-3xl mx-auto flex items-start space-x-3 text-left">
-          <span class="text-base leading-none">💡</span>
-          <div class="space-y-1 font-light">
-            <span class="font-bold text-amber-950 block">【赤入れポイント：相談者ペルソナ・実際のエピソード】</span>
-            <p class="leading-relaxed">松山市30代ファミリー・東温市20代ご夫婦の仮説です。実際のお客様の「当初の悩み」や「喜んでくれたこと」を箇条書きで教えていただければ、こちらで自然なエピソード文章に仕上げます。</p>
-          </div>
-        </div>
-
-        <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Voice</span>
-        <h2 class="font-mincho text-2xl md:text-3xl font-normal tracking-widest text-zinc-900">ご紹介したお客様の声</h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- お客様の声 1 -->
-        <div class="p-8 rounded-2xl bg-white border border-zinc-200/80 shadow-sm space-y-4">
-          <div class="flex items-center justify-between border-b border-zinc-100 pb-3">
-            <span class="font-bold text-zinc-900 text-sm">松山市在住・30代ご夫婦（お子様1人）</span>
-            <span class="text-xs text-zinc-400">愛媛県</span>
-          </div>
-          <h3 class="font-bold text-zinc-800 text-sm">「良いところだけでなく注意点も教えてくれた」のが信頼の決め手でした</h3>
-          <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-            展示場を回るうちに何が良いか分からなくなり相談しました。自分たちの年収に合った適正予算と、各ハウスメーカーの見積もりの見方を分かりやすく解説していただき、納得のいく会社と出会えました。
-          </p>
-        </div>
-
-        <!-- お客様の声 2 -->
-        <div class="p-8 rounded-2xl bg-white border border-zinc-200/80 shadow-sm space-y-4">
-          <div class="flex items-center justify-between border-b border-zinc-100 pb-3">
-            <span class="font-bold text-zinc-900 text-sm">東温市在住・20代後半ご夫婦</span>
-            <span class="text-xs text-zinc-400">愛媛県</span>
-          </div>
-          <h3 class="font-bold text-zinc-800 text-sm">新築か中古リノベかで迷っていた私たちに最適な答えをくれました</h3>
-          <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-            土地探しから住宅ローンの組み方まで親身に相談に乗っていただき、結果として予算内で大満足の住まいが完成しました。強引な営業が一切ない安心感が本当に心強かったです。
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ==============================================
-       9. ご紹介までの流れ & LINEで無料相談
+       8. ご紹介までの流れ & LINEで無料相談
   =============================================== -->
   <section id="contact" class="py-24 md:py-32 bg-white">
     <div class="max-w-4xl mx-auto px-6 sm:px-8">
@@ -610,10 +572,10 @@
       <div class="text-center mb-16 sm:mb-20">
         
         <!-- レビュー用 確認ポイント注記 -->
-        <div class="review-tip bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs text-amber-900 mb-10 max-w-2xl mx-auto flex items-start space-x-3 text-left">
+        <div class="review-tip bg-rose-50/90 border border-rose-200/80 rounded-xl p-4 text-xs text-rose-900 mb-10 max-w-2xl mx-auto flex items-start space-x-3 text-left">
           <span class="text-base leading-none">💡</span>
           <div class="space-y-1 font-light">
-            <span class="font-bold text-amber-950 block">【赤入れポイント：ご相談からご紹介までの実務ステップ】</span>
+            <span class="font-bold text-rose-950 block">【赤入れポイント：ご相談からご紹介までの実務ステップ】</span>
             <p class="leading-relaxed">STEP 01: LINE登録 → STEP 02: ヒアリング → STEP 03: ご紹介の3ステップです。実際の対面/オンライン面談の形式や所要時間など、実務の流れに合わせて微調整が可能です。</p>
           </div>
         </div>
@@ -748,10 +710,10 @@
       <div class="text-center mb-16">
         
         <!-- レビュー用 確認ポイント注記 -->
-        <div class="review-tip bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs text-amber-900 mb-10 max-w-2xl mx-auto flex items-start space-x-3 text-left">
+        <div class="review-tip bg-rose-50/90 border border-rose-200/80 rounded-xl p-4 text-xs text-rose-900 mb-10 max-w-2xl mx-auto flex items-start space-x-3 text-left">
           <span class="text-base leading-none">💡</span>
           <div class="space-y-1 font-light">
-            <span class="font-bold text-amber-950 block">【赤入れポイント：相談前の頻出質問トップ3】</span>
+            <span class="font-bold text-rose-950 block">【赤入れポイント：相談前の頻出質問トップ3】</span>
             <p class="leading-relaxed">Q1: 料金・仕組み / Q2: 初期検討段階での相談可否 / Q3: お断り代行。日頃お客様から実際によく受ける質問や不安があれば、口頭でお答えしている内容のままで大丈夫ですのでお気軽にお知らせください（Q&Aの文章化はこちらで行います）。</p>
           </div>
         </div>
@@ -771,7 +733,7 @@
           </button>
           <div class="faq-answer hidden px-6 pb-6 pt-2 bg-white border-t border-zinc-100">
             <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
-              <span class="font-en font-bold text-zinc-400 mr-3">A1</span>ご相談は完全無料です。提携している優良工務店・ハウスメーカー様からの紹介手数料で運営しているため、施主様から相談料や追加手数料をいただくことは一切ございません。建築会社側で見積もりに上乗せされることもありませんのでご安心ください。
+              <span class="font-en font-bold text-zinc-400 mr-3">A1</span><del class="diff-del">ご相談は完全無料です。提携している優良工務店・ハウスメーカー様からの紹介手数料で運営しているため、施主様から相談料や追加手数料をいただくことは一切ございません。建築会社側で見積もりに上乗せされることもありませんのでご安心ください。</del><ins class="diff-ins">注文住宅のご相談やハウスメーカー・工務店のご紹介は完全無料です。提携各社様からの紹介料・広告費で運営しているため、施主様から紹介料等の費用をいただくことは一切ございません（建築会社の見積もりに上乗せされることもありません）。なお、土地探しや建売・中古物件のご購入（不動産売買仲介）の際は、宅建業法に基づく所定の仲介手数料が発生いたします。諸費用も含めた資金シミュレーションを事前にお出ししますので、安心してご相談ください。</ins>
             </p>
           </div>
         </div>
@@ -820,7 +782,7 @@
         後悔しない住まい選びは、<br class="hidden sm:inline">正しい情報を知ることから。
       </h2>
       <p class="text-xs md:text-sm tracking-widest text-zinc-400 max-w-lg mx-auto mb-10 leading-loose">
-        愛媛での住まい選びに役立つ最新情報や注意点を日々配信中。<br class="hidden sm:inline">購入相談や物件探しの第一歩として、お気軽にお声がけください。
+        <del class="diff-del">愛媛での</del><ins class="diff-ins">後悔しない</ins>住まい選びに役立つ最新情報や注意点を日々配信中。<br class="hidden sm:inline">購入相談や物件探しの第一歩として、お気軽にお声がけください。
       </p>
       <div>
         <a href="https://www.instagram.com/sumaito_house?stkn=cmk1aGNqbGpiMTYz" target="_blank" rel="noopener noreferrer"
@@ -843,7 +805,7 @@
       <!-- ロゴ -->
       <a href="#" class="inline-flex flex-col items-center">
         <span class="font-en text-2xl font-bold tracking-widest text-zinc-900">sumaito</span>
-        <span class="text-[10px] tracking-wider text-zinc-400 font-normal -mt-1">愛媛の住まいの選択肢</span>
+        <span class="text-[10px] tracking-wider text-zinc-400 font-normal -mt-1"><del class="diff-del">愛媛の住まいの選択肢</del><ins class="diff-ins">後悔しない住まいの選択肢</ins></span>
       </a>
 
       <!-- ナビゲーションリンク -->
@@ -851,7 +813,6 @@
         <a href="#philosophy" class="hover:text-zinc-900 transition-colors">理念</a>
         <a href="#service" class="hover:text-zinc-900 transition-colors">サービス</a>
         <a href="#why-free" class="hover:text-zinc-900 transition-colors">sumaitoの仕組み</a>
-        <a href="#cases" class="hover:text-zinc-900 transition-colors">ご紹介事例</a>
         <a href="#contact" class="hover:text-zinc-900 transition-colors">ご紹介の流れ</a>
         <a href="#faq" class="hover:text-zinc-900 transition-colors">よくある質問</a>
         <a href="company.html" class="hover:text-zinc-900 transition-colors">運営会社について</a>

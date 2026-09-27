@@ -118,24 +118,24 @@
             <div class="p-7 sm:p-8">
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="text-[11px] px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-600 font-medium">住宅・工務店紹介</span>
-                <span class="text-[11px] px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-600 font-medium">愛媛エリア特化</span>
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-600 font-medium">中立な住宅相談</span>
                 <span class="text-[11px] px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-600 font-medium">公式LINE相談誘導</span>
                 <span class="text-[11px] px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-600 font-medium">下層ページ完備</span>
               </div>
 
               <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light mb-6">
-                愛媛で理想の住まいを建てる施主と優良工務店・ハウスメーカーを中立につなぐ住宅相談サービスLP。カナマルHOUSEをリファレンスに、4つの提供価値枠、無料の仕組み、ご紹介ステップ（丸型アイコン）の枠組みを実装。
+                理想の住まいを建てる施主と優良工務店・ハウスメーカーを中立につなぐ住宅相談サービスLP。カナマルHOUSEをリファレンスに、4つの提供価値枠、無料の仕組み、ご紹介ステップ（丸型アイコン）の枠組みを実装。
               </p>
 
-              <!-- 成果物リンク（枠組み版 / 初期サンプル / 下層ページ） -->
+              <!-- 成果物リンク（本番クリーン版 / 確認レビュー版 / 枠組み版 / 下層ページ） -->
               <div class="space-y-3 pt-4 border-t border-zinc-100">
                 <span class="text-[11px] font-mono text-zinc-400 uppercase tracking-wider block">Deliverables & Variants</span>
                 
-                <!-- 枠組み版LPボタン -->
+                <!-- 本番クリーン版LPボタン -->
                 <a href="sumaito/index.html"
                    class="flex items-center justify-between p-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white transition-all duration-200 group/btn shadow-sm">
                   <div class="flex items-center space-x-3">
-                    <span class="text-xs font-medium tracking-widest">枠組み版 LP（カナマルHOUSE最新構成）</span>
+                    <span class="text-xs font-medium tracking-widest">最新版 LP（本番クリーン表示）</span>
                     <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">sumaito/</span>
                   </div>
                   <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -143,12 +143,24 @@
                   </svg>
                 </a>
 
-                <!-- 仮説ドラフト版LPボタン -->
+                <!-- 確認・レビュー用LPボタン -->
                 <a href="sumaito_sample/index.html"
-                   class="flex items-center justify-between p-3.5 rounded-xl bg-zinc-50 hover:bg-zinc-100 text-zinc-700 border border-zinc-200 transition-all duration-200 group/btn">
+                   class="flex items-center justify-between p-3.5 rounded-xl bg-emerald-50/70 hover:bg-emerald-50 text-zinc-800 border border-emerald-200/80 transition-all duration-200 group/btn">
                   <div class="flex items-center space-x-3">
-                    <span class="text-xs font-medium">確認サンプル版（デザイン・文面レビュー用）</span>
-                    <span class="text-[10px] font-mono text-zinc-400">sumaito_sample/</span>
+                    <span class="text-xs font-medium">確認・レビュー用 LP（修正箇所・注記ハイライト付き）</span>
+                    <span class="text-[10px] font-mono text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded">sumaito_sample/</span>
+                  </div>
+                  <svg class="w-4 h-4 text-emerald-600 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+
+                <!-- 枠組み版（汎用テンプレート）LPボタン -->
+                <a href="_templates/housing_lp_frame/index.html"
+                   class="flex items-center justify-between p-3 rounded-xl bg-zinc-50 hover:bg-zinc-100 text-zinc-600 border border-zinc-200 transition-all duration-200 group/btn">
+                  <div class="flex items-center space-x-3">
+                    <span class="text-xs font-normal">住宅系LP枠組みテンプレート（汎用枠組み版）</span>
+                    <span class="text-[10px] font-mono text-zinc-400">_templates/housing_lp_frame/</span>
                   </div>
                   <svg class="w-4 h-4 text-zinc-400 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -172,7 +184,7 @@
           <!-- カードフッター情報 -->
           <div class="bg-zinc-50/70 border-t border-zinc-100 px-7 py-3.5 flex items-center justify-between text-[11px] text-zinc-400 font-mono">
             <span>Stack: HTML5 / Tailwind / JS</span>
-            <span>Client: sumaito (愛媛)</span>
+            <span>Client: sumaito</span>
           </div>
 
         </article>

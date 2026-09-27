@@ -4,6 +4,8 @@
   "private": true,
   "description": "Sumaito LP & Client Review Portal",
   "scripts": {
+    "sync": "node scripts/sync-clean.mjs",
+    "init-project": "node scripts/init-project.mjs",
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:report": "playwright show-report"
