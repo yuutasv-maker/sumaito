@@ -191,36 +191,107 @@
 
 
         <!-- ==============================================
-             PROJECT 02: Coming Soon / 新規案件スロット
+             PROJECT 02: いけだ屋（ikedaya）
         =============================================== -->
-        <article class="bg-zinc-100/50 border-2 border-dashed border-zinc-300 rounded-3xl p-8 sm:p-10 flex flex-col justify-between items-center text-center min-h-[500px]">
+        <article class="bg-white border border-zinc-200 rounded-3xl overflow-hidden hover:border-zinc-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
           
-          <div class="flex flex-col items-center justify-center my-auto">
-            <div class="w-16 h-16 rounded-2xl bg-zinc-200/80 border border-zinc-300 flex items-center justify-center text-zinc-400 mb-6">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-              </svg>
-            </div>
-            
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-mono tracking-wide bg-zinc-200 text-zinc-600 font-medium mb-4">
-              PROJECT #02
-            </span>
-            
-            <h3 class="font-mincho text-2xl font-medium tracking-wider text-zinc-700 mb-3">
-              次期制作案件スロット
-            </h3>
-            
-            <p class="text-xs sm:text-sm text-zinc-400 max-w-sm leading-relaxed mb-6 font-light">
-              新規LP・Webサイト制作案件に着手次第、ディレクトリを追加してここにプレビューカードを配置・拡張できます。
-            </p>
+          <div>
+            <!-- アイキャッチ画像プレビュー -->
+            <div class="relative h-60 sm:h-72 w-full overflow-hidden bg-zinc-900">
+              <img src="ikedaya/images/hero_karaage_lemon.jpg" alt="いけだ屋 LPプレビュー"
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
+              <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/20 to-transparent"></div>
+              
+              <!-- バッジ・メタ情報 -->
+              <div class="absolute top-5 left-5 right-5 flex items-center justify-between">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-mono font-medium tracking-wide bg-white/90 backdrop-blur-md text-zinc-900 shadow-sm">
+                  PROJECT #02
+                </span>
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-mono tracking-wide bg-emerald-500/90 text-white backdrop-blur-md font-medium">
+                  ● Review Ready
+                </span>
+              </div>
 
-            <span class="text-[11px] font-mono text-zinc-400 px-4 py-2 rounded-xl bg-white/60 border border-zinc-200">
-              Ready for Next Project
-            </span>
+              <!-- 案件名（画像内） -->
+              <div class="absolute bottom-5 left-6 right-6 text-white">
+                <span class="text-[11px] font-mono tracking-widest text-amber-300 uppercase block mb-1">Food Truck &amp; Craft Lemon Sour</span>
+                <h3 class="font-mincho text-2xl sm:text-3xl font-medium tracking-wider text-white">
+                  いけだ屋（ikedaya）
+                </h3>
+              </div>
+            </div>
+
+            <!-- 案件詳細説明 -->
+            <div class="p-7 sm:p-8">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-amber-50 text-amber-800 font-medium border border-amber-200">キッチンカー</span>
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-600 font-medium">唐揚げ＆レモンサワー</span>
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-rose-50 text-rose-700 font-medium border border-rose-200">Instagram最新情報集約</span>
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-600 font-medium">ケータリング受付</span>
+              </div>
+
+              <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light mb-6">
+                愛媛・松山を中心に巡回する唐揚げとレモンサワー専門キッチンカーLP。出店スケジュール表をInstagram（ストーリーズ・投稿）集約型へ刷新し、フォロワー限定特典やケータリング相談窓口を最適化。
+              </p>
+
+              <!-- 成果物リンク（本番クリーン版 / 確認レビュー版 / 枠組み版） -->
+              <div class="space-y-3 pt-4 border-t border-zinc-100">
+                <span class="text-[11px] font-mono text-zinc-400 uppercase tracking-wider block">Deliverables &amp; Variants</span>
+                
+                <!-- 本番クリーン版LPボタン -->
+                <a href="ikedaya/index.html"
+                   class="flex items-center justify-between p-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white transition-all duration-200 group/btn shadow-sm">
+                  <div class="flex items-center space-x-3">
+                    <span class="text-xs font-medium tracking-widest">最新版 LP（本番クリーン表示）</span>
+                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">ikedaya/</span>
+                  </div>
+                  <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </a>
+
+                <!-- 確認・レビュー用LPボタン -->
+                <a href="ikedaya_sample/index.html"
+                   class="flex items-center justify-between p-3.5 rounded-xl bg-amber-50/70 hover:bg-amber-50 text-zinc-800 border border-amber-200/80 transition-all duration-200 group/btn">
+                  <div class="flex items-center space-x-3">
+                    <span class="text-xs font-medium">確認・レビュー用 LP（赤入れ注記ハイライト付き）</span>
+                    <span class="text-[10px] font-mono text-amber-800 bg-amber-100/80 px-2 py-0.5 rounded">ikedaya_sample/</span>
+                  </div>
+                  <svg class="w-4 h-4 text-amber-600 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+
+                <!-- 枠組み版 LPボタン -->
+                <a href="ikedaya_frame/index.html"
+                   class="flex items-center justify-between p-3 rounded-xl bg-zinc-50 hover:bg-zinc-100 text-zinc-600 border border-zinc-200 transition-all duration-200 group/btn">
+                  <div class="flex items-center space-x-3">
+                    <span class="text-xs font-normal">初期枠組み版 LP（ワイヤーフレーム）</span>
+                    <span class="text-[10px] font-mono text-zinc-400">ikedaya_frame/</span>
+                  </div>
+                  <svg class="w-4 h-4 text-zinc-400 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+
+                <!-- 設計ドキュメント直通リンク -->
+                <div class="grid grid-cols-2 gap-2 pt-1">
+                  <a href="ikedaya/REQUIREMENTS_SPEC.md" target="_blank" class="text-center py-2.5 px-3 rounded-lg border border-zinc-200 hover:border-zinc-400 text-zinc-600 hover:text-zinc-900 text-xs transition-colors">
+                    要件定義書 ↗
+                  </a>
+                  <a href="ikedaya/HEARING_SHEET.md" target="_blank" class="text-center py-2.5 px-3 rounded-lg border border-zinc-200 hover:border-zinc-400 text-zinc-600 hover:text-zinc-900 text-xs transition-colors">
+                    ヒアリングシート ↗
+                  </a>
+                </div>
+
+              </div>
+            </div>
           </div>
 
-          <div class="w-full pt-6 border-t border-dashed border-zinc-200 text-[11px] text-zinc-400 font-mono">
-            Directory structure: /project-name/
+          <!-- カードフッター情報 -->
+          <div class="bg-zinc-50/70 border-t border-zinc-100 px-7 py-3.5 flex items-center justify-between text-[11px] text-zinc-400 font-mono">
+            <span>Stack: HTML5 / Tailwind / JS</span>
+            <span>Client: いけだ屋（@karaage_ikedaya）</span>
           </div>
 
         </article>

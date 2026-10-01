@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>【初期枠組み版】いけだ屋｜キッチンカー LPワイヤーフレーム</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#FACC15',
+              dark: '#1C1917',
+              cream: '#FEFDF8',
+              coral: '#F97316',
+            }
+          },
+          fontFamily: {
+            kiwi: ['"Kiwi Maru"', 'serif'],
+            rubik: ['"Rubik"', 'sans-serif'],
+            sans: ['"Hiragino Sans"', '"Meiryo"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;600&family=Rubik:ital,wght@0,600;0,800;0,900;1,900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .box-shadow-street { box-shadow: 4px 4px 0px #1C1917; }
+    .box-shadow-street-lg { box-shadow: 6px 6px 0px #1C1917; }
+    .box-shadow-street-yellow { box-shadow: 4px 4px 0px #FACC15; }
+  </style>
+</head>
+<body class="bg-brand-cream text-stone-800 font-sans antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b-2 border-brand-dark">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-brand-yellow border-2 border-brand-dark rounded-xl flex items-center justify-center font-rubik font-black text-xl box-shadow-street">
+          ロ
+        </div>
+        <div class="flex flex-column leading-tight">
+          <span class="font-kiwi font-bold text-xl text-brand-dark">【ロゴ・屋号】</span>
+          <span class="text-[10px] font-kiwi font-medium text-stone-500">【サブタイトル・業態名】</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-7 font-kiwi font-medium text-sm text-stone-700">
+        <a href="#about" class="hover:text-brand-coral">こだわり</a>
+        <a href="#instagram" class="hover:text-brand-coral text-brand-coral font-bold flex items-center gap-1">
+          <i data-lucide="instagram" class="w-4 h-4"></i> 最新情報
+        </a>
+        <a href="#manager" class="hover:text-brand-coral">店長紹介</a>
+        <a href="#menu" class="hover:text-brand-coral">メニュー</a>
+        <a href="#faq" class="hover:text-brand-coral">よくある質問</a>
+        <a href="#catering" class="hover:text-brand-coral">ケータリング</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://www.instagram.com/karaage_ikedaya/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 text-white font-kiwi font-bold text-xs px-4 py-2.5 rounded-full shadow">
+          <i data-lucide="instagram" class="w-4 h-4"></i>
+          <span>Instagramを見る</span>
+        </a>
+        <button id="menuToggle" aria-label="メニューを開閉" class="md:hidden p-2 text-brand-dark">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-b-2 border-brand-dark px-6 py-6 space-y-4 font-kiwi text-base">
+      <a href="#about" class="block py-1">こだわり</a>
+      <a href="#instagram" class="block py-1 text-brand-coral font-bold flex items-center gap-1.5">
+        <i data-lucide="instagram" class="w-4 h-4"></i> 最新情報（Instagram）
+      </a>
+      <a href="#manager" class="block py-1">店長紹介</a>
+      <a href="#menu" class="block py-1">メニュー</a>
+      <a href="#faq" class="block py-1">よくある質問</a>
+      <a href="#catering" class="block py-1">出店・ケータリング</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[90vh] flex items-center justify-center bg-brand-dark text-white overflow-hidden py-24">
+    <div class="absolute inset-0 bg-cover bg-center opacity-45" style="background-image: url('images/hero_karaage_lemon.jpg');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-brand-dark/60"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <div class="inline-block bg-brand-yellow text-brand-dark font-rubik font-black text-xs sm:text-sm px-4 py-1.5 rounded-full border-2 border-brand-dark box-shadow-street -rotate-1 mb-6">
+        FOOD TRUCK IN EHIME &amp; MATSUYAMA
+      </div>
+
+      <h1 class="font-kiwi font-bold text-3xl sm:text-5xl md:text-6xl leading-tight sm:leading-snug mb-6 text-white drop-shadow-md">
+        【ここにメインキャッチコピーを書く】<br>
+        <span class="text-brand-yellow">【強調ワード】</span>【サブフレーズ】
+      </h1>
+
+      <p class="font-kiwi text-stone-200 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed mb-10">
+        【ここにサービスの導入リード文を書く。愛媛・松山を巡回するキッチンカーのコンセプトや、看板商品への想いを記載します。】
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#instagram" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-yellow text-brand-dark font-kiwi font-bold text-base px-8 py-4 rounded-xl border-2 border-brand-dark box-shadow-street">
+          <i data-lucide="instagram" class="w-5 h-5 text-brand-dark"></i>
+          <span>【最新の出店情報をチェック】</span>
+        </a>
+        <a href="#menu" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-stone-900/80 text-white font-kiwi font-medium text-base px-8 py-4 rounded-xl border-2 border-stone-600">
+          <span>【看板メニューを見る】</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Concept Section -->
+  <section class="py-20 bg-brand-cream border-b-2 border-brand-dark" id="about">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="relative order-2 md:order-1">
+          <div class="border-2 border-brand-dark rounded-2xl overflow-hidden box-shadow-street-lg bg-stone-900 rotate-1">
+            <img src="images/truck_exterior.jpg" alt="キッチンカー外観" class="w-full h-auto object-cover">
+          </div>
+        </div>
+
+        <div class="order-1 md:order-2 space-y-6">
+          <div class="inline-block font-rubik font-bold text-xs text-brand-coral uppercase tracking-wider">
+            OUR PHILOSOPHY
+          </div>
+          <h2 class="font-kiwi font-bold text-2xl sm:text-3xl text-brand-dark leading-snug">
+            【ここにこだわりの見出しを書く】
+          </h2>
+          <div class="font-kiwi text-stone-700 space-y-4 text-sm sm:text-base leading-relaxed">
+            <p>【ここにこだわり本文段落1を書く。店舗を持たないキッチンカーならではの強みや、食材選びについて記載します。】</p>
+            <p>【ここにこだわり本文段落2を書く。調理法や味付け、揚げたてへのこだわりを記載します。】</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram / Latest Schedule Section -->
+  <section class="py-20 bg-stone-900 text-white border-b-2 border-brand-dark" id="instagram">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-block font-rubik font-black text-xs text-brand-yellow uppercase tracking-widest mb-2">
+          WHERE TO FIND US
+        </span>
+        <h2 class="font-kiwi font-bold text-3xl sm:text-4xl text-white mb-4">
+          【出店情報・完売状況はInstagramで発信中！】
+        </h2>
+        <p class="font-kiwi text-stone-300 text-sm sm:text-base">
+          【出店場所や営業時間、完売速報はInstagramで確認していただく案内文を記載します。】
+        </p>
+      </div>
+
+      <div class="bg-stone-800 border-2 border-stone-700 rounded-3xl p-6 sm:p-10 box-shadow-street-yellow max-w-3xl mx-auto">
+        <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+          <div class="w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 shrink-0 shadow-lg">
+            <div class="w-full h-full rounded-full bg-brand-dark flex items-center justify-center text-white">
+              <i data-lucide="instagram" class="w-12 h-12 text-brand-yellow"></i>
+            </div>
+          </div>
+          <div class="text-center sm:text-left space-y-2 flex-1">
+            <span class="font-rubik font-bold text-xl text-white">@karaage_ikedaya</span>
+            <p class="font-kiwi font-medium text-stone-300 text-sm">【アカウント名・キャッチコピー】</p>
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <a href="https://www.instagram.com/karaage_ikedaya/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 text-white font-kiwi font-bold text-base px-8 py-4 rounded-2xl shadow-xl">
+            <i data-lucide="instagram" class="w-6 h-6"></i>
+            <span>最新出店情報をInstagramで確認する</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Owner Section -->
+  <section class="py-20 bg-white border-b-2 border-brand-dark" id="manager">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <div class="inline-block font-rubik font-bold text-xs text-brand-coral uppercase tracking-wider">
+            MEET THE OWNER
+          </div>
+          <h2 class="font-kiwi font-bold text-3xl text-brand-dark">
+            【店長紹介・メッセージ】
+          </h2>
+          <div class="font-kiwi text-stone-700 space-y-4 text-sm sm:text-base leading-relaxed">
+            <p>【ここに店長からの自己紹介文を書く。創業への想いやお客様へのメッセージを記載します。】</p>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="border-2 border-brand-dark rounded-2xl overflow-hidden box-shadow-street-lg bg-stone-900 -rotate-1 max-w-md mx-auto">
+            <img src="images/shop_owner.jpg" alt="店長ポートレート" class="w-full h-auto aspect-square object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="py-20 bg-brand-cream border-b-2 border-brand-dark" id="menu">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="inline-block font-rubik font-black text-xs text-brand-coral uppercase tracking-widest mb-2">
+          SPECIAL MENU
+        </span>
+        <h2 class="font-kiwi font-bold text-3xl sm:text-4xl text-brand-dark mb-4">
+          【おすすめメニュー（4品）】
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white border-2 border-brand-dark rounded-2xl overflow-hidden box-shadow-street p-5">
+          <img src="images/menu_karaage_classic.jpg" alt="メニュー1" class="w-full aspect-square object-cover rounded-xl mb-4 border border-brand-dark">
+          <h3 class="font-kiwi font-bold text-lg text-brand-dark">【メニュー名１】</h3>
+          <p class="font-kiwi text-xs text-stone-600 mt-2">【メニュー説明文１】</p>
+        </div>
+        <div class="bg-white border-2 border-brand-dark rounded-2xl overflow-hidden box-shadow-street p-5">
+          <img src="images/menu_karaage_shio_lemon.jpg" alt="メニュー2" class="w-full aspect-square object-cover rounded-xl mb-4 border border-brand-dark">
+          <h3 class="font-kiwi font-bold text-lg text-brand-dark">【メニュー名２】</h3>
+          <p class="font-kiwi text-xs text-stone-600 mt-2">【メニュー説明文２】</p>
+        </div>
+        <div class="bg-white border-2 border-brand-dark rounded-2xl overflow-hidden box-shadow-street p-5">
+          <img src="images/menu_karaage_nanban.jpg" alt="メニュー3" class="w-full aspect-square object-cover rounded-xl mb-4 border border-brand-dark">
+          <h3 class="font-kiwi font-bold text-lg text-brand-dark">【メニュー名３】</h3>
+          <p class="font-kiwi text-xs text-stone-600 mt-2">【メニュー説明文３】</p>
+        </div>
+        <div class="bg-white border-2 border-brand-dark rounded-2xl overflow-hidden box-shadow-street p-5">
+          <img src="images/menu_lemon_sour.jpg" alt="メニュー4" class="w-full aspect-square object-cover rounded-xl mb-4 border border-brand-dark">
+          <h3 class="font-kiwi font-bold text-lg text-brand-dark">【ドリンクメニュー名】</h3>
+          <p class="font-kiwi text-xs text-stone-600 mt-2">【ドリンク説明文】</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-white border-b-2 border-brand-dark" id="faq">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-kiwi font-bold text-3xl text-brand-dark">よくある質問</h2>
+      </div>
+      <div class="space-y-4 font-kiwi">
+        <div class="p-5 bg-brand-cream border-2 border-brand-dark rounded-xl box-shadow-street">
+          <p class="font-bold">Q. 【質問内容１】</p>
+          <p class="text-sm text-stone-700 mt-2">A. 【回答内容１】</p>
+        </div>
+        <div class="p-5 bg-brand-cream border-2 border-brand-dark rounded-xl box-shadow-street">
+          <p class="font-bold">Q. 【質問内容２】</p>
+          <p class="text-sm text-stone-700 mt-2">A. 【回答内容２】</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catering Section -->
+  <section class="py-20 bg-brand-yellow text-brand-dark border-b-2 border-brand-dark" id="catering">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-6">
+          <h2 class="font-kiwi font-bold text-3xl text-brand-dark">
+            【ケータリング・出店依頼の見出し】
+          </h2>
+          <p class="font-kiwi text-stone-800 text-sm leading-relaxed">
+            【イベント出店、福利厚生、フェス出店のご案内文】
+          </p>
+          <div>
+            <a href="https://www.instagram.com/karaage_ikedaya/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand-dark text-white font-kiwi font-bold px-8 py-4 rounded-xl border-2 border-brand-dark box-shadow-street">
+              <span>出店のご相談はこちら（Instagram DM）</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="border-2 border-brand-dark rounded-2xl overflow-hidden box-shadow-street-lg bg-stone-900 rotate-2">
+            <img src="images/catering_scene.jpg" alt="ケータリング風景" class="w-full h-auto object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-dark text-stone-400 py-16 font-kiwi text-center text-sm">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+      <div class="font-kiwi font-bold text-2xl text-white">【いけだ屋】</div>
+      <p class="text-xs">&copy; 2026 いけだ屋. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

@@ -144,3 +144,38 @@ test.describe('住宅系LP枠組みテンプレート (_templates/housing_lp_fra
     expect(bodyText).not.toContain('完全無料');
   });
 });
+
+// ==========================================
+// 4. いけだ屋 (ikedaya) のテスト
+// ==========================================
+test.describe('いけだ屋 LP (ikedaya) の UI・整合性テスト', () => {
+
+  test('確認レビュー版 (ikedaya_sample) に注記が存在し、Instagramリンクが正しいこと', async ({ page }) => {
+    await page.goto('/ikedaya_sample/index.html');
+    const reviewTips = page.locator('.review-tip');
+    await expect(reviewTips).toHaveCount(4);
+
+    const igLinks = page.locator('a[href*="instagram.com/karaage_ikedaya"]');
+    expect(await igLinks.count()).toBeGreaterThan(0);
+  });
+
+  test('本番クリーン版 (ikedaya) に注記（赤入れポイント）が混入していないこと', async ({ page }) => {
+    await page.goto('/ikedaya/index.html');
+    const reviewTips = page.locator('.review-tip');
+    await expect(reviewTips).toHaveCount(0);
+
+    const bodyText = await page.locator('body').innerText();
+    expect(bodyText).not.toContain('赤入れポイント');
+    expect(bodyText).not.toContain('要ヒアリング');
+  });
+
+  test('初期枠組み版 (ikedaya_frame) にプレースホルダーが存在し注記がないこと', async ({ page }) => {
+    await page.goto('/ikedaya_frame/index.html');
+    const reviewTips = page.locator('.review-tip');
+    await expect(reviewTips).toHaveCount(0);
+
+    const bodyText = await page.locator('body').innerText();
+    expect(bodyText).toContain('【ここにメインキャッチコピーを書く】');
+  });
+});
+
