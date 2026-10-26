@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【初期枠組み版】bar Mano a Mano｜愛媛松山のカジュアルバー（ワイヤーフレーム）</title>
+  <meta name="description" content="bar Mano a Manoの初期枠組み版（ワイヤーフレーム構成案）です。">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            en: ['"Montserrat"', 'sans-serif'],
+            mincho: ['"Shippori Mincho"', 'serif'],
+          },
+          colors: {
+            wood: {
+              50: '#fdfbf7',
+              100: '#f7f2ea',
+              200: '#eee4d3',
+              300: '#e1d0b5',
+              400: '#cfb38f',
+              500: '#b8926a',
+              600: '#9b734e',
+              700: '#7d583b',
+              800: '#64452e',
+              900: '#4a3322',
+              950: '#2b1c11',
+            },
+            citrus: {
+              400: '#facc15',
+              500: '#eab308',
+              600: '#ca8a04',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #2b1c11;
+      background-color: #fdfbf7;
+      letter-spacing: 0.05em;
+    }
+    .hero-slide {
+      transition: opacity 1.2s ease-in-out;
+    }
+    .hero-bg-zoom {
+      animation: slowZoom 8s infinite alternate ease-in-out;
+    }
+    @keyframes slowZoom {
+      0% { transform: scale(1.0); }
+      100% { transform: scale(1.05); }
+    }
+    .text-shadow-strong {
+      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.9);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-wood-800 selection:text-white">
+
+  <!-- ==============================================
+       1. グローバルヘッダー
+  =============================================== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-wood-50/90 backdrop-blur-md border-b border-wood-200">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
+      <!-- ロゴ -->
+      <a href="#" class="flex flex-col group">
+        <span class="font-en text-2xl font-bold tracking-wider text-wood-900 group-hover:text-wood-700 transition-colors">bar Mano a Mano</span>
+        <span class="text-[10px] tracking-widest text-wood-600 font-normal -mt-0.5">【ワイヤーフレーム版】サワーと絶品唐揚げのバー</span>
+      </a>
+
+      <!-- デスクトップ ナビゲーション -->
+      <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
+        <a href="#concept" class="text-xs font-medium tracking-widest text-wood-700 hover:text-wood-950 transition-colors">コンセプト</a>
+        <a href="#signature" class="text-xs font-medium tracking-widest text-wood-700 hover:text-wood-950 transition-colors">名物料理・お酒</a>
+        <a href="#atmosphere" class="text-xs font-medium tracking-widest text-wood-700 hover:text-wood-950 transition-colors">空間・一人飲み</a>
+        <a href="#party" class="text-xs font-medium tracking-widest text-wood-700 hover:text-wood-950 transition-colors">貸切・二次会</a>
+        <a href="#faq" class="text-xs font-medium tracking-widest text-wood-700 hover:text-wood-950 transition-colors">よくある質問</a>
+        <a href="#info" class="text-xs font-medium tracking-widest text-wood-700 hover:text-wood-950 transition-colors">店舗情報</a>
+      </nav>
+
+      <!-- ヘッダー右 CTA -->
+      <div class="hidden md:flex items-center space-x-3">
+        <a href="https://www.instagram.com/barmanoamano" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center px-4 py-2 rounded-full text-xs font-medium tracking-widest text-wood-800 hover:text-wood-950 border border-wood-300 hover:border-wood-500 transition-all duration-300 bg-white">
+          <svg class="w-3.5 h-3.5 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          Instagram
+        </a>
+        <a href="tel:080-4999-0246"
+           class="inline-flex items-center px-5 py-2 rounded-full text-xs font-semibold tracking-widest bg-wood-900 text-white hover:bg-wood-800 transition-all duration-300 shadow-sm hover:shadow-md">
+          <svg class="w-3.5 h-3.5 mr-2 fill-current" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
+          </svg>
+          080-4999-0246
+        </a>
+      </div>
+
+      <!-- モバイルメニューボタン -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-wood-900 focus:outline-none" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- モバイルメニュー展開部 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-wood-50 border-b border-wood-200 px-6 py-6 space-y-4">
+      <a href="#concept" class="block text-sm font-medium tracking-wider text-wood-800 hover:text-wood-950 py-1">コンセプト</a>
+      <a href="#signature" class="block text-sm font-medium tracking-wider text-wood-800 hover:text-wood-950 py-1">名物料理・お酒</a>
+      <a href="#atmosphere" class="block text-sm font-medium tracking-wider text-wood-800 hover:text-wood-950 py-1">空間・一人飲み</a>
+      <a href="#party" class="block text-sm font-medium tracking-wider text-wood-800 hover:text-wood-950 py-1">貸切・二次会</a>
+      <a href="#faq" class="block text-sm font-medium tracking-wider text-wood-800 hover:text-wood-950 py-1">よくある質問</a>
+      <a href="#info" class="block text-sm font-medium tracking-wider text-wood-800 hover:text-wood-950 py-1">店舗情報</a>
+      <div class="pt-2 space-y-2">
+        <a href="tel:080-4999-0246"
+           class="flex items-center justify-center w-full py-3 rounded-full text-xs font-semibold tracking-widest bg-wood-900 text-white hover:bg-wood-800 transition-colors shadow-sm">
+          お電話で空席・貸切確認
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==============================================
+       2. ファーストビュー（FVスライダー & キャッチコピー）
+  =============================================== -->
+  <section class="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden bg-wood-950">
+    <!-- スライド画像群（プレースホルダー） -->
+    <div class="absolute inset-0 z-0">
+      <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+        <div class="w-full h-full bg-cover bg-center hero-bg-zoom filter brightness-50"
+             style="background-image: url('images/hero_slider_1.jpg');"></div>
+      </div>
+      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <div class="w-full h-full bg-cover bg-center hero-bg-zoom filter brightness-50"
+             style="background-image: url('images/hero_slider_2.jpg');"></div>
+      </div>
+      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <div class="w-full h-full bg-cover bg-center hero-bg-zoom filter brightness-50"
+             style="background-image: url('images/hero_slider_3.jpg');"></div>
+      </div>
+    </div>
+
+    <!-- オーバーレイ -->
+    <div class="absolute inset-0 bg-gradient-to-t from-wood-950/90 via-wood-950/40 to-wood-950/60 z-10"></div>
+
+    <!-- コピー領域 -->
+    <div class="relative z-20 max-w-4xl mx-auto px-6 text-center text-white">
+      <div class="inline-block px-4 py-1.5 rounded-full bg-wood-500/30 backdrop-blur-sm border border-wood-300/40 text-xs font-medium tracking-widest text-wood-200 mb-6">
+        松山市二番町・Reon二番町 3階
+      </div>
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold tracking-wider leading-tight text-shadow-strong mb-6 font-mincho">
+        【ここにメインキャッチコピー】<br>
+        <span class="text-citrus-400">手と手を取り合う、心ほどける夜を。</span>
+      </h1>
+      <p class="text-sm sm:text-base md:text-lg text-wood-100 max-w-2xl mx-auto leading-relaxed font-light mb-10 text-shadow-strong">
+        【ここにサブコピーが入ります】<br>
+        こだわりの生レモンサワーと唐揚げ専門店「いけだ屋」の絶品唐揚げ。<br>
+        お一人様の一杯から、最大30名の貸切パーティーまで温かくお迎えします。
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="tel:080-4999-0246"
+           class="w-full sm:w-auto px-8 py-4 rounded-full bg-citrus-500 hover:bg-citrus-600 text-wood-950 font-bold text-sm tracking-widest transition-all shadow-lg hover:shadow-xl flex items-center justify-center">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
+          </svg>
+          お電話で空席・貸切を確認する
+        </a>
+        <a href="https://www.instagram.com/barmanoamano" target="_blank" rel="noopener noreferrer"
+           class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-medium text-sm tracking-widest transition-all flex items-center justify-center">
+          公式Instagramを見る
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       3. コンセプトセクション（About）
+  =============================================== -->
+  <section id="concept" class="py-24 bg-wood-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-widest text-wood-600 uppercase font-en">CONCEPT</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-wood-900 mt-2 font-mincho">
+          【ここにコンセプト見出し】<br>
+          「Mano a Mano」＝ 手と手を取り合う温かな場所
+        </h2>
+        <div class="w-12 h-0.5 bg-wood-400 mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 text-sm sm:text-base leading-relaxed text-wood-800">
+          <p>
+            【ここにコンセプト本文 1段落目】<br>
+            店名である「Mano a Mano」は、スペイン語で「手と手」を意味します。お客様同士、そして私たちスタッフが手と手を取り合い、誰もが笑顔でくつろげる空間を作りたいという想いから生まれました。
+          </p>
+          <p>
+            【ここにコンセプト本文 2段落目】<br>
+            ビルの3階という落ち着いた隠れ家でありながら、扉を開ければそこは温もりある木目と柔らかな灯りに包まれたアットホームな世界。初めての一人飲みでも、気兼ねなく肩の力を抜いてお過ごしいただけます。
+          </p>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3] bg-wood-200">
+          <img src="images/hero_slider_1.jpg" alt="bar Mano a Mano 店内" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       4. 2大名物メニュー（サワー ＆ 唐揚げ）
+  =============================================== -->
+  <section id="signature" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-widest text-wood-600 uppercase font-en">SIGNATURE MENU</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-wood-900 mt-2 font-mincho">
+          【ここに名物メニューの見出し】<br>
+          果汁弾けるサワーと、専門店直伝の唐揚げ
+        </h2>
+        <div class="w-12 h-0.5 bg-citrus-500 mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- 名物 1: サワー -->
+        <div class="bg-wood-50 rounded-2xl p-8 border border-wood-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="aspect-[16/9] rounded-xl overflow-hidden mb-6 bg-wood-200">
+              <img src="images/hero_slider_2.jpg" alt="こだわり生レモンサワー" class="w-full h-full object-cover">
+            </div>
+            <span class="text-xs font-bold text-citrus-600 tracking-wider">DRINK SIGNATURE</span>
+            <h3 class="text-xl font-bold text-wood-900 mt-1 mb-3">こだわり生レモンサワー ＆ 旬のフルーツサワー</h3>
+            <p class="text-sm text-wood-700 leading-relaxed">
+              【ここにサワーのこだわりテキスト】<br>
+              搾りたてのフレッシュな生果汁をたっぷり使用。爽やかな香りと心地よい炭酸が喉を潤す、当店一番人気の看板ドリンクです。季節替わりのフルーツサワーもご用意しています。
+            </p>
+          </div>
+        </div>
+
+        <!-- 名物 2: 唐揚げ -->
+        <div class="bg-wood-50 rounded-2xl p-8 border border-wood-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="aspect-[16/9] rounded-xl overflow-hidden mb-6 bg-wood-200">
+              <img src="images/hero_slider_3.jpg" alt="いけだ屋の絶品唐揚げ" class="w-full h-full object-cover">
+            </div>
+            <span class="text-xs font-bold text-wood-700 tracking-wider">FOOD SIGNATURE</span>
+            <h3 class="text-xl font-bold text-wood-900 mt-1 mb-3">唐揚げ専門店「いけだ屋」の絶品唐揚げ</h3>
+            <p class="text-sm text-wood-700 leading-relaxed">
+              【ここに唐揚げのこだわりテキスト】<br>
+              外はサクッと香ばしく、中はあふれる肉汁。唐揚げ専門店直伝の秘伝ダレで仕込んだ熱々の唐揚げは、爽快なレモンサワーとの相性が抜群。お酒が進む自慢の逸品です。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       5. 空間・一人飲み歓迎（Atmosphere）
+  =============================================== -->
+  <section id="atmosphere" class="py-24 bg-wood-100">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-widest text-wood-600 uppercase font-en">ATMOSPHERE</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-wood-900 mt-2 font-mincho">
+          【ここに空間見出し】<br>
+          お一人様から温かく。木目の温もりあるカウンター
+        </h2>
+        <div class="w-12 h-0.5 bg-wood-400 mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-wood-200 text-center">
+          <div class="w-12 h-12 rounded-full bg-wood-100 text-wood-800 flex items-center justify-center mx-auto mb-4 font-bold text-lg">01</div>
+          <h3 class="text-base font-bold text-wood-900 mb-2">一人飲みに優しいカウンター</h3>
+          <p class="text-xs sm:text-sm text-wood-700 leading-relaxed">
+            【お一人様歓迎の文言】<br>
+            女性お一人や出張の方も大歓迎。気さくなスタッフと心地よい距離感で会話も楽しめます。
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-wood-200 text-center">
+          <div class="w-12 h-12 rounded-full bg-wood-100 text-wood-800 flex items-center justify-center mx-auto mb-4 font-bold text-lg">02</div>
+          <h3 class="text-base font-bold text-wood-900 mb-2">テーブル席で語らう夜</h3>
+          <p class="text-xs sm:text-sm text-wood-700 leading-relaxed">
+            【少人数テーブルの文言】<br>
+            友人同士や同僚との2軒目利用に。ゆったり落ち着いてお酒と会話をお楽しみいただけます。
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-wood-200 text-center">
+          <div class="w-12 h-12 rounded-full bg-wood-100 text-wood-800 flex items-center justify-center mx-auto mb-4 font-bold text-lg">03</div>
+          <h3 class="text-base font-bold text-wood-900 mb-2">アットホームなコミュニティ</h3>
+          <p class="text-xs sm:text-sm text-wood-700 leading-relaxed">
+            【アットホームさの文言】<br>
+            常連様も初めてのお客様も、いつの間にか笑顔で打ち解け合えるアットホームな空気感です。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       6. 貸切・二次会・設備案内（Party & Charter）
+  =============================================== -->
+  <section id="party" class="py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-widest text-wood-600 uppercase font-en">PARTY & CHARTER</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-wood-900 mt-2 font-mincho">
+          【ここに貸切見出し】<br>
+          10名〜30名様で貸切OK。各種パーティー・二次会に
+        </h2>
+        <div class="w-12 h-0.5 bg-citrus-500 mx-auto mt-4"></div>
+      </div>
+
+      <div class="bg-wood-50 border border-wood-200 rounded-3xl p-8 sm:p-12 shadow-sm">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
+          <div>
+            <h3 class="text-xl font-bold text-wood-900 mb-4">充実の音響＆プロジェクター完備</h3>
+            <p class="text-sm text-wood-700 leading-relaxed mb-4">
+              【ここに貸切説明テキスト】<br>
+              結婚式二次会、歓送迎会、誕生日会、スポーツ観戦、音楽イベントなど多彩なシーンに対応。大型プロジェクターでの映像投影や各種音響設備も自由にご利用いただけます。
+            </p>
+            <ul class="text-xs sm:text-sm text-wood-800 space-y-2">
+              <li class="flex items-center">✓ 貸切人数：10名様〜最大30名様程度</li>
+              <li class="flex items-center">✓ 飲み放題付きコース対応（料理内容・ご予算相談可）</li>
+              <li class="flex items-center">✓ 大型プロジェクター・マイク・音響機器完備</li>
+            </ul>
+          </div>
+          <div class="aspect-[16/9] rounded-2xl overflow-hidden shadow-md bg-wood-200">
+            <img src="images/party_banquet.jpg" alt="貸切パーティー風景" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <div class="text-center pt-6 border-t border-wood-200">
+          <p class="text-xs sm:text-sm text-wood-600 mb-4">日時・ご予算・料理構成など、お気軽にお電話またはSNSよりご相談ください。</p>
+          <a href="tel:080-4999-0246" class="inline-flex items-center px-8 py-3.5 rounded-full bg-wood-900 text-white font-bold text-xs tracking-widest hover:bg-wood-800 transition-all shadow-md">
+            貸切のご相談・お見積りはお電話で（080-4999-0246）
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       7. 店舗情報・アクセス（Shop Info & Map）
+  =============================================== -->
+  <section id="info" class="py-24 bg-wood-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-widest text-wood-600 uppercase font-en">INFORMATION</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-wood-900 mt-2 font-mincho">
+          店舗情報・アクセス
+        </h2>
+        <div class="w-12 h-0.5 bg-wood-400 mx-auto mt-4"></div>
+      </div>
+
+      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-wood-200 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- スペック表 -->
+        <dl class="divide-y divide-wood-100 text-xs sm:text-sm">
+          <div class="py-3.5 grid grid-cols-3">
+            <dt class="font-bold text-wood-900">店名</dt>
+            <dd class="col-span-2 text-wood-700">bar Mano a Mano（バー マーノ ア マーノ）</dd>
+          </div>
+          <div class="py-3.5 grid grid-cols-3">
+            <dt class="font-bold text-wood-900">住所</dt>
+            <dd class="col-span-2 text-wood-700">〒790-0002 愛媛県松山市二番町1-6-10 Reon二番町 3階</dd>
+          </div>
+          <div class="py-3.5 grid grid-cols-3">
+            <dt class="font-bold text-wood-900">電話番号</dt>
+            <dd class="col-span-2 text-wood-700">
+              <a href="tel:080-4999-0246" class="text-wood-900 font-bold hover:underline">080-4999-0246</a>
+            </dd>
+          </div>
+          <div class="py-3.5 grid grid-cols-3">
+            <dt class="font-bold text-wood-900">営業時間</dt>
+            <dd class="col-span-2 text-wood-700">20:00 〜 翌3:00頃</dd>
+          </div>
+          <div class="py-3.5 grid grid-cols-3">
+            <dt class="font-bold text-wood-900">定休日</dt>
+            <dd class="col-span-2 text-wood-700">不定休（SNSにて随時告知）</dd>
+          </div>
+          <div class="py-3.5 grid grid-cols-3">
+            <dt class="font-bold text-wood-900">席数</dt>
+            <dd class="col-span-2 text-wood-700">約20〜25席（カウンター・テーブル）</dd>
+          </div>
+          <div class="py-3.5 grid grid-cols-3">
+            <dt class="font-bold text-wood-900">チャージ</dt>
+            <dd class="col-span-2 text-wood-700">500円（※仮設定）</dd>
+          </div>
+        </dl>
+
+        <!-- マップ案内 -->
+        <div class="flex flex-col justify-between">
+          <div class="rounded-2xl overflow-hidden bg-wood-100 border border-wood-200 aspect-[4/3] flex items-center justify-center text-wood-500 text-xs">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.438289417032!2d132.76865!3d33.84025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354fe59a0f443b09%3A0x643190df035303a2!2zUkVPTuS6jOeVqueUug!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" 
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <p class="text-[11px] text-wood-500 mt-3 text-center">
+            伊予鉄道「大街道駅」より徒歩約5分。Reon二番町ビルの3階です。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       8. フッター
+  =============================================== -->
+  <footer class="bg-wood-950 text-wood-300 py-12 border-t border-wood-800">
+    <div class="max-w-6xl mx-auto px-6 text-center text-xs">
+      <div class="font-en text-xl font-bold tracking-wider text-white mb-2">bar Mano a Mano</div>
+      <p class="text-wood-400 mb-6">愛媛県松山市二番町1-6-10 Reon二番町 3階 / TEL: 080-4999-0246</p>
+      <p class="text-wood-500 text-[11px]">© bar Mano a Mano. All Rights Reserved. (Wireframe Archive)</p>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       9. モバイル常時固定CTAバー
+  =============================================== -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-wood-950/95 backdrop-blur-md border-t border-wood-800 p-3 flex gap-2">
+    <a href="tel:080-4999-0246"
+       class="flex-1 py-3 rounded-full bg-citrus-500 text-wood-950 font-bold text-xs tracking-wider flex items-center justify-center shadow-md">
+      <svg class="w-3.5 h-3.5 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
+      </svg>
+      電話で確認
+    </a>
+    <a href="https://www.instagram.com/barmanoamano" target="_blank" rel="noopener noreferrer"
+       class="flex-1 py-3 rounded-full bg-wood-800 text-white font-medium text-xs tracking-wider flex items-center justify-center border border-wood-700">
+      Instagram
+    </a>
+  </div>
+
+  <!-- スクリプト: FVスライダー & モバイルメニュー -->
+  <script>
+    // モバイルメニュー開閉
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn?.addEventListener('click', () => {
+      mobileMenu?.classList.toggle('hidden');
+    });
+
+    // FVスライダー切り替え
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
+    if (slides.length > 1) {
+      setInterval(() => {
+        slides[currentSlide].classList.remove('opacity-100');
+        slides[currentSlide].classList.add('opacity-0');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.remove('opacity-0');
+        slides[currentSlide].classList.add('opacity-100');
+      }, 5000);
+    }
+  </script>
+</body>
+</html>

@@ -6,6 +6,7 @@
   "scripts": {
     "sync": "node scripts/sync-clean.mjs",
     "init-project": "node scripts/init-project.mjs",
+    "share": "node scripts/share.mjs",
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:report": "playwright show-report"

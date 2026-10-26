@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>いけだ屋｜愛媛・松山 秘伝ダレが息づく名代唐揚げ ＆ BAR生レモンサワー</title>
+  <meta name="description" content="＼唐揚げとレモンサワー／ 愛媛・松山を中心にキッチンカー出店する「いけだ屋」。醤油ベースの特製漬けダレで外はサクサク中はジューシーな名代唐揚げと、BARの生レモンサワーをお届けします。">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wa: {
+              sumi: '#181715',
+              washi: '#f5f2eb',
+              gold: '#c2974a',
+              kuri: '#42352b',
+              vermilion: '#ba3c2a',
+            }
+          },
+          fontFamily: {
+            mincho: ['"Shippori Mincho"', 'serif'],
+            sans: ['"Noto Serif JP"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      background-color: #f5f2eb;
+      color: #2b2520;
+      font-family: 'Shippori Mincho', serif;
+      letter-spacing: 0.06em;
+    }
+    .wa-border {
+      border-color: rgba(43, 37, 32, 0.15);
+    }
+    .gold-border {
+      border-color: rgba(194, 151, 74, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-wa-washi text-stone-800 antialiased selection:bg-wa-gold selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-[#f5f2eb]/90 backdrop-blur-md border-b wa-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3.5 group">
+        <img src="images/real_logo.jpg" alt="唐揚げとレモンサワー いけだ屋 公式ロゴ" class="w-11 h-11 object-contain rounded-full border wa-border p-0.5 bg-white mix-blend-multiply group-hover:scale-105 transition-transform">
+        <div class="flex flex-col leading-tight">
+          <span class="font-bold text-2xl text-wa-sumi tracking-widest">いけだ屋</span>
+          <span class="text-[10px] text-wa-vermilion tracking-[0.2em] font-sans">唐揚げとレモンサワー｜松山</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-xs tracking-widest text-stone-700">
+        <a href="#about" class="hover:text-wa-gold transition-colors">こだわり</a>
+        <a href="#instagram" class="hover:text-wa-gold transition-colors flex items-center gap-1 text-wa-vermilion font-bold">
+          <i data-lucide="instagram" class="w-3.5 h-3.5"></i> 出店日程
+        </a>
+        <a href="#manager" class="hover:text-wa-gold transition-colors">店長挨拶</a>
+        <a href="#menu" class="hover:text-wa-gold transition-colors">お品書き</a>
+        <a href="#faq" class="hover:text-wa-gold transition-colors">質疑応答</a>
+        <a href="#catering" class="hover:text-wa-gold transition-colors">催事出店</a>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="flex items-center gap-3">
+        <a href="https://www.instagram.com/karaage_ikedaya/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-wa-sumi text-wa-washi text-xs tracking-widest px-5 py-2.5 rounded-none border border-wa-gold hover:bg-wa-kuri transition-all">
+          <i data-lucide="instagram" class="w-3.5 h-3.5 text-wa-gold"></i>
+          <span>@karaage_ikedaya</span>
+        </a>
+        <button id="menuToggle" aria-label="メニューを開閉" class="md:hidden p-2 text-wa-sumi focus:outline-none">
+          <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[#f5f2eb] border-b wa-border px-6 py-6 space-y-4 text-base tracking-widest text-wa-sumi">
+      <a href="#about" class="block py-1 hover:text-wa-gold">こだわり</a>
+      <a href="#instagram" class="block py-1 text-wa-vermilion flex items-center gap-1.5 font-bold">
+        <i data-lucide="instagram" class="w-4 h-4"></i> 出店・最新情報（Instagram）
+      </a>
+      <a href="#manager" class="block py-1 hover:text-wa-gold">店長挨拶</a>
+      <a href="#menu" class="block py-1 hover:text-wa-gold">お品書き</a>
+      <a href="#faq" class="block py-1 hover:text-wa-gold">質疑応答</a>
+      <a href="#catering" class="block py-1 hover:text-wa-gold">催事出店</a>
+      <div class="pt-2">
+        <a href="https://www.instagram.com/karaage_ikedaya/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 bg-wa-sumi text-white tracking-widest rounded-none border border-wa-gold">
+          <i data-lucide="instagram" class="w-4 h-4 text-wa-gold"></i>
+          <span>公式Instagramを開く</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center justify-center bg-wa-sumi text-white overflow-hidden py-24 border-b wa-border">
+    <div class="absolute inset-0 bg-cover bg-center opacity-30 scale-105" style="background-image: url('images/hero_karaage_lemon.jpg');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-wa-sumi via-wa-sumi/60 to-wa-sumi/80"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <span class="inline-block text-wa-gold text-xs tracking-[0.3em] font-sans uppercase mb-6 border-b gold-border pb-1">
+        愛媛・松山　名代唐揚げキッチンカー
+      </span>
+
+      <h1 class="text-3xl sm:text-5xl md:text-6xl leading-tight sm:leading-snug mb-8 text-white tracking-widest font-normal">
+        ＼唐揚げとレモンサワー／<br><span class="text-wa-gold">旨味と肉汁。</span>真っ直ぐな味わいをお届けします。
+      </h1>
+
+      <p class="text-stone-300 text-xs sm:text-base max-w-2xl mx-auto leading-loose mb-12 font-light">
+        醤油ベースの特製漬けダレにじっくり漬け込み、外はサクサク、中はジューシーに。愛媛・松山のイベントや街角で、揚げたての「名代 唐揚げ」と「BARの生レモンサワー」をお届けするキッチンカー「いけだ屋」です🚚
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+        <a href="#instagram" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-wa-gold text-wa-sumi font-bold text-xs sm:text-sm tracking-widest px-9 py-4 rounded-none hover:bg-yellow-500 transition-all">
+          <i data-lucide="instagram" class="w-4 h-4"></i>
+          <span>出店日程をInstagramで確認</span>
+        </a>
+        <a href="#menu" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent text-white border border-stone-500 hover:border-wa-gold text-xs sm:text-sm tracking-widest px-9 py-4 rounded-none transition-all">
+          <span>お品書きを見る</span>
+          <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-24 bg-white border-b wa-border" id="about">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+        <div class="relative order-2 md:order-1">
+          <div class="p-2 border wa-border bg-[#faf8f5] shadow-sm">
+            <img src="images/real_truck_tent.jpg" alt="いけだ屋 実際の出店風景" class="w-full h-auto object-cover">
+          </div>
+          <div class="absolute -bottom-3 -left-3 bg-wa-sumi text-wa-gold text-[10px] tracking-widest px-3 py-1.5 border gold-border">
+            松山二番町 BAR MANO A MANO 監修
+          </div>
+        </div>
+
+        <div class="order-1 md:order-2 space-y-6">
+          <span class="text-[11px] text-wa-vermilion tracking-[0.25em] font-sans block uppercase">
+            // いけだ屋の想い
+          </span>
+          <h2 class="text-2xl sm:text-3xl text-wa-sumi leading-snug tracking-wider font-normal">
+            皆さまに末永くご愛顧いただけますよう、<br>心を込めた「名代 唐揚げ」を。
+          </h2>
+          <div class="text-stone-700 space-y-4 text-xs sm:text-sm leading-loose font-light">
+            <p>こんにちは☀️ キッチンカーの唐揚げ「いけだ屋」です🚚</p>
+            <p>
+              愛媛県松山市二番町にある「bar Mano a Mano（@barmanoamano）」から誕生した、唐揚げとレモンサワーの専門店です。イベントやお祭り、マルシェなどで皆さまとお会いできることを毎回楽しみに出店しています。
+            </p>
+            <p>
+              旨味と肉汁が詰まった「名代 唐揚げ」は、醤油ベースの特製漬けダレにじっくり漬け込み、外はサクサク、中はジューシーに。そして、BAR仕込みの本格生搾りレモンサワーや微炭酸レモネードとともに、できたての一番美味しい瞬間をお届けします。
+            </p>
+            <p class="font-bold text-wa-vermilion">＼フォローよろしくお願いします🙂／</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram / Schedule -->
+  <section class="py-24 bg-[#ede8df] border-b wa-border" id="instagram">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs text-wa-gold tracking-[0.3em] font-sans uppercase block mb-2">
+          // WHERE TO FIND US
+        </span>
+        <h2 class="text-3xl sm:text-4xl text-wa-sumi mb-4 tracking-wider">
+          出店情報・完売状況は<br><span class="text-wa-vermilion">Instagram</span>にて随時更新
+        </h2>
+        <p class="text-stone-600 text-xs sm:text-sm leading-loose font-light">
+          直近の出店場所・時間・雨天変更、そして当日のリアルタイムな完売状況は、公式Instagram（@karaage_ikedaya）のストーリーズ・投稿にてご案内しています。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center max-w-4xl mx-auto">
+        <div class="md:col-span-5 text-center">
+          <div class="p-2 bg-white border wa-border shadow-md inline-block max-w-xs mx-auto">
+            <img src="images/real_event_flyer.jpg" alt="直近のイベント出店フライヤー" class="w-full h-auto object-cover">
+          </div>
+          <p class="text-[11px] text-wa-sumi mt-3 tracking-widest font-sans">
+            📢 直近の出店予定もストーリーズで随時告知！
+          </p>
+        </div>
+
+        <div class="md:col-span-7 bg-white border wa-border p-8 shadow-sm">
+          <div class="flex items-center gap-5 mb-6">
+            <img src="images/real_logo.jpg" alt="いけだ屋 アイコン" class="w-16 h-16 rounded-full border wa-border p-0.5 bg-white shrink-0">
+            <div>
+              <span class="font-bold text-lg text-wa-sumi tracking-wider">@karaage_ikedaya</span>
+              <p class="text-stone-600 text-xs mt-0.5">いけだ屋　@唐揚げとレモンサワー</p>
+              <p class="text-[10px] text-stone-400 mt-1 font-sans">from @barmanoamano（松山市二番町）</p>
+            </div>
+          </div>
+
+          <div class="border wa-border bg-[#faf8f5] p-4 space-y-2 text-xs text-stone-700 leading-relaxed font-light">
+            <div class="flex items-center gap-2 text-wa-gold font-bold">
+              <i data-lucide="ticket" class="w-4 h-4"></i>
+              <span>COUPON（フォロワー様限定）</span>
+            </div>
+            <p>
+              日頃の感謝を込めて、フォロワー様限定のお得なクーポンを時おりストーリーズにて配布いたします。スクショの上、ご注文時に提示していただけると幸いです！
+            </p>
+          </div>
+
+          <div class="mt-6 text-center">
+            <a href="https://www.instagram.com/karaage_ikedaya/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-wa-sumi text-wa-washi font-bold text-xs sm:text-sm tracking-widest px-6 py-3.5 border border-wa-gold shadow-md hover:bg-wa-kuri transition-all w-full">
+              <i data-lucide="instagram" class="w-4 h-4 text-wa-gold"></i>
+              <span>Instagramで出店情報を確認する</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5 opacity-70"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manager Section -->
+  <section class="py-24 bg-white border-b wa-border" id="manager">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+        <div class="space-y-6">
+          <span class="text-[11px] text-wa-gold tracking-[0.25em] font-sans block uppercase">
+            // 店長挨拶
+          </span>
+          <h2 class="text-3xl text-wa-sumi tracking-wider">
+            店長紹介 &amp; メッセージ
+          </h2>
+          <div class="text-stone-700 space-y-4 text-xs sm:text-sm leading-loose font-light">
+            <p>愛媛・松山の皆さま、いつもいけだ屋をご愛顧いただき誠にありがとうございます！</p>
+            <p>
+              夜は松山市二番町の「bar Mano a Mano」に立ちながら、週末やイベントではキッチンカー・テントで街の皆さまへ揚げたての唐揚げをお届けしています。
+            </p>
+            <p>
+              「お祭りで食べた唐揚げが美味しかった！」「レモンサワーとの相性が最高」と声をかけていただく瞬間が一番の励みです。お近くにお越しのさいは、ぜひ気軽にお立ち寄りいただけると嬉しいです！
+            </p>
+            <p class="font-bold text-wa-vermilion">
+              ご来場・ご来店、心よりお待ちしております！
+            </p>
+          </div>
+          <div class="pt-4 border-t wa-border text-[11px] text-stone-500 space-y-1 font-sans">
+            <p><span class="font-bold text-wa-sumi">実店舗：</span>bar Mano a Mano（愛媛県松山市二番町1-6-10 Reon二番町 3階）</p>
+            <p><span class="font-bold text-wa-sumi">お電話：</span>080-4999-0246</p>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="p-2 border wa-border bg-[#faf8f5] shadow-md max-w-md mx-auto">
+            <img src="images/shop_owner.jpg" alt="いけだ屋 店長" class="w-full h-auto aspect-square object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="py-24 bg-wa-washi border-b wa-border" id="menu">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs text-wa-gold tracking-[0.3em] font-sans uppercase block mb-2">
+          // IKEDAYA MENU
+        </span>
+        <h2 class="text-3xl sm:text-4xl text-wa-sumi mb-4 tracking-wider">
+          いけだ屋 自信のお品書き
+        </h2>
+        <p class="text-stone-600 text-xs sm:text-sm leading-relaxed font-light">
+          醤油ベースの特製ダレに漬け込んだ唐揚げと、BAR直伝の生搾りレモンサワー。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white border wa-border p-5 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="aspect-square bg-stone-100 overflow-hidden mb-4">
+              <img src="images/menu_karaage_classic.jpg" alt="名代 唐揚げ" class="w-full h-full object-cover hover:scale-103 transition-transform">
+            </div>
+            <span class="text-[10px] text-wa-vermilion font-bold tracking-widest block mb-1">看板</span>
+            <h3 class="text-lg text-wa-sumi font-bold mb-2 tracking-wide">名代 唐揚げ</h3>
+            <p class="text-xs text-stone-600 leading-loose font-light">
+              〜旨味と肉汁。醤油ベースの特製漬けダレに漬け込み、外はサクサク、中はジューシーに。いけだ屋が誇る真っ直ぐな味わいの看板唐揚げです。〜
+            </p>
+          </div>
+          <div class="pt-3 border-t wa-border text-[10px] text-stone-500 font-sans mt-4">
+            揚げたて熱々をご提供
+          </div>
+        </div>
+
+        <div class="bg-white border wa-border p-5 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="aspect-square bg-stone-100 overflow-hidden mb-4">
+              <img src="images/menu_karaage_shio_lemon.jpg" alt="チキンスティック" class="w-full h-full object-cover hover:scale-103 transition-transform">
+            </div>
+            <span class="text-[10px] text-wa-gold font-bold tracking-widest block mb-1">人気</span>
+            <h3 class="text-lg text-wa-sumi font-bold mb-2 tracking-wide">チキンスティック</h3>
+            <p class="text-xs text-stone-600 leading-loose font-light">
+              食べ歩きやフェスのお供に大人気！スティック状で手軽につまめるサクサクジューシーな特製チキンスティック。大人からお子様まで止まらない美味しさです。
+            </p>
+          </div>
+          <div class="pt-3 border-t wa-border text-[10px] text-stone-500 font-sans mt-4">
+            催事・食べ歩きに最適
+          </div>
+        </div>
+
+        <div class="bg-white border wa-border p-5 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="aspect-square bg-stone-100 overflow-hidden mb-4">
+              <img src="images/menu_lemon_sour.jpg" alt="BARの生レモンサワー" class="w-full h-full object-cover hover:scale-103 transition-transform">
+            </div>
+            <span class="text-[10px] text-wa-vermilion font-bold tracking-widest block mb-1">名物</span>
+            <h3 class="text-lg text-wa-sumi font-bold mb-2 tracking-wide">BARの生レモンサワー 🍋</h3>
+            <p class="text-xs text-stone-600 leading-loose font-light">
+              松山市二番町の「bar Mano a Mano」直伝！フレッシュな生レモンを贅沢に搾り、爽快な炭酸で仕上げた本格BARクオリティのレモンサワー。唐揚げとの相乗効果は格別です。
+            </p>
+          </div>
+          <div class="pt-3 border-t wa-border text-[10px] text-stone-500 font-sans mt-4">
+            from @barmanoamano
+          </div>
+        </div>
+
+        <div class="bg-white border wa-border p-5 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="aspect-square bg-stone-100 overflow-hidden mb-4">
+              <img src="images/hero_karaage_lemon.jpg" alt="自家製 微炭酸レモネード" class="w-full h-full object-cover hover:scale-103 transition-transform">
+            </div>
+            <span class="text-[10px] text-emerald-700 font-bold tracking-widest block mb-1">甘味・麦酒</span>
+            <h3 class="text-lg text-wa-sumi font-bold mb-2 tracking-wide">微炭酸レモネード / 生ビール</h3>
+            <p class="text-xs text-stone-600 leading-loose font-light">
+              お酒が飲めない方やお子様、ドライバーの方に大好評の「自家製 微炭酸(生)レモネード」。さらにイベント時には大人気「生ビール（ハートランド）」もご用意しています！
+            </p>
+          </div>
+          <div class="pt-3 border-t wa-border text-[10px] text-stone-500 font-sans mt-4">
+            ハートランド生ビール（限定出店時）
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-24 bg-white border-b wa-border" id="faq">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <span class="text-xs text-wa-gold tracking-[0.3em] font-sans uppercase block mb-2">
+          // 質疑応答
+        </span>
+        <h2 class="text-3xl text-wa-sumi tracking-wider">
+          よくあるご質問
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <details class="group bg-[#faf8f5] border wa-border p-6">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-wa-sumi select-none list-none">
+            <span class="flex items-center gap-3">
+              <span class="text-wa-gold font-bold text-lg font-sans">Q.</span>
+              出店場所やスケジュールはどこで分かりますか？
+            </span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-stone-500 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <div class="pt-4 text-xs sm:text-sm text-stone-700 leading-loose border-t wa-border mt-4 font-light">
+            日々の出店場所や営業時間、雨天時の変更などは、公式Instagram（@karaage_ikedaya）のストーリーズおよび投稿にて随時ご案内しております。フォローしてぜひチェックしてください！
+          </div>
+        </details>
+
+        <details class="group bg-[#faf8f5] border wa-border p-6">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-wa-sumi select-none list-none">
+            <span class="flex items-center gap-3">
+              <span class="text-wa-gold font-bold text-lg font-sans">Q.</span>
+              実店舗はどこにありますか？
+            </span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-stone-500 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <div class="pt-4 text-xs sm:text-sm text-stone-700 leading-loose border-t wa-border mt-4 font-light">
+            愛媛県松山市二番町1-6-10 Reon二番町 3階の「bar Mano a Mano（@barmanoamano）」が拠点となっております。夜のバー営業でも美味しいドリンクとお料理をお楽しみいただけます。
+          </div>
+        </details>
+
+        <details class="group bg-[#faf8f5] border wa-border p-6">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-wa-sumi select-none list-none">
+            <span class="flex items-center gap-3">
+              <span class="text-wa-gold font-bold text-lg font-sans">Q.</span>
+              イベント出店やケータリングの相談はできますか？
+            </span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-stone-500 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <div class="pt-4 text-xs sm:text-sm text-stone-700 leading-loose border-t wa-border mt-4 font-light">
+            はい、喜んで伺います！キッチンカーでの出店はもちろん、テント形式での出店実績も多数ございます。マルシェ、音楽フェス、地域のお祭り、企業行事など、Instagram DMよりお気軽にご相談ください。
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catering Section -->
+  <section class="py-24 bg-[#ede8df] border-b wa-border" id="catering">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-6">
+          <span class="text-[11px] text-wa-gold tracking-[0.25em] font-sans block uppercase">
+            // 催事・出張販売
+          </span>
+          <h2 class="text-3xl sm:text-4xl text-wa-sumi leading-snug tracking-wider">
+            イベント出店・ケータリング<br>
+            喜んで伺います！
+          </h2>
+          <p class="text-stone-700 text-xs sm:text-sm leading-loose font-light">
+            音楽フェス、地域のお祭り、スポーツ大会、マルシェなど、キッチンカーまたはテント形式にて出店いたします。<br>
+            会場を包む香ばしい香りと、揚げたてサクサクの「名代 唐揚げ」、冷えた「BARの生レモンサワー」で来場者の皆さまを笑顔にします！<br>
+            出店条件やスペースのご相談は、公式InstagramのDMよりお気軽にお声がけください。
+          </p>
+
+          <div class="pt-2">
+            <a href="https://www.instagram.com/karaage_ikedaya/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-wa-sumi text-white text-xs tracking-widest px-8 py-4 border border-wa-gold hover:bg-wa-kuri transition-all">
+              <i data-lucide="send" class="w-4 h-4 text-wa-gold"></i>
+              <span>出店のご相談はこちら（Instagram DM）</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="p-2 border wa-border bg-white shadow-md">
+            <img src="images/catering_scene.jpg" alt="いけだ屋のケータリング風景" class="w-full h-auto object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-wa-sumi text-stone-400 py-16 text-center text-xs">
+    <div class="max-w-4xl mx-auto px-4 space-y-8">
+      <div class="space-y-3 flex flex-col items-center">
+        <img src="images/real_logo.jpg" alt="唐揚げとレモンサワー いけだ屋 公式ロゴ" class="w-16 h-16 rounded-full border border-stone-600 bg-white p-1">
+        <div class="text-3xl text-white tracking-widest font-normal">いけだ屋</div>
+        <p class="text-xs text-wa-gold tracking-widest">＼唐揚げとレモンサワー／ 愛媛・松山 キッチンカー出店中</p>
+        <p class="text-stone-500 font-sans">from bar Mano a Mano（愛媛県松山市二番町1-6-10 Reon二番町 3階）</p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-stone-300 tracking-wider">
+        <a href="#about" class="hover:text-wa-gold transition-colors">こだわり</a>
+        <a href="#instagram" class="hover:text-wa-gold transition-colors">出店情報（Instagram）</a>
+        <a href="#manager" class="hover:text-wa-gold transition-colors">店長挨拶</a>
+        <a href="#menu" class="hover:text-wa-gold transition-colors">お品書き</a>
+        <a href="#faq" class="hover:text-wa-gold transition-colors">質疑応答</a>
+        <a href="#catering" class="hover:text-wa-gold transition-colors">催事出店</a>
+      </div>
+
+      <div class="pt-6 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-stone-500 gap-4 font-sans">
+        <div>&copy; 2026 いけだ屋（唐揚げとレモンサワー）. All Rights Reserved.</div>
+        <div>
+          <a href="https://www.instagram.com/karaage_ikedaya/" target="_blank" rel="noopener noreferrer" class="hover:text-wa-gold flex items-center gap-1.5 font-bold">
+            <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+            <span>@karaage_ikedaya</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle?.addEventListener('click', () => mobileMenu?.classList.toggle('hidden'));
+    mobileMenu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu?.classList.add('hidden'));
+    });
+    const allDetails = document.querySelectorAll('#faq details');
+    allDetails.forEach(targetDetail => {
+      targetDetail.addEventListener('click', (e) => {
+        if (!targetDetail.open) {
+          allDetails.forEach(detail => {
+            if (detail !== targetDetail) detail.removeAttribute('open');
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

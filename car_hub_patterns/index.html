@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アサヒワークス デザイン構成比較ダッシュボード | 株式会社Livre</title>
+  <meta name="robots" content="noindex, nofollow">
+  <!-- Google Fonts: Inter & Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#0b0f19] text-slate-100 min-h-screen flex flex-col selection:bg-blue-600 selection:text-white font-sans">
+
+  <!-- ヘッダー -->
+  <header class="bg-[#0f172a]/95 backdrop-blur-md border-b border-slate-800 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-18 py-3.5 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors" title="メインポータルに戻る">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        </a>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-base sm:text-lg text-white font-mono tracking-tight">ASAHI WORKS DESIGN LAB</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-mono border border-blue-500/30">PATTERNS</span>
+          </div>
+          <span class="text-[11px] text-slate-400">株式会社Livre アサヒワークス LP構成・デザイン比較ダッシュボード</span>
+        </div>
+      </div>
+
+      <!-- デバイスプレビュー切り替え ＆ 新しいタブで開くボタン -->
+      <div class="flex items-center space-x-2 sm:space-x-4">
+        <div class="hidden sm:inline-flex items-center bg-slate-800 rounded-lg p-1 border border-slate-700 text-xs font-mono">
+          <button id="viewPcBtn" class="px-3 py-1.5 rounded-md font-bold bg-blue-600 text-white transition-all flex items-center gap-1.5">
+            <i data-lucide="monitor" class="w-3.5 h-3.5"></i>
+            <span>PC</span>
+          </button>
+          <button id="viewSpBtn" class="px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white transition-all flex items-center gap-1.5">
+            <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+            <span>Mobile</span>
+          </button>
+        </div>
+        <a id="externalOpenBtn" href="multi_page/index.html" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium border border-slate-700 transition-all">
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">新しいタブで開く</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- メインエリア: 2ペイン構造 -->
+  <div class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-8 py-6 flex flex-col lg:flex-row gap-6">
+
+    <!-- 左ペイン: パターン選択カード一覧 -->
+    <aside class="w-full lg:w-96 shrink-0 space-y-4">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+        <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Select Architecture</span>
+        <span class="text-xs text-blue-400 font-mono">2 Patterns + Legacy</span>
+      </div>
+
+      <!-- パターンB: コーポレート・マルチページ構成（トップ＋下層5ページ） -->
+      <div class="pattern-card cursor-pointer p-4 rounded-xl border-2 border-blue-500 bg-slate-800/90 shadow-lg transition-all hover:border-blue-400"
+           data-url="multi_page/index.html" data-title="パターンB: コーポレート・マルチページ構成（トップ＋個別5事業ページ）" data-theme="トップはシンプルな事業案内カードに絞り、各事業の詳細は個別ページで深掘りする企業サイト">
+        <div class="flex items-start justify-between mb-1.5">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-600 text-white font-bold">PATTERN B / NEW</span>
+          <span class="text-[11px] text-slate-400 font-mono">multi_page/</span>
+        </div>
+        <h3 class="text-sm font-bold text-white mb-1">パターンB: マルチページ構成（下層5ページ完備）</h3>
+        <p class="text-xs text-slate-300 leading-relaxed font-light mb-3">
+          トップは各事業へのスマートな導入に絞り、各事業カードから専用ページ（`sales.html` 等）へ遷移。各事業の魅力・強みを1ページずつ深くアピールできます。
+        </p>
+        <div class="flex items-center gap-1.5">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-900/60 text-blue-300 border border-blue-700/50">クリーンな事業カード</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-900/60 text-blue-300 border border-blue-700/50">下層5ページ完備</span>
+          <span class="text-[10px] text-blue-400 font-mono ml-auto">Multi-Page</span>
+        </div>
+      </div>
+
+      <!-- パターンA: 1枚完結LP型（理研巧業スタイル / シングルページ） -->
+      <div class="pattern-card cursor-pointer p-4 rounded-xl border-2 border-slate-800 bg-slate-900/80 hover:bg-slate-800 transition-all hover:border-slate-700"
+           data-url="../car_hub_sample/index.html" data-title="パターンA: 1枚完結LP型（理研巧業スタイル / シングルページ）" data-theme="5大事業を「OUR BUSINESS」1枠に集約。ページ内スクロールですべて完結するスッキリ型LP">
+        <div class="flex items-start justify-between mb-1.5">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-700 text-slate-200 font-bold">PATTERN A</span>
+          <span class="text-[11px] text-slate-400 font-mono">car_hub_sample/</span>
+        </div>
+        <h3 class="text-sm font-bold text-white mb-1">パターンA: 1枚完結LP型（理研巧業スタイル）</h3>
+        <p class="text-xs text-slate-300 leading-relaxed font-light mb-3">
+          理研巧業オマージュの洗練された1ページ構成。事業内容をコンパクトに集約し、Instagramスナップや問い合わせへ流れるような導線。
+        </p>
+        <div class="flex items-center gap-1.5">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">1枚完結</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">コンパクト集約</span>
+          <span class="text-[10px] text-slate-400 font-mono ml-auto">Single-Page</span>
+        </div>
+      </div>
+
+      <!-- レガシー版: 5大サービス縦積み長大LP（変更前の初期版） -->
+      <div class="pattern-card cursor-pointer p-4 rounded-xl border-2 border-slate-800 bg-slate-900/80 hover:bg-slate-800 transition-all hover:border-slate-700"
+           data-url="../car_hub_sample/legacy.html" data-title="旧レガシー版: 5大サービス縦積み詳細LP（構成変更前）" data-theme="5大サービスを縦に長く1つずつ解説する初期版LP（比較・参考用）">
+        <div class="flex items-start justify-between mb-1.5">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-900/60 text-amber-300 border border-amber-700/50 font-bold">LEGACY</span>
+          <span class="text-[11px] text-slate-400 font-mono">legacy.html</span>
+        </div>
+        <h3 class="text-sm font-bold text-white mb-1">旧レガシー版（5大サービス縦積み）</h3>
+        <p class="text-xs text-slate-400 leading-relaxed font-light mb-3">
+          構成再編前の初期バージョン。5大サービスが縦に長大に展開されていたフルボリューム版です。
+        </p>
+        <div class="flex items-center gap-1.5">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-500 border border-slate-700">縦積み型</span>
+          <span class="text-[10px] text-amber-500/80 font-mono ml-auto">Initial Draft</span>
+        </div>
+      </div>
+
+      <!-- 下層ページ個別ダイレクトリンク -->
+      <div class="pt-2 border-t border-slate-800">
+        <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block mb-2">Pattern B Direct Pages</span>
+        <div class="grid grid-cols-1 gap-1.5 text-xs">
+          <a href="multi_page/sales.html" target="_blank" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-300 flex items-center justify-between">
+            <span>01. 車両販売・特殊製作</span>
+            <i data-lucide="external-link" class="w-3 h-3 text-slate-500"></i>
+          </a>
+          <a href="multi_page/rentacar.html" target="_blank" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-300 flex items-center justify-between">
+            <span>02. レンタカー事業（100台+）</span>
+            <i data-lucide="external-link" class="w-3 h-3 text-slate-500"></i>
+          </a>
+          <a href="multi_page/lease.html" target="_blank" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-300 flex items-center justify-between">
+            <span>03. 自社ローン・定額プラン</span>
+            <i data-lucide="external-link" class="w-3 h-3 text-slate-500"></i>
+          </a>
+          <a href="multi_page/insurance.html" target="_blank" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-300 flex items-center justify-between">
+            <span>04. 自動車保険代理店</span>
+            <i data-lucide="external-link" class="w-3 h-3 text-slate-500"></i>
+          </a>
+          <a href="multi_page/roadservice.html" target="_blank" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-300 flex items-center justify-between">
+            <span>05. ロードサービス・自社板金</span>
+            <i data-lucide="external-link" class="w-3 h-3 text-slate-500"></i>
+          </a>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- 右ペイン: ライブプレビュー画面（iframe） -->
+    <main class="flex-1 flex flex-col bg-[#070b14] rounded-2xl border border-slate-800 overflow-hidden shadow-2xl min-h-[640px]">
+      <div class="bg-slate-900/90 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+          <span id="previewUrlLabel" class="text-xs font-mono text-slate-300 ml-2">multi_page/index.html</span>
+        </div>
+        <span id="previewThemeLabel" class="text-[11px] text-blue-400 font-mono hidden sm:inline">トップはシンプルな事業案内カードに絞り、各事業の詳細は個別ページで深掘りする企業サイト</span>
+      </div>
+
+      <div class="flex-1 flex items-center justify-center p-3 sm:p-5 bg-[#070b14] overflow-hidden">
+        <div id="iframeContainer" class="w-full h-full transition-all duration-300 flex items-center justify-center">
+          <iframe id="previewFrame" src="multi_page/index.html" class="w-full h-[760px] rounded-lg border border-slate-800 bg-white shadow-xl" frameborder="0"></iframe>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    const previewFrame = document.getElementById('previewFrame');
+    const previewUrlLabel = document.getElementById('previewUrlLabel');
+    const previewThemeLabel = document.getElementById('previewThemeLabel');
+    const externalOpenBtn = document.getElementById('externalOpenBtn');
+    const patternCards = document.querySelectorAll('.pattern-card');
+    const viewPcBtn = document.getElementById('viewPcBtn');
+    const viewSpBtn = document.getElementById('viewSpBtn');
+
+    patternCards.forEach(card => {
+      card.addEventListener('click', () => {
+        patternCards.forEach(c => {
+          c.classList.remove('border-blue-500', 'bg-slate-800/90', 'shadow-lg');
+          c.classList.add('border-slate-800', 'bg-slate-900/80');
+        });
+        card.classList.remove('border-slate-800', 'bg-slate-900/80');
+        card.classList.add('border-blue-500', 'bg-slate-800/90', 'shadow-lg');
+
+        const url = card.getAttribute('data-url');
+        const theme = card.getAttribute('data-theme');
+        previewFrame.src = url;
+        previewUrlLabel.textContent = url;
+        previewThemeLabel.textContent = theme;
+        externalOpenBtn.href = url;
+      });
+    });
+
+    viewPcBtn.addEventListener('click', () => {
+      viewPcBtn.className = 'px-3 py-1.5 rounded-md font-bold bg-blue-600 text-white transition-all flex items-center gap-1.5';
+      viewSpBtn.className = 'px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white transition-all flex items-center gap-1.5';
+      previewFrame.style.width = '100%';
+      previewFrame.style.maxWidth = '100%';
+    });
+
+    viewSpBtn.addEventListener('click', () => {
+      viewSpBtn.className = 'px-3 py-1.5 rounded-md font-bold bg-blue-600 text-white transition-all flex items-center gap-1.5';
+      viewPcBtn.className = 'px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white transition-all flex items-center gap-1.5';
+      previewFrame.style.width = '390px';
+      previewFrame.style.maxWidth = '390px';
+    });
+  </script>
+</body>
+</html>

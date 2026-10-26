@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>いけだ屋｜松山発！ガツンと肉汁の秘伝唐揚げ＆極上生レモンサワー</title>
+  <meta name="description" content="＼唐揚げとレモンサワー／ 愛媛・松山を爆走するキッチンカー「いけだ屋」！醤油ベースの特製漬けダレで外はバリサク・中は肉汁あふれる名代唐揚げと、BAR直伝キンキン生レモンサワー！">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            diner: {
+              yellow: '#ffcc00',
+              orange: '#ff5500',
+              dark: '#141414',
+              card: '#1f1f1f',
+            }
+          },
+          fontFamily: {
+            impact: ['"Anton"', 'sans-serif'],
+            heavy: ['"Archivo Black"', 'sans-serif'],
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      background-color: #141414;
+      color: #eeeeee;
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+    .brutal-card {
+      background: #1f1f1f;
+      border: 3px solid #ffcc00;
+      box-shadow: 6px 6px 0px 0px #ffcc00;
+    }
+    .brutal-btn-yellow {
+      background: #ffcc00;
+      color: #141414;
+      border: 2px solid #ffffff;
+      box-shadow: 4px 4px 0px 0px #ffffff;
+      transition: all 0.15s ease;
+    }
+    .brutal-btn-yellow:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px 0px #ffffff;
+    }
+    .stamp-tilt {
+      transform: rotate(-3deg);
+    }
+  </style>
+</head>
+<body class="bg-diner-dark text-white antialiased selection:bg-diner-yellow selection:text-black">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-diner-dark/95 backdrop-blur-md border-b-4 border-diner-yellow">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3.5 group">
+        <img src="images/real_logo.jpg" alt="唐揚げとレモンサワー いけだ屋 公式ロゴ" class="w-12 h-12 object-contain rounded-lg border-2 border-white bg-white p-0.5 group-hover:scale-105 transition-transform">
+        <div class="flex flex-col leading-none">
+          <span class="font-impact text-3xl text-diner-yellow tracking-wider">IKEDAYA</span>
+          <span class="text-[10px] font-black text-white tracking-widest uppercase mt-0.5">唐揚げとレモンサワー｜松山</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 font-heavy text-xs tracking-wider text-zinc-300">
+        <a href="#about" class="hover:text-diner-yellow transition-colors uppercase">ABOUT</a>
+        <a href="#instagram" class="hover:text-diner-yellow transition-colors flex items-center gap-1 text-diner-yellow font-bold uppercase">
+          <i data-lucide="instagram" class="w-4 h-4"></i> SCHEDULE
+        </a>
+        <a href="#manager" class="hover:text-diner-yellow transition-colors uppercase">MESSAGE</a>
+        <a href="#menu" class="hover:text-diner-yellow transition-colors uppercase">MENU</a>
+        <a href="#faq" class="hover:text-diner-yellow transition-colors uppercase">FAQ</a>
+        <a href="#catering" class="hover:text-diner-yellow transition-colors uppercase">CATERING</a>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="flex items-center gap-3">
+        <a href="https://www.instagram.com/karaage_ikedaya/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 brutal-btn-yellow font-black text-xs px-4 py-2.5 rounded-none">
+          <i data-lucide="instagram" class="w-4 h-4"></i>
+          <span>@karaage_ikedaya</span>
+        </a>
+        <button id="menuToggle" aria-label="メニューを開閉" class="md:hidden p-2 text-diner-yellow focus:outline-none">
+          <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobileMenu" class="hidden md:hidden bg-black border-b-4 border-diner-yellow px-6 py-6 space-y-4 font-black text-base text-white">
+      <a href="#about" class="block py-1 hover:text-diner-yellow">こだわり</a>
+      <a href="#instagram" class="block py-1 text-diner-yellow flex items-center gap-1.5">
+        <i data-lucide="instagram" class="w-4 h-4"></i> 出店情報（Instagram）
+      </a>
+      <a href="#manager" class="block py-1 hover:text-diner-yellow">店長紹介</a>
+      <a href="#menu" class="block py-1 hover:text-diner-yellow">メニュー</a>
+      <a href="#faq" class="block py-1 hover:text-diner-yellow">よくある質問</a>
+      <a href="#catering" class="block py-1 hover:text-diner-yellow">出店・ケータリング</a>
+      <div class="pt-2">
+        <a href="https://www.instagram.com/karaage_ikedaya/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 bg-diner-yellow text-black font-black text-sm">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+          <span>公式Instagramを開く</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center justify-center bg-black text-white overflow-hidden py-24 border-b-4 border-diner-orange">
+    <div class="absolute inset-0 bg-cover bg-center opacity-45 scale-105 contrast-125" style="background-image: url('images/hero_karaage_lemon.jpg');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/70"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <div class="inline-block px-4 py-1 bg-diner-orange text-white font-impact text-sm tracking-widest stamp-tilt mb-6 uppercase border-2 border-white">
+        HOT &amp; JUICY CRAFT KARAAGE DINER 🍗
+      </div>
+
+      <h1 class="font-heavy text-4xl sm:text-6xl md:text-7xl leading-none mb-6 text-white drop-shadow-md">
+        ＼唐揚げとレモンサワー／<br><span class="text-diner-yellow">旨味と肉汁。</span>真っ直ぐな味わいをお届けします。
+      </h1>
+
+      <p class="text-zinc-200 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed mb-10 font-bold">
+        醤油ベースの特製漬けダレにじっくり漬け込み、外はサクサク、中はジューシーに。愛媛・松山のイベントや街角で、揚げたての「名代 唐揚げ」と「BARの生レモンサワー」をお届けするキッチンカー「いけだ屋」です🚚
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+        <a href="#instagram" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 brutal-btn-yellow font-black text-base px-8 py-4">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+          <span>出店情報・ストーリーズをチェック</span>
+        </a>
+        <a href="#menu" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-diner-card hover:bg-zinc-800 text-white font-bold text-base px-8 py-4 border-2 border-white">
+          <span>メニューを見る</span>
+          <i data-lucide="arrow-down" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-20 bg-diner-card border-b-4 border-diner-yellow" id="about">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="relative order-2 md:order-1">
+          <div class="brutal-card overflow-hidden">
+            <img src="images/real_truck_tent.jpg" alt="いけだ屋 実際の出店風景" class="w-full h-auto object-cover">
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-diner-orange text-white font-impact text-xs px-4 py-2 border-2 border-white">
+            FROM BAR MANO A MANO
+          </div>
+        </div>
+
+        <div class="order-1 md:order-2 space-y-6">
+          <div class="inline-block px-3 py-1 bg-diner-yellow text-black font-impact text-xs tracking-wider uppercase">
+            ABOUT IKEDAYA
+          </div>
+          <h2 class="font-heavy text-2xl sm:text-3xl text-white leading-tight">
+            皆さまに末永くご愛顧いただけますよう、<br>心を込めた「名代 唐揚げ」を。
+          </h2>
+          <div class="text-zinc-300 space-y-4 text-sm sm:text-base leading-relaxed font-bold">
+            <p>こんにちは☀️ キッチンカーの唐揚げ「いけだ屋」です🚚</p>
+            <p>
+              愛媛県松山市二番町にある「bar Mano a Mano（@barmanoamano）」から誕生した、唐揚げとレモンサワーの専門店です。イベントやお祭り、マルシェなどで皆さまとお会いできることを毎回楽しみに出店しています。
+            </p>
+            <p>
+              旨味と肉汁が詰まった「名代 唐揚げ」は、醤油ベースの特製漬けダレにじっくり漬け込み、外はサクサク、中はジューシーに。そして、BAR仕込みの本格生搾りレモンサワーや微炭酸レモネードとともに、できたての一番美味しい瞬間をお届けします。
+            </p>
+            <p class="font-black text-diner-yellow text-lg">＼フォローよろしくお願いします🙂／</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram / Schedule -->
+  <section class="py-20 bg-black border-b-4 border-diner-yellow" id="instagram">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-block font-impact text-xs text-diner-orange uppercase tracking-widest mb-2">
+          WHERE TO FIND US
+        </span>
+        <h2 class="font-heavy text-3xl sm:text-4xl text-white mb-4">
+          出店情報・完売状況は<br><span class="text-diner-yellow">Instagram</span>で毎日発信中！
+        </h2>
+        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed font-bold">
+          直近の出店場所・時間・雨天変更、そして当日のリアルタイムな完売状況は、公式Instagram（@karaage_ikedaya）のストーリーズ・投稿にてご案内しています。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center max-w-4xl mx-auto">
+        <div class="md:col-span-5 text-center">
+          <div class="brutal-card inline-block max-w-xs mx-auto overflow-hidden">
+            <img src="images/real_event_flyer.jpg" alt="直近のイベント出店フライヤー" class="w-full h-auto object-cover">
+          </div>
+          <p class="text-xs text-diner-yellow mt-3 font-black">
+            📢 直近の出店予定もストーリーズで随時告知！
+          </p>
+        </div>
+
+        <div class="md:col-span-7 bg-diner-card border-2 border-white/20 p-6 sm:p-8">
+          <div class="flex items-center gap-5 mb-6">
+            <img src="images/real_logo.jpg" alt="いけだ屋 アイコン" class="w-16 h-16 rounded-full border-2 border-diner-yellow p-0.5 bg-white shrink-0">
+            <div>
+              <span class="font-impact text-2xl text-white tracking-wide">@karaage_ikedaya</span>
+              <p class="text-zinc-300 text-xs sm:text-sm font-bold">いけだ屋　@唐揚げとレモンサワー</p>
+              <p class="text-[11px] text-zinc-500 mt-1">from @barmanoamano（松山市二番町）</p>
+            </div>
+          </div>
+
+          <div class="border-2 border-diner-yellow bg-black p-4 space-y-2">
+            <div class="flex items-center gap-2 text-diner-yellow font-black text-xs">
+              <i data-lucide="ticket" class="w-4 h-4"></i>
+              <span>COUPON（フォロワー様限定）</span>
+            </div>
+            <p class="text-xs text-zinc-300 leading-relaxed font-medium">
+              日頃の感謝を込めて、フォロワー様限定のお得なクーポンを時おりストーリーズにて配布いたします。スクショの上、ご注文時に提示していただけると幸いです！
+            </p>
+          </div>
+
+          <div class="mt-6 text-center">
+            <a href="https://www.instagram.com/karaage_ikedaya/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 brutal-btn-yellow font-black text-sm sm:text-base px-6 py-4 w-full">
+              <i data-lucide="instagram" class="w-5 h-5"></i>
+              <span>Instagramで出店情報をチェック</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manager Section -->
+  <section class="py-20 bg-diner-card border-b-4 border-diner-yellow" id="manager">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <div class="inline-block px-3 py-1 bg-diner-orange text-white font-impact text-xs tracking-wider uppercase">
+            MESSAGE FROM OWNER
+          </div>
+          <h2 class="font-heavy text-3xl text-white">
+            店長紹介 &amp; メッセージ
+          </h2>
+          <div class="text-zinc-300 space-y-4 text-sm sm:text-base leading-relaxed font-bold">
+            <p>愛媛・松山の皆さま、いつもいけだ屋をご愛顧いただき誠にありがとうございます！</p>
+            <p>
+              夜は松山市二番町の「bar Mano a Mano」に立ちながら、週末やイベントではキッチンカー・テントで街の皆さまへ揚げたての唐揚げをお届けしています。
+            </p>
+            <p>
+              「お祭りで食べた唐揚げが美味しかった！」「レモンサワーとの相性が最高」と声をかけていただく瞬間が一番の励みです。お近くにお越しのさいは、ぜひ気軽にお立ち寄りいただけると嬉しいです！
+            </p>
+            <p class="font-black text-diner-yellow text-base">
+              ご来場・ご来店、心よりお待ちしております！
+            </p>
+          </div>
+          <div class="pt-4 border-t-2 border-white/20 text-xs text-zinc-400 space-y-1 font-bold">
+            <p><span class="text-white">実店舗：</span>bar Mano a Mano（愛媛県松山市二番町1-6-10 Reon二番町 3階）</p>
+            <p><span class="text-white">お電話：</span>080-4999-0246</p>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="brutal-card max-w-md mx-auto overflow-hidden">
+            <img src="images/shop_owner.jpg" alt="いけだ屋 店長" class="w-full h-auto aspect-square object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="py-20 bg-black border-b-4 border-diner-yellow" id="menu">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="inline-block font-impact text-xs text-diner-orange uppercase tracking-widest mb-2">
+          IKEDAYA MENU
+        </span>
+        <h2 class="font-heavy text-3xl sm:text-4xl text-white mb-4">
+          いけだ屋 自信の販売メニュー
+        </h2>
+        <p class="text-zinc-400 text-sm sm:text-base font-bold">
+          醤油ベースの特製ダレに漬け込んだ唐揚げと、BAR直伝の生搾りレモンサワー。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="brutal-card p-4 flex flex-col justify-between">
+          <div>
+            <div class="aspect-square overflow-hidden mb-4 border-2 border-black">
+              <img src="images/menu_karaage_classic.jpg" alt="名代 唐揚げ" class="w-full h-full object-cover hover:scale-105 transition-transform">
+            </div>
+            <span class="inline-block px-2 py-0.5 bg-diner-orange text-white font-impact text-xs mb-1">SIGNATURE</span>
+            <h3 class="font-heavy text-xl text-white mb-2">名代 唐揚げ</h3>
+            <p class="text-xs text-zinc-300 leading-relaxed font-bold">
+              〜旨味と肉汁。醤油ベースの特製漬けダレに漬け込み、外はサクサク、中はジューシーに。いけだ屋が誇る真っ直ぐな味わいの看板唐揚げです。〜
+            </p>
+          </div>
+          <div class="pt-3 border-t-2 border-white/20 text-xs text-diner-yellow font-black mt-4">
+            揚げたて熱々をご提供
+          </div>
+        </div>
+
+        <div class="brutal-card p-4 flex flex-col justify-between">
+          <div>
+            <div class="aspect-square overflow-hidden mb-4 border-2 border-black">
+              <img src="images/menu_karaage_shio_lemon.jpg" alt="チキンスティック" class="w-full h-full object-cover hover:scale-105 transition-transform">
+            </div>
+            <span class="inline-block px-2 py-0.5 bg-diner-yellow text-black font-impact text-xs mb-1">POPULAR SNACK</span>
+            <h3 class="font-heavy text-xl text-white mb-2">チキンスティック</h3>
+            <p class="text-xs text-zinc-300 leading-relaxed font-bold">
+              食べ歩きやフェスのお供に大人気！スティック状で手軽につまめるサクサクジューシーな特製チキンスティック。大人からお子様まで止まらない美味しさです。
+            </p>
+          </div>
+          <div class="pt-3 border-t-2 border-white/20 text-xs text-diner-yellow font-black mt-4">
+            イベント・食べ歩きに最適
+          </div>
+        </div>
+
+        <div class="brutal-card p-4 flex flex-col justify-between">
+          <div>
+            <div class="aspect-square overflow-hidden mb-4 border-2 border-black">
+              <img src="images/menu_lemon_sour.jpg" alt="BARの生レモンサワー" class="w-full h-full object-cover hover:scale-105 transition-transform">
+            </div>
+            <span class="inline-block px-2 py-0.5 bg-diner-orange text-white font-impact text-xs mb-1">CRAFT DRINK</span>
+            <h3 class="font-heavy text-xl text-white mb-2">BARの生レモンサワー 🍋</h3>
+            <p class="text-xs text-zinc-300 leading-relaxed font-bold">
+              松山市二番町の「bar Mano a Mano」直伝！フレッシュな生レモンを贅沢に搾り、爽快な炭酸で仕上げた本格BARクオリティのレモンサワー。唐揚げとの相乗効果は格別です。
+            </p>
+          </div>
+          <div class="pt-3 border-t-2 border-white/20 text-xs text-zinc-400 font-bold mt-4">
+            from @barmanoamano
+          </div>
+        </div>
+
+        <div class="brutal-card p-4 flex flex-col justify-between">
+          <div>
+            <div class="aspect-square overflow-hidden mb-4 border-2 border-black">
+              <img src="images/hero_karaage_lemon.jpg" alt="自家製 微炭酸レモネード" class="w-full h-full object-cover hover:scale-105 transition-transform">
+            </div>
+            <span class="inline-block px-2 py-0.5 bg-emerald-500 text-black font-impact text-xs mb-1">NON-ALCOHOL &amp; BEER</span>
+            <h3 class="font-heavy text-xl text-white mb-2">微炭酸レモネード / 生ビール</h3>
+            <p class="text-xs text-zinc-300 leading-relaxed font-bold">
+              お酒が飲めない方やお子様、ドライバーの方に大好評の「自家製 微炭酸(生)レモネード」。さらにイベント時には大人気「生ビール（ハートランド）」もご用意しています！
+            </p>
+          </div>
+          <div class="pt-3 border-t-2 border-white/20 text-xs text-diner-yellow font-black mt-4">
+            ハートランド生ビール（限定出店時）
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-diner-card border-b-4 border-diner-yellow" id="faq">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="inline-block font-impact text-xs text-diner-orange uppercase tracking-widest mb-2">
+          FAQ
+        </span>
+        <h2 class="font-heavy text-3xl text-white">
+          よくある質問
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <details class="group bg-black border-2 border-white/30 p-6">
+          <summary class="flex items-center justify-between cursor-pointer font-black text-white select-none list-none">
+            <span class="flex items-center gap-3">
+              <span class="text-diner-yellow font-impact text-xl">Q.</span>
+              出店場所やスケジュールはどこで分かりますか？
+            </span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <div class="pt-4 text-sm text-zinc-300 leading-relaxed border-t-2 border-white/20 mt-4 font-medium">
+            日々の出店場所や営業時間、雨天時の変更などは、公式Instagram（@karaage_ikedaya）のストーリーズおよび投稿にて随時ご案内しております。フォローしてぜひチェックしてください！
+          </div>
+        </details>
+
+        <details class="group bg-black border-2 border-white/30 p-6">
+          <summary class="flex items-center justify-between cursor-pointer font-black text-white select-none list-none">
+            <span class="flex items-center gap-3">
+              <span class="text-diner-yellow font-impact text-xl">Q.</span>
+              実店舗はどこにありますか？
+            </span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <div class="pt-4 text-sm text-zinc-300 leading-relaxed border-t-2 border-white/20 mt-4 font-medium">
+            愛媛県松山市二番町1-6-10 Reon二番町 3階の「bar Mano a Mano（@barmanoamano）」が拠点となっております。夜のバー営業でも美味しいドリンクとお料理をお楽しみいただけます。
+          </div>
+        </details>
+
+        <details class="group bg-black border-2 border-white/30 p-6">
+          <summary class="flex items-center justify-between cursor-pointer font-black text-white select-none list-none">
+            <span class="flex items-center gap-3">
+              <span class="text-diner-yellow font-impact text-xl">Q.</span>
+              イベント出店やケータリングの相談はできますか？
+            </span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <div class="pt-4 text-sm text-zinc-300 leading-relaxed border-t-2 border-white/20 mt-4 font-medium">
+            はい、喜んで伺います！キッチンカーでの出店はもちろん、テント形式での出店実績も多数ございます。マルシェ、音楽フェス、地域のお祭り、企業行事など、Instagram DMよりお気軽にご相談ください。
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catering Section -->
+  <section class="py-20 bg-diner-yellow text-black border-b-4 border-black" id="catering">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-6">
+          <div class="inline-block font-impact text-xs text-black border-b-2 border-black tracking-wider pb-0.5">
+            EVENT CATERING &amp; FESTIVAL
+          </div>
+          <h2 class="font-heavy text-3xl sm:text-4xl text-black leading-tight">
+            イベント出店・ケータリング<br>
+            喜んで伺います！
+          </h2>
+          <p class="text-black text-sm sm:text-base leading-relaxed font-bold">
+            音楽フェス、地域のお祭り、スポーツ大会、マルシェなど、キッチンカーまたはテント形式にて出店いたします。<br>
+            会場を包む香ばしい香りと、揚げたてサクサクの「名代 唐揚げ」、冷えた「BARの生レモンサワー」で来場者の皆さまを笑顔にします！<br>
+            出店条件やスペースのご相談は、公式InstagramのDMよりお気軽にお声がけください。
+          </p>
+
+          <div class="pt-2">
+            <a href="https://www.instagram.com/karaage_ikedaya/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-black text-white font-heavy text-sm px-8 py-4 border-2 border-white shadow-xl hover:bg-zinc-800 transition-all">
+              <i data-lucide="send" class="w-5 h-5 text-diner-yellow"></i>
+              <span>出店のご相談はこちら（Instagram DM）</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="border-4 border-black bg-black p-2 shadow-2xl">
+            <img src="images/catering_scene.jpg" alt="いけだ屋のケータリング風景" class="w-full h-auto object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-zinc-500 py-16 text-center text-sm">
+    <div class="max-w-4xl mx-auto px-4 space-y-8">
+      <div class="space-y-3 flex flex-col items-center">
+        <img src="images/real_logo.jpg" alt="唐揚げとレモンサワー いけだ屋 公式ロゴ" class="w-16 h-16 rounded-lg border-2 border-diner-yellow bg-white p-1">
+        <div class="font-impact text-3xl text-white tracking-widest">IKEDAYA</div>
+        <p class="text-xs text-diner-yellow font-black">＼唐揚げとレモンサワー／ 愛媛・松山 キッチンカー出店中</p>
+        <p class="text-xs text-zinc-500">from bar Mano a Mano（愛媛県松山市二番町1-6-10 Reon二番町 3階）</p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-zinc-300 font-bold">
+        <a href="#about" class="hover:text-diner-yellow transition-colors">こだわり</a>
+        <a href="#instagram" class="hover:text-diner-yellow transition-colors">出店情報（Instagram）</a>
+        <a href="#manager" class="hover:text-diner-yellow transition-colors">店長紹介</a>
+        <a href="#menu" class="hover:text-diner-yellow transition-colors">メニュー</a>
+        <a href="#faq" class="hover:text-diner-yellow transition-colors">よくある質問</a>
+        <a href="#catering" class="hover:text-diner-yellow transition-colors">ケータリング</a>
+      </div>
+
+      <div class="pt-6 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+        <div>&copy; 2026 いけだ屋（唐揚げとレモンサワー）. All Rights Reserved.</div>
+        <div>
+          <a href="https://www.instagram.com/karaage_ikedaya/" target="_blank" rel="noopener noreferrer" class="hover:text-diner-yellow flex items-center gap-1.5 font-bold">
+            <i data-lucide="instagram" class="w-4 h-4"></i>
+            <span>@karaage_ikedaya</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle?.addEventListener('click', () => mobileMenu?.classList.toggle('hidden'));
+    mobileMenu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu?.classList.add('hidden'));
+    });
+    const allDetails = document.querySelectorAll('#faq details');
+    allDetails.forEach(targetDetail => {
+      targetDetail.addEventListener('click', (e) => {
+        if (!targetDetail.open) {
+          allDetails.forEach(detail => {
+            if (detail !== targetDetail) detail.removeAttribute('open');
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
