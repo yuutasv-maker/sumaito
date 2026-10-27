@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社Livre アサヒワークス｜愛媛・松前 自動車販売・レンタカー・リース・ロードサービス</title>
+  <meta name="description" content="＼車屋が怖い？うちは「優しい」と言われます／ 愛媛県松前町の株式会社Livre アサヒワークス。自動車販売実績1,000台以上、レンタカー保有100台以上、自社積載車完備。新車・中古車販売、キッチンカー製作、福祉車両、レンタカー、定額リース、ロードサービスまでワンストップ。">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            en: ['"Montserrat"', 'sans-serif'],
+            mincho: ['"Shippori Mincho"', 'serif'],
+          },
+          /* カラーパレットのセマンティック化:
+             無秩序なマルチカラー（紫・インディゴ等）を排除し、実店舗の信頼感を醸成するスレート/ネイビー基調に整理。
+             色は役割（アクセント＝ブルー、LINE＝エメラルド、緊急時＝ローズ）に限定して定義 */
+          colors: {
+            brand: {
+              navy: '#0f172a',
+              slate: '#1e293b',
+              blue: '#2563eb',
+              accent: '#3b82f6',
+              light: '#f8fafc',
+              border: '#e2e8f0',
+              ring: '#94a3b8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-slate-900 selection:text-white pb-16 md:pb-0">
+
+  <!-- ==========================================
+       ヘッダー
+  =========================================== -->
+  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- ブランドロゴ: 判読性を重視したサイズと余白 -->
+      <a href="#hero" class="flex items-center space-x-3 shrink-0 group">
+        <img src="images/logo_livre.jpg" alt="株式会社Livre ロゴ" class="h-9 sm:h-10 w-auto object-contain">
+        <div class="border-l border-slate-200 pl-3">
+          <span class="font-bold text-sm sm:text-base tracking-tight text-slate-900 block leading-tight">
+            アサヒワークス
+          </span>
+          <span class="text-[10px] text-slate-500 tracking-wider block">
+            株式会社Livre（愛媛・松前町）
+          </span>
+        </div>
+      </a>
+
+      <!-- デスクトップナビゲーション: 項目を大分類4点にまとめ、折り返しや詰まりを防止 -->
+      <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-slate-600">
+        <a href="#services" class="hover:text-blue-600 transition-colors">サービス案内</a>
+        <a href="#features" class="hover:text-blue-600 transition-colors">当店の特徴</a>
+        <a href="#faq" class="hover:text-blue-600 transition-colors">よくある質問</a>
+        <a href="#shop" class="hover:text-blue-600 transition-colors">店舗・会社案内</a>
+      </nav>
+
+      <!-- デスクトップ連絡先（電話＋LINE） -->
+      <div class="hidden lg:flex items-center space-x-4 shrink-0">
+        <a href="tel:089-909-8577" class="text-xs text-slate-600 hover:text-blue-600 transition-colors flex items-center space-x-1.5 font-medium">
+          <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          <span class="font-en font-bold text-sm">089-909-8577</span>
+        </a>
+        <a href="https://lin.ee/S6OS2fb" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold tracking-wide transition shadow-sm">
+          LINE相談
+        </a>
+      </div>
+
+      <!-- モバイルメニュー開閉ボタン（lg未満で展開） -->
+      <button id="mobile-menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu"
+              class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">
+        <svg class="w-6 h-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- モバイルドロワーメニュー -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 py-4 space-y-3">
+      <div class="flex flex-col space-y-1 text-sm font-medium text-slate-700 pb-3 border-b border-slate-100">
+        <a href="#services" class="py-2 px-3 rounded-lg hover:bg-slate-50 font-semibold text-slate-900">サービス案内</a>
+        <a href="#sales" class="py-1 px-3 pl-6 text-xs text-slate-600 hover:bg-slate-50">・車両販売・製作</a>
+        <a href="#rentacar" class="py-1 px-3 pl-6 text-xs text-slate-600 hover:bg-slate-50">・レンタカー（1日3,300円〜）</a>
+        <a href="#lease" class="py-1 px-3 pl-6 text-xs text-slate-600 hover:bg-slate-50">・マイカーリース（定額）</a>
+        <a href="#roadservice" class="py-1 px-3 pl-6 text-xs text-rose-600 font-bold hover:bg-slate-50">・自社積載車ロードサービス</a>
+        <a href="#features" class="py-2 px-3 rounded-lg hover:bg-slate-50 mt-2">当店の特徴</a>
+        <a href="#faq" class="py-2 px-3 rounded-lg hover:bg-slate-50">よくある質問</a>
+        <a href="#shop" class="py-2 px-3 rounded-lg hover:bg-slate-50">店舗・会社案内</a>
+      </div>
+      <div class="pt-1 flex flex-col space-y-2">
+        <a href="tel:089-909-8577" class="w-full py-2.5 rounded-lg bg-slate-900 text-white text-center text-xs font-semibold flex items-center justify-center space-x-2">
+          <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          <span>お電話：089-909-8577</span>
+        </a>
+        <a href="https://lin.ee/S6OS2fb" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-lg bg-emerald-600 text-white text-center text-xs font-semibold flex items-center justify-center space-x-2">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.5 5.43 3.84 7.08L5 22l4.16-1.39C10.05 20.85 11 21 12 21c5.52 0 10-4.03 10-9s-4.48-9-10-9z"/>
+          </svg>
+          <span>LINEで相談する</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==========================================
+       1. ヒーローセクション
+  =========================================== -->
+  <section id="hero" class="relative overflow-hidden bg-slate-50 text-slate-900 py-16 sm:py-24">
+    <!-- 背景スライド画像群（実店舗写真 & 車両イメージのクロスフェード） -->
+    <div id="hero-slider" class="absolute inset-0 z-0 overflow-hidden">
+      <!-- Slide 1: 自社積載車2台体制（実店舗写真） -->
+      <div class="hero-bg-slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
+        <img src="images/carrier_trucks.jpg" alt="株式会社Livre 自社積載車2台体制" class="w-full h-full object-cover object-right sm:object-center opacity-95 sm:opacity-100 contrast-[1.03]">
+      </div>
+      <!-- Slide 2: 車両販売展示イメージ -->
+      <div class="hero-bg-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out pointer-events-none">
+        <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1920&q=80" alt="自動車販売展示" class="w-full h-full object-cover object-right sm:object-center opacity-95 sm:opacity-100 contrast-[1.03]">
+      </div>
+      <!-- Slide 3: トラック荷台木床板張り替え（施工実績写真） -->
+      <div class="hero-bg-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out pointer-events-none">
+        <img src="images/truck_bed_wood.jpg" alt="トラック荷台木床板張り替え施工" class="w-full h-full object-cover object-right sm:object-center opacity-95 sm:opacity-100 contrast-[1.03]">
+      </div>
+      <!-- Slide 4: レンタカー（保有車両イメージ） -->
+      <div class="hero-bg-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out pointer-events-none">
+        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1920&q=80" alt="自社レンタカー保有車両" class="w-full h-full object-cover object-right sm:object-center opacity-95 sm:opacity-100 contrast-[1.03]">
+      </div>
+      <!-- Slide 5: 店舗エントランス（実店舗写真） -->
+      <div class="hero-bg-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out pointer-events-none">
+        <img src="images/entrance_door.jpg" alt="アサヒワークス 店舗エントランス" class="w-full h-full object-cover object-right sm:object-center opacity-95 sm:opacity-100 contrast-[1.03]">
+      </div>
+      <!-- オーバーレイグラデーション（左側テキストの可読性を100%確保しつつ、右側の写真を100%くっきり鮮明に魅せる左右グラデーション） -->
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/95 via-35% sm:via-slate-50/90 sm:via-45% to-slate-50/20 sm:to-transparent z-10"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-50/80 via-transparent to-transparent sm:hidden z-10"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        
+        <!-- 拠点ラベル -->
+        <div class="inline-flex items-center space-x-2 text-xs font-medium text-slate-600 mb-4 bg-white/90 px-3 py-1 rounded-md border border-slate-200 shadow-sm backdrop-blur-sm">
+          <span>愛媛県松前町</span>
+          <span class="text-slate-400">|</span>
+          <span>アサヒワークス（株式会社Livre）</span>
+        </div>
+
+        <!-- Instagram公式 安心宣言フレーズ -->
+        <div class="text-amber-700 font-bold text-sm sm:text-base mb-4 flex items-center space-x-2">
+          <span class="bg-amber-400 text-slate-950 px-2 py-0.5 rounded text-xs font-black">安心宣言</span>
+          <span>＼ 車屋が怖い？ うちは「優しい」と言われます。全部お任せOK ／</span>
+        </div>
+
+        <!-- メインキャッチコピー -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-5 text-slate-900">
+          車のこと、よく分からなくても大丈夫。<br>
+          <span class="text-slate-900">
+            愛媛・松前町の「優しい」車屋さんです。
+          </span>
+        </h1>
+
+        <!-- サブコピー -->
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl font-normal">
+          自動車販売実績1,000台以上・レンタカー常時100台以上保有・自社積載車完備。<br class="hidden sm:inline">
+          お車の購入から、急な故障時のレッカー急行・代車手配まで。他のお店を挟まず、アサヒワークスのスタッフが直接対応いたします。
+        </p>
+
+        <!-- CTA動線: 主要なLINE相談、電話、緊急対応の3本を整理 -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          <a href="https://lin.ee/S6OS2fb" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition shadow-lg shadow-emerald-600/30">
+            <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.5 5.43 3.84 7.08L5 22l4.16-1.39C10.05 20.85 11 21 12 21c5.52 0 10-4.03 10-9s-4.48-9-10-9z"/>
+            </svg>
+            LINEで無料相談
+          </a>
+          <a href="tel:089-909-8577"
+             class="inline-flex items-center justify-center px-5 py-3.5 rounded-xl bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-sm font-medium transition shadow-sm">
+            <svg class="w-4 h-4 mr-2 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            お電話：089-909-8577
+          </a>
+          <a href="#roadservice"
+             class="inline-flex items-center justify-center px-5 py-3.5 rounded-xl bg-rose-600/90 hover:bg-rose-600 text-rose-100 font-semibold text-sm transition shadow-md">
+            <span class="w-2 h-2 rounded-full bg-rose-300 mr-2 animate-pulse"></span>
+            自社積載車ロードサービス急行
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       実績スタッツバー
+  =========================================== -->
+  <section class="bg-white border-b border-slate-200 text-slate-800 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-slate-100">
+        
+        <div class="px-2">
+          <span class="text-xs text-slate-500 block font-medium mb-1">自動車販売実績</span>
+          <span class="font-en text-2xl sm:text-3xl font-extrabold text-blue-600">1,000<span class="text-sm font-normal text-slate-500 ml-1">台以上</span></span>
+        </div>
+
+        <div class="px-2">
+          <span class="text-xs text-slate-500 block font-medium mb-1">レンタカー保有台数</span>
+          <span class="font-en text-2xl sm:text-3xl font-extrabold text-slate-900">100<span class="text-sm font-normal text-slate-500 ml-1">台以上</span></span>
+        </div>
+
+        <div class="px-2">
+          <span class="text-xs text-slate-500 block font-medium mb-1">緊急時ロードサービス</span>
+          <span class="font-bold text-xl sm:text-2xl text-rose-600">自社積載車<span class="text-xs sm:text-sm font-normal text-slate-500 ml-1">完備</span></span>
+        </div>
+
+        <div class="px-2">
+          <span class="text-xs text-slate-500 block font-medium mb-1">拠点所在地</span>
+          <span class="font-bold text-lg sm:text-xl text-slate-900">愛媛県松前町</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       2. 事業内容
+  =========================================== -->
+  <section id="services" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- セクション見出し -->
+      <div class="max-w-3xl mb-12 sm:mb-16">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">事業内容</h2>
+        <div class="w-12 h-1 bg-blue-600 mt-4 mb-6"></div>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-light">
+          お車の購入から、急な故障時のレッカー急行・代車手配まで。他のお店を挟まず、アサヒワークスのスタッフが直接対応いたします。
+        </p>
+      </div>
+
+
+      <!-- 4大事業カードグリッド（写真＋箇条書き取扱品目＋スマートリンク） -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        
+        <!-- 01: 車両販売・製作 -->
+        <div id="sales" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:shadow-lg transition-all duration-300 flex flex-col">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80"
+                 alt="アサヒワークス 自動車販売展示" class="w-full h-full object-cover">
+            <div class="absolute bottom-3 left-3 bg-slate-900/85 backdrop-blur-sm text-white px-2.5 py-1 rounded text-[11px] font-semibold flex items-center space-x-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+              <span>累計販売実績 1,000台以上</span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-slate-900 mb-3">車両販売・製作</h3>
+              <ul class="text-xs sm:text-sm text-slate-600 space-y-2 border-t border-slate-200/80 pt-3 font-light">
+                <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 shrink-0"></span>国産全メーカー・輸入車対応（カーセンサー掲載）</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 shrink-0"></span>移動販売車（キッチンカー）オーダー製作・架装</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 shrink-0"></span>トラック荷台の床板張り替え・補修</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 shrink-0"></span>車いすスローパー等の福祉車両取扱</li>
+              </ul>
+            </div>
+            <div class="pt-5 mt-4 border-t border-slate-200/60 flex items-center justify-between text-xs">
+              <a href="https://www.carsensor.net/shop/ehime/318991001/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium">カーセンサー公式在庫 ↗</a>
+              <a href="https://lin.ee/S6OS2fb" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline font-semibold">LINEでお車相談 →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02: レンタカー -->
+        <div id="rentacar" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:shadow-lg transition-all duration-300 flex flex-col">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80"
+                 alt="レンタカー車両" class="w-full h-full object-cover">
+            <div class="absolute bottom-3 left-3 bg-slate-900/85 backdrop-blur-sm text-white px-2.5 py-1 rounded text-[11px] font-semibold flex items-center space-x-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>常時100台以上保有</span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-slate-900 mb-3">レンタカー</h3>
+              <ul class="text-xs sm:text-sm text-slate-600 space-y-2 border-t border-slate-200/80 pt-3 font-light">
+                <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2 shrink-0"></span>1日 3,300円〜（軽自動車クラス）</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2 shrink-0"></span>コンパクト・ミニバン・商用バン</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2 shrink-0"></span>事故・修理時の代車即日手配</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2 shrink-0"></span>マンスリー・長期法人利用プラン</li>
+              </ul>
+            </div>
+            <div class="pt-5 mt-4 border-t border-slate-200/60 flex items-center justify-between text-xs">
+              <a href="tel:089-909-8577" class="text-slate-600 hover:text-blue-600 font-medium">即日電話確認</a>
+              <a href="https://lin.ee/S6OS2fb" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline font-semibold">空車をLINE確認 →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03: マイカーリース -->
+        <div id="lease" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:shadow-lg transition-all duration-300 flex flex-col">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
+                 alt="マイカーリースの最新SUV" class="w-full h-full object-cover">
+            <div class="absolute bottom-3 left-3 bg-slate-900/85 backdrop-blur-sm text-white px-2.5 py-1 rounded text-[11px] font-semibold flex items-center space-x-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+              <span>頭金0円・定額</span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-slate-900 mb-3">マイカーリース</h3>
+              <ul class="text-xs sm:text-sm text-slate-600 space-y-2 border-t border-slate-200/80 pt-3 font-light">
+                <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 shrink-0"></span>頭金0円・毎月定額払い</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 shrink-0"></span>毎年の自動車税コミコミ</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 shrink-0"></span>車検基本料・自賠責保険込み</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 shrink-0"></span>国産全メーカー新車・中古車対応</li>
+              </ul>
+            </div>
+            <div class="pt-5 mt-4 border-t border-slate-200/60 flex items-center justify-between text-xs">
+              <span class="text-slate-500 font-medium">月々のお支払い相談</span>
+              <a href="https://lin.ee/S6OS2fb" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline font-semibold">プランをLINE相談 →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04: 自社積載車ロードサービス -->
+        <div id="roadservice" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:shadow-lg transition-all duration-300 flex flex-col">
+          <div class="relative h-48 overflow-hidden">
+            <img src="images/carrier_trucks.jpg"
+                 alt="株式会社Livre 自社保有の積載車（セーフティローダー）2台" class="w-full h-full object-cover">
+            <div class="absolute bottom-3 left-3 bg-slate-900/85 backdrop-blur-sm text-white px-2.5 py-1 rounded text-[11px] font-semibold flex items-center space-x-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+              <span>自社積載車（セーフティローダー）2台体制</span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold text-rose-600 tracking-wider block mb-1">【積載車完備】</span>
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-2 leading-snug">
+                万が一のトラブルにも迅速対応。<br>
+                自社積載車で安心のロードサービス体制。
+              </h3>
+              <div class="text-xs sm:text-sm text-slate-600 space-y-2 border-t border-slate-200/80 pt-3 font-light leading-relaxed">
+                <p>突然の事故や故障など、お車のトラブルにも安心のロードサービス体制を整えております。</p>
+                <p>当社では積載車を自社保有し、事故車・故障車の搬送から修理、代車の手配まで一貫して対応いたします。</p>
+                <p class="font-medium text-slate-800">お客様の「もしも」に寄り添い、安心・安全なカーライフをサポートいたします。</p>
+              </div>
+            </div>
+            <div class="pt-5 mt-4 border-t border-slate-200/60 flex flex-wrap items-center justify-between gap-2 text-xs">
+              <a href="tel:089-909-8577" class="inline-flex items-center px-3.5 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-bold transition shadow-sm">
+                <svg class="w-3.5 h-3.5 mr-1 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                緊急出動：089-909-8577
+              </a>
+              <a href="https://lin.ee/S6OS2fb" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline font-semibold">LINE急行相談 →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       3. 選ばれる理由
+  =========================================== -->
+  <section id="features" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl mb-12">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">当店の特徴・選ばれる理由</h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">「車屋が怖い？」そんな不安を解消し、長く安心して頼れる3つの理由。</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- 特徴1: 敷居の低さ・優しさ -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">敷居の低い「優しい車屋」</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
+              「車に詳しくないから聞きづらい」という方も大歓迎です。世間話をする感覚でお気軽にご相談ください。
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-medium text-slate-500 flex items-center">
+            <span class="text-amber-500 mr-1.5 font-bold">★</span> 初めての方・相談のみも大歓迎
+          </div>
+        </div>
+
+        <!-- 特徴2: 規模と一本化 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">販売・レンタカー・製作の一本化</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
+              累計販売1,000台以上・レンタカー常時100台以上の確かな規模。購入後の点検も、故障時のレンタカー手配も、電話1本でそのまま繋がります。
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-medium text-slate-500 flex items-center">
+            <span class="text-blue-500 mr-1.5 font-bold">★</span> 販売1,000台＋保有100台の規模感
+          </div>
+        </div>
+
+        <!-- 特徴3: 自社積載車によるトラブル対応 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">自社積載車完備の迅速レスキュー</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
+              セーフティローダー（積載車）を自社で2台保有。自社で積載車と100台以上のレンタカーを保有しているため、急な事故でも現場へ駆けつけ、その場で代車をお渡しできます。
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-medium text-slate-500 flex items-center">
+            <span class="text-rose-500 mr-1.5 font-bold">★</span> 搬送から代車・修理まで自社完備
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       4. 公式Instagram
+  =========================================== -->
+  <section id="instagram" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <div class="max-w-2xl mx-auto mb-10">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">公式Instagram</h2>
+        <div class="w-10 h-0.5 bg-blue-600 mx-auto mt-3 mb-4"></div>
+        <p class="text-xs sm:text-sm text-slate-600 font-light">
+          日々の納車風景や、キッチンカーの製作現場を更新中！「どんな雰囲気のお店か見てみたい」という方はぜひ覗いてみてください。
+        </p>
+      </div>
+
+      <!-- 4枚の現場フォトギャラリー -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div class="group relative rounded-xl overflow-hidden aspect-square border border-slate-200 bg-slate-900 shadow-sm block">
+          <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80"
+               alt="納車・販売車両の紹介" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent flex items-end p-3">
+            <span class="text-xs text-white font-medium">納車・販売車両</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-xl overflow-hidden aspect-square border border-slate-200 bg-slate-900 shadow-sm block">
+          <img src="images/entrance_door.jpg"
+               alt="アサヒワークス 店舗エントランス" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent flex items-end p-3">
+            <span class="text-xs text-white font-medium">店舗・ピット風景</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-xl overflow-hidden aspect-square border border-slate-200 bg-slate-900 shadow-sm block">
+          <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=600&q=80"
+               alt="レンタカー車両整備" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent flex items-end p-3">
+            <span class="text-xs text-white font-medium">レンタカー最新車両</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-xl overflow-hidden aspect-square border border-slate-200 bg-slate-900 shadow-sm block">
+          <img src="images/truck_bed_wood.jpg"
+               alt="トラック荷台の木床板張り替え施工実績" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent flex items-end p-3">
+            <span class="text-xs text-white font-medium">荷台木床板張り替え施工</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- フォローするボタン -->
+      <a href="https://www.instagram.com/asahi.works/" target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold text-xs tracking-wider transition shadow-md">
+        <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        公式Instagram（@asahi.works）を見る ↗
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       5. よくある質問 (FAQ)
+  =========================================== -->
+  <section id="faq" class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-10 text-center sm:text-left">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">よくあるご質問</h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">お問い合わせの前にご確認いただける一般的な疑問をまとめました。</p>
+      </div>
+
+      <div class="space-y-3">
+        
+        <!-- FAQ 1: WAI-ARIA制御 -->
+        <div class="faq-item bg-slate-50 rounded-xl border border-slate-200 overflow-hidden">
+          <button type="button"
+                  id="faq-btn-1"
+                  aria-expanded="false"
+                  aria-controls="faq-ans-1"
+                  class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between text-slate-900 font-semibold text-sm hover:text-blue-600 transition">
+            <span class="pr-4">Q. お車の相談やお見積もりだけでも費用はかかりますか？</span>
+            <span class="faq-icon text-slate-400 font-mono text-base shrink-0">＋</span>
+          </button>
+          <div id="faq-ans-1"
+               role="region"
+               aria-labelledby="faq-btn-1"
+               hidden
+               class="faq-answer hidden px-5 pb-4 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200 bg-white">
+            もちろん無料です。「とりあえず話だけ聞いてみたい」「他店と相見積もりを取りたい」という段階でも遠慮なくどうぞ。無理にお勧めするような営業は一切ありませんので、安心してお越しください。
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-slate-50 rounded-xl border border-slate-200 overflow-hidden">
+          <button type="button"
+                  id="faq-btn-2"
+                  aria-expanded="false"
+                  aria-controls="faq-ans-2"
+                  class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between text-slate-900 font-semibold text-sm hover:text-blue-600 transition">
+            <span class="pr-4">Q. レンタカーの当日利用や長期（1ヶ月以上）のレンタルは可能ですか？</span>
+            <span class="faq-icon text-slate-400 font-mono text-base shrink-0">＋</span>
+          </button>
+          <div id="faq-ans-2"
+               role="region"
+               aria-labelledby="faq-btn-2"
+               hidden
+               class="faq-answer hidden px-5 pb-4 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200 bg-white">
+            はい、空車状況に応じて当日のお貸し出しも承っております。お急ぎの場合はお電話（089-909-8577）またはLINEにてお問い合わせください。また、お仕事用や修理期間中の代車など、1ヶ月以上の長期マンスリープランも格安でご用意しております。
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-slate-50 rounded-xl border border-slate-200 overflow-hidden">
+          <button type="button"
+                  id="faq-btn-3"
+                  aria-expanded="false"
+                  aria-controls="faq-ans-3"
+                  class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between text-slate-900 font-semibold text-sm hover:text-blue-600 transition">
+            <span class="pr-4">Q. 他店で購入した車でも、事故や故障時にロードサービスを頼めますか？</span>
+            <span class="faq-icon text-slate-400 font-mono text-base shrink-0">＋</span>
+          </button>
+          <div id="faq-ans-3"
+               role="region"
+               aria-labelledby="faq-btn-3"
+               hidden
+               class="faq-answer hidden px-5 pb-4 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200 bg-white">
+            はい、当店でご購入いただいたお車でなくても対応可能です。自社保有の積載車（セーフティローダー）にて現場へ急行し、搬送から修理・代車の手配まで一括して対応いたします。
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       6. 経営理念セクション
+  =========================================== -->
+  <section id="philosophy" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <span class="text-xs font-semibold tracking-wider text-slate-500 uppercase block mb-2">企業理念</span>
+      <h2 class="text-xs sm:text-sm font-bold text-slate-400 tracking-widest uppercase mb-3">株式会社Livre 経営理念</h2>
+      
+      <div class="font-mincho text-2xl sm:text-3xl text-slate-900 font-bold tracking-wider mb-6">
+        「共に挑み、共に栄え」
+      </div>
+
+      <div class="w-12 h-0.5 bg-slate-300 mx-auto mb-6"></div>
+
+      <div class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 text-slate-700 leading-relaxed text-xs sm:text-sm font-light space-y-3 text-left sm:text-center shadow-sm">
+        <p>
+          私たちはお客様一人ひとりに誠実に向き合い、期待を超える価値と安心を提供することで、信頼される企業であり続けます。
+        </p>
+        <p>
+          そして現状に満足することなく、常に新たな可能性に挑戦し、成長し続けます。その挑戦から生まれる成果を社員やその家族、取引先、地域社会など関わるすべての人と分かち合い、共に豊かで幸せな未来を築いていきます。
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       7. 店舗・会社案内・アクセス
+  =========================================== -->
+  <section id="shop" class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl mb-12">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">店舗情報・アクセス</h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">株式会社Livre / アサヒワークス（asahi.works）</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        
+        <!-- 店舗基本情報テーブル -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden divide-y divide-slate-200/70 text-xs sm:text-sm">
+            
+            <div class="p-4 flex flex-col sm:flex-row sm:items-center">
+              <span class="w-28 font-bold text-slate-900 shrink-0 mb-1 sm:mb-0">屋号・店舗名</span>
+              <span class="text-slate-800 font-bold">アサヒワークス（asahi.works）</span>
+            </div>
+
+            <div class="p-4 flex flex-col sm:flex-row sm:items-center">
+              <span class="w-28 font-bold text-slate-900 shrink-0 mb-1 sm:mb-0">運営法人</span>
+              <span class="text-slate-700">株式会社Livre</span>
+            </div>
+
+            <div class="p-4 flex flex-col sm:flex-row sm:items-start">
+              <span class="w-28 font-bold text-slate-900 shrink-0 mb-1 sm:mb-0">所在地</span>
+              <span class="text-slate-700">
+                〒791-3151 愛媛県伊予郡松前町大字神崎626-1<br>
+                <span class="text-xs text-slate-500 mt-0.5 block">（国道56号線近く / 駐車場完備）</span>
+              </span>
+            </div>
+
+            <div class="p-4 flex flex-col sm:flex-row sm:items-center">
+              <span class="w-28 font-bold text-slate-900 shrink-0 mb-1 sm:mb-0">電話番号</span>
+              <div class="text-slate-700">
+                <a href="tel:089-909-8577" class="font-en font-bold text-slate-900 text-sm hover:text-blue-600 transition">089-909-8577</a>
+                <span class="text-xs text-slate-500 ml-2">（FAX：089-909-8571）</span>
+              </div>
+            </div>
+
+            <div class="p-4 flex flex-col sm:flex-row sm:items-center">
+              <span class="w-28 font-bold text-slate-900 shrink-0 mb-1 sm:mb-0">営業時間</span>
+              <span class="text-slate-700">
+                10:00 〜 19:00<br class="sm:hidden">
+                <span class="text-xs text-rose-600 font-semibold sm:ml-2">※ロードサービスは緊急受付対応</span>
+              </span>
+            </div>
+
+            <div class="p-4 flex flex-col sm:flex-row sm:items-center">
+              <span class="w-28 font-bold text-slate-900 shrink-0 mb-1 sm:mb-0">定休日</span>
+              <span class="text-slate-700">日曜日（不定休）</span>
+            </div>
+
+            <div class="p-4 flex flex-col sm:flex-row sm:items-start">
+              <span class="w-28 font-bold text-slate-900 shrink-0 mb-1 sm:mb-0">事業内容</span>
+              <div class="text-slate-700 space-y-0.5">
+                <div>自動車販売（新車・中古車 / カーセンサー掲載）</div>
+                <div>移動販売車（キッチンカー）オーダー製作・架装</div>
+                <div>トラック荷台床板張り替え・補修</div>
+                <div>福祉車両取扱（車いすスローパー・リフトアップシート等）</div>
+                <div>レンタカー事業（常時保有100台以上）</div>
+                <div>マイカーリース取扱</div>
+                <div>ロードサービス（自社積載車完備）</div>
+              </div>
+            </div>
+
+            <div class="p-4 flex flex-col sm:flex-row sm:items-center">
+              <span class="w-28 font-bold text-slate-900 shrink-0 mb-1 sm:mb-0">公式SNS / LINE</span>
+              <div class="text-slate-700 flex flex-wrap gap-4">
+                <a href="https://lin.ee/S6OS2fb" target="_blank" rel="noopener noreferrer" class="text-emerald-600 font-semibold hover:underline">
+                  公式LINE ↗
+                </a>
+                <a href="https://www.instagram.com/asahi.works/" target="_blank" rel="noopener noreferrer" class="text-slate-600 font-semibold hover:underline">
+                  Instagram (@asahi.works) ↗
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- エントランス写真＆マップ枠 -->
+        <div class="lg:col-span-5 space-y-4">
+          <!-- 提供写真: エントランスドア -->
+          <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm relative">
+            <img src="images/entrance_door.jpg"
+                 alt="株式会社Livre オフィスエントランス"
+                 class="w-full h-48 object-cover">
+          </div>
+
+          <!-- Google Maps 埋め込みエリア -->
+          <div class="rounded-xl overflow-hidden border border-slate-200 h-56 bg-slate-100 shadow-sm">
+            <iframe
+              src="https://maps.google.com/maps?q=%E6%84%9B%E5%AA%9B%E7%9C%8C%E4%BC%8A%E4%BA%88%E9%83%A1%E6%9D%BE%E5%89%8D%E7%94%BA%E7%A5%9E%E5%B4%8E626-1&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="アサヒワークス 店舗アクセスマップ">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       8. お問い合わせ・ご相談
+  =========================================== -->
+  <section id="contact" class="py-16 sm:py-20 bg-slate-100 border-t border-slate-200 text-slate-900 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+      
+      <div class="text-center mb-10">
+        <h2 class="text-xl sm:text-3xl font-bold tracking-tight text-slate-900">お問い合わせ・ご相談</h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-2">お車に関するご質問・お見積もりなど、お気軽にお問い合わせください。</p>
+      </div>
+
+      <!-- 2大クイックアクション（LINE & 電話） -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+        
+        <!-- LINE（実リンク反映） -->
+        <a href="https://lin.ee/S6OS2fb" target="_blank" rel="noopener noreferrer"
+           class="p-5 rounded-xl bg-white border border-emerald-200 hover:border-emerald-500 transition flex items-center space-x-4 group shadow-sm">
+          <div class="w-10 h-10 rounded-lg bg-emerald-600 flex items-center justify-center text-white shrink-0">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.5 5.43 3.84 7.08L5 22l4.16-1.39C10.05 20.85 11 21 12 21c5.52 0 10-4.03 10-9s-4.48-9-10-9z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xs text-emerald-700 block font-medium">公式LINEで気軽に相談</span>
+            <span class="text-sm font-bold text-emerald-900">友だち追加（lin.ee/S6OS2fb）</span>
+          </div>
+        </a>
+
+        <!-- 電話発信 -->
+        <a href="tel:089-909-8577"
+           class="p-5 rounded-xl bg-white border border-slate-200 hover:border-blue-500 transition flex items-center space-x-4 group shadow-sm">
+          <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 shrink-0">
+            <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xs text-slate-500 block font-medium">お電話でのお問い合わせ</span>
+            <span class="font-en text-lg font-bold text-slate-900 tracking-tight">089-909-8577</span>
+            <span class="text-[10px] text-slate-500 block">受付時間 10:00〜19:00（日曜定休）</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Webフォーム -->
+      <div class="bg-white rounded-2xl p-6 sm:p-8 text-slate-800 shadow-xl">
+        <h3 class="text-base font-bold text-slate-900 mb-6 text-center">WEBお問い合わせフォーム</h3>
+        
+        <!-- WAI-ARIA (role="status") に準拠した完了通知コンテナ -->
+        <div id="contact-success-msg" role="status" aria-live="polite" class="hidden mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800">
+          <div class="flex items-center space-x-3">
+            <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <div>
+              <p class="font-bold text-sm">お問い合わせを受け付けました</p>
+              <p class="text-xs text-emerald-700 mt-0.5">内容を確認次第、担当者より1営業日以内にご連絡いたします。（※デモ版のため実際の送信は行われません）</p>
+            </div>
+          </div>
+        </div>
+
+        <form id="contact-form" action="#" method="POST" class="space-y-4">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">お名前 <span class="text-rose-500">*</span></label>
+              <input type="text" required placeholder="例：山田 太郎"
+                     class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">お電話番号 <span class="text-rose-500">*</span></label>
+              <input type="tel" required placeholder="例：090-1234-5678"
+                     class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">メールアドレス <span class="text-rose-500">*</span></label>
+            <input type="email" required placeholder="例：example@domain.com"
+                   class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">ご相談のサービス <span class="text-rose-500">*</span></label>
+            <select required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+              <option value="">選択してください</option>
+              <option value="sales">自動車販売（購入・注文販売・下取り）について</option>
+              <option value="custom">キッチンカー製作・福祉車両について</option>
+              <option value="rentacar">格安レンタカー（予約・代車・長期）について</option>
+              <option value="lease">マイカーリース（定額プラン）について</option>
+              <option value="roadservice">ロードサービス・積載車搬送について</option>
+              <option value="other">その他全般のご相談</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">お問い合わせ内容</label>
+            <textarea rows="4" placeholder="ご希望の車種やご予算、ご質問内容などを自由にご記入ください。"
+                      class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"></textarea>
+          </div>
+
+          <div class="text-center pt-2">
+            <button id="contact-submit-btn" type="submit"
+                    class="w-full sm:w-auto px-8 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white font-bold text-sm tracking-wide shadow transition flex items-center justify-center mx-auto space-x-2">
+              <span id="contact-submit-text">送信する</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- ==========================================
+       フッター
+  =========================================== -->
+  <footer class="bg-slate-950 text-slate-400 py-14 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        
+        <!-- 左列：ブランド紹介 -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center space-x-3">
+            <img src="images/logo_livre.jpg" alt="株式会社Livre ロゴ" class="h-8 w-auto object-contain bg-white rounded p-1">
+            <span class="font-bold text-white text-base">株式会社Livre アサヒワークス</span>
+          </div>
+          <p class="text-slate-400 max-w-sm leading-relaxed">
+            【経営理念】「共に挑み、共に栄え」<br>
+            〒791-3151 愛媛県伊予郡松前町大字神崎626-1<br>
+            TEL: 089-909-8577 / FAX: 089-909-8571<br>
+            自動車販売（実績1,000台以上）・キッチンカー製作・福祉車両・格安レンタカー（保有100台以上）・マイカーリース・自社積載車完備ロードサービス。
+          </p>
+        </div>
+
+        <!-- 中列：サービスリンク -->
+        <div>
+          <span class="text-white font-bold block mb-3 tracking-wider">取扱サービス</span>
+          <ul class="space-y-2">
+            <li><a href="#sales" class="hover:text-white transition">自動車販売・車両製作</a></li>
+            <li><a href="#rentacar" class="hover:text-white transition">格安レンタカー（100台以上）</a></li>
+            <li><a href="#lease" class="hover:text-white transition">マイカーリース</a></li>
+            <li><a href="#roadservice" class="hover:text-white transition">ロードサービス（積載車完備）</a></li>
+          </ul>
+        </div>
+
+        <!-- 右列：会社・規約リンク -->
+        <div>
+          <span class="text-white font-bold block mb-3 tracking-wider">会社・店舗情報</span>
+          <ul class="space-y-2">
+            <li><a href="#philosophy" class="hover:text-white transition">経営理念</a></li>
+            <li><a href="#features" class="hover:text-white transition">選ばれる理由</a></li>
+            <li><a href="#shop" class="hover:text-white transition">店舗アクセス・会社概要</a></li>
+            <li><a href="company.html" class="hover:text-white transition">運営会社情報（株式会社Livre）</a></li>
+            <li><a href="privacy.html" class="hover:text-white transition">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 text-center text-slate-500 font-mono text-[11px]">
+        &copy; 2026 株式会社Livre / アサヒワークス（asahi.works） All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ==========================================
+       スマホ固定CTAバー（モバイルのみ画面下部に常駐）
+  =========================================== -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2 flex items-center space-x-2 shadow-lg">
+    <a href="tel:089-909-8577"
+       class="flex-1 py-3 rounded-xl bg-slate-900 text-white text-center font-bold text-xs flex items-center justify-center space-x-1.5 shadow">
+      <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+      </svg>
+      <span>電話（089-909-8577）</span>
+    </a>
+    <a href="https://lin.ee/S6OS2fb" target="_blank" rel="noopener noreferrer"
+       class="flex-1 py-3 rounded-xl bg-emerald-600 text-white text-center font-bold text-xs flex items-center justify-center space-x-1.5 shadow">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.5 5.43 3.84 7.08L5 22l4.16-1.39C10.05 20.85 11 21 12 21c5.52 0 10-4.03 10-9s-4.48-9-10-9z"/>
+      </svg>
+      <span>LINEで無料相談</span>
+    </a>
+  </div>
+
+
+  <!-- ==========================================
+       インタラクションスクリプト
+  =========================================== -->
+  <script>
+    // モバイルメニュートグル
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // メニュー内リンククリック時に閉じる
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // FAQアコーディオン開閉（排他制御 ＆ WAI-ARIA属性同期）
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const btn = item.querySelector('.faq-btn');
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
+
+      if (!btn || !answer) return;
+
+      btn.addEventListener('click', () => {
+        const currentlyExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+        // 他のFAQを閉じる（排他制御）
+        faqItems.forEach(otherItem => {
+          const otherBtn = otherItem.querySelector('.faq-btn');
+          const otherAnswer = otherItem.querySelector('.faq-answer');
+          const otherIcon = otherItem.querySelector('.faq-icon');
+          if (otherBtn && otherAnswer) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+            otherAnswer.classList.add('hidden');
+            otherAnswer.setAttribute('hidden', '');
+            if (otherIcon) otherIcon.textContent = '＋';
+          }
+        });
+
+        // 押された項目のトグル
+        if (!currentlyExpanded) {
+          btn.setAttribute('aria-expanded', 'true');
+          answer.classList.remove('hidden');
+          answer.removeAttribute('hidden');
+          if (icon) icon.textContent = '✕';
+        }
+      });
+    });
+
+    // ヒーロー背景スライダー（5秒間隔のクロスフェード）
+    const heroSlides = document.querySelectorAll('.hero-bg-slide');
+    if (heroSlides.length > 1) {
+      let currentSlideIdx = 0;
+      setInterval(() => {
+        heroSlides[currentSlideIdx].classList.remove('opacity-100');
+        heroSlides[currentSlideIdx].classList.add('opacity-0', 'pointer-events-none');
+        currentSlideIdx = (currentSlideIdx + 1) % heroSlides.length;
+        heroSlides[currentSlideIdx].classList.remove('opacity-0', 'pointer-events-none');
+        heroSlides[currentSlideIdx].classList.add('opacity-100');
+      }, 5000);
+    }
+
+    // お問い合わせフォーム State管理（Submitting / Success）
+    const contactForm = document.getElementById('contact-form');
+    const contactSubmitBtn = document.getElementById('contact-submit-btn');
+    const contactSubmitText = document.getElementById('contact-submit-text');
+    const contactSuccessMsg = document.getElementById('contact-success-msg');
+
+    if (contactForm && contactSubmitBtn) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Submitting 状態：ボタン非活性化 ＆ ローディング演出
+        contactSubmitBtn.disabled = true;
+        contactSubmitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+        if (contactSubmitText) {
+          contactSubmitText.innerHTML = `
+            <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+            </svg>
+            送信処理中...
+          `;
+        }
+
+        // 疑似非同期処理（600ms後にSuccess状態へ移行）
+        setTimeout(() => {
+          contactForm.reset();
+          contactSubmitBtn.disabled = false;
+          contactSubmitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+          if (contactSubmitText) contactSubmitText.textContent = '送信する';
+          if (contactSuccessMsg) {
+            contactSuccessMsg.classList.remove('hidden');
+            contactSuccessMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        }, 600);
+      });
+    }
+  </script>
+
+</body>
+</html>

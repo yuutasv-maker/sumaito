@@ -42,6 +42,20 @@ const server = http.createServer((req, res) => {
     return res.end('403 Forbidden');
   }
 
+  // PROJECT #01: 住宅 スマイト（sumaito）のトンネル外部公開終了（Cloudflare経由のリクエストを404遮断）
+  const isExternalRequest = req.headers['cf-ray'] ||
+                            (req.headers['host'] && req.headers['host'].includes('trycloudflare.com')) ||
+                            req.headers['x-forwarded-proto'];
+
+  if (isExternalRequest && (
+    reqPath.startsWith('/sumaito') ||
+    reqPath.startsWith('/sumaito_sample') ||
+    reqPath.startsWith('/sumaito_frame')
+  )) {
+    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+    return res.end('404 Not Found: PROJECT #01（住宅 スマイト）の外部共有トンネルは終了しました。');
+  }
+
   // ディレクトリ指定時に末尾スラッシュ補正
   if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
     if (!req.url.endsWith('/')) {
@@ -127,15 +141,14 @@ function printShareBanner(publicUrl) {
   console.log(`\n  🔗 ポータルTOP（全体一覧）:`);
   console.log(`     \x1b[1m\x1b[36m${publicUrl}/\x1b[0m\n`);
   console.log(`  📱 各案件ダイレクトリンク:`);
+  console.log(`     - 車屋 (car_hub) ライト新装: ${publicUrl}/car_hub_light/`);
   console.log(`     - 車屋 (car_hub) 確認版    : ${publicUrl}/car_hub_sample/`);
-  console.log(`     - 車屋 (car_hub) 旧版(比較): ${publicUrl}/car_hub_sample/legacy.html`);
   console.log(`     - 車屋 (car_hub) 本番版    : ${publicUrl}/car_hub/`);
   console.log(`     - bar Mano a Mano 確認版   : ${publicUrl}/manoamano_sample/`);
   console.log(`     - bar Mano a Mano 本番版   : ${publicUrl}/manoamano/`);
   console.log(`     - 唐揚げ いけだ屋 確認版   : ${publicUrl}/ikedaya_sample/`);
   console.log(`     - 唐揚げ いけだ屋 本番版   : ${publicUrl}/ikedaya/`);
-  console.log(`     - 住宅 スマイト 確認版     : ${publicUrl}/sumaito_sample/`);
-  console.log(`     - 住宅 スマイト 本番版     : ${publicUrl}/sumaito/`);
+  console.log(`     - 住宅 スマイト (sumaito)  : [共有終了 / 閉鎖中]`);
   console.log('\n' + '='.repeat(68));
   console.log(' ※ 終了するには [Ctrl + C] を押してください。');
   console.log('='.repeat(68) + '\n');

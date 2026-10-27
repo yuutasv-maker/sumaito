@@ -313,20 +313,24 @@ test.describe('bar Mano a Mano LP (manoamano) の UI・整合性テスト', () =
 // ==========================================
 test.describe('株式会社Livre アサヒワークス LP (car_hub) の UI・整合性テスト', () => {
 
-  test('確認レビュー版 (car_hub_sample) に理念・実情報・FAQ・5大サービス・積載車写真が存在すること', async ({ page }) => {
+  test('確認レビュー版 (car_hub_sample) に理念・実情報・FAQ・4大サービス・積載車写真が存在すること', async ({ page }) => {
     await page.goto('/car_hub_sample/index.html');
 
-    // 理念および5大サービスセクションの存在確認
+    // 理念および4大サービスセクションの存在確認（保険事業は要望により一旦非表示）
     await expect(page.locator('#philosophy')).toBeVisible();
     await expect(page.locator('#sales')).toBeVisible();
     await expect(page.locator('#rentacar')).toBeVisible();
     await expect(page.locator('#lease')).toBeVisible();
-    await expect(page.locator('#insurance')).toBeVisible();
+    await expect(page.locator('#insurance')).toHaveCount(0);
     await expect(page.locator('#roadservice')).toBeVisible();
 
-    // 自社積載車写真の存在確認
-    const truckImg = page.locator('img[src="images/carrier_trucks.jpg"]');
+    // 自社積載車写真の存在確認（ロードサービスカード内）
+    const truckImg = page.locator('#roadservice img[src="images/carrier_trucks.jpg"]');
     await expect(truckImg).toBeVisible();
+
+    // ヒーロー背景スライダーの存在確認（5枚構成）
+    const heroSlides = page.locator('.hero-bg-slide');
+    await expect(heroSlides).toHaveCount(5);
 
     // 実電話番号およびLINE実リンクの確認
     const telLinks = page.locator('a[href="tel:089-909-8577"]');

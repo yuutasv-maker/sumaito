@@ -58,20 +58,56 @@
     <!-- 左ペイン: パターン選択カード一覧 -->
     <aside class="w-full lg:w-96 shrink-0 space-y-4">
       <div class="flex items-center justify-between pb-2 border-b border-slate-800">
-        <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Select Architecture</span>
-        <span class="text-xs text-blue-400 font-mono">2 Patterns + Legacy</span>
+        <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Select Architecture & Tone</span>
+        <span class="text-xs text-blue-400 font-mono">Light & Dark Patterns</span>
       </div>
 
-      <!-- パターンB: コーポレート・マルチページ構成（トップ＋下層5ページ） -->
-      <div class="pattern-card cursor-pointer p-4 rounded-xl border-2 border-blue-500 bg-slate-800/90 shadow-lg transition-all hover:border-blue-400"
-           data-url="multi_page/index.html" data-title="パターンB: コーポレート・マルチページ構成（トップ＋個別5事業ページ）" data-theme="トップはシンプルな事業案内カードに絞り、各事業の詳細は個別ページで深掘りする企業サイト">
+      <!-- パターンA（ライト版）: 白・ライトグレー・親しみやすい安心トーン -->
+      <div class="pattern-card cursor-pointer p-4 rounded-xl border-2 border-emerald-500 bg-slate-800/90 shadow-lg transition-all hover:border-emerald-400"
+           data-url="../car_hub_light/index.html" data-title="パターンA（ライトトーン版）: 白・ライトグレー・清潔感ある安心トーン" data-theme="黒背景を全廃し、白・清潔感ある明るいライトグレー基調で親しみやすさを最大化したシングルページLP">
         <div class="flex items-start justify-between mb-1.5">
-          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-600 text-white font-bold">PATTERN B / NEW</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-600 text-white font-bold">PATTERN A / LIGHT</span>
+          <span class="text-[11px] text-emerald-400 font-mono">car_hub_light/</span>
+        </div>
+        <h3 class="text-sm font-bold text-white mb-1">パターンA: シングルページ（ライトトーン版）</h3>
+        <p class="text-xs text-slate-300 leading-relaxed font-light mb-3">
+          黒背景（SaaS風）を脱却し、白・ライトグレー基調の優しいビジュアルへ変更。「車屋が怖い？うちは優しいと言われます」のコンセプトに直結した安心デザインです。
+        </p>
+        <div class="flex items-center gap-1.5">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">白系ヒーロー</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">明るいスタッツ</span>
+          <span class="text-[10px] text-emerald-400 font-mono ml-auto">Light Tone</span>
+        </div>
+      </div>
+
+      <!-- パターンB（ライト版）: マルチページ構成（ライトトーン版） -->
+      <div class="pattern-card cursor-pointer p-4 rounded-xl border-2 border-slate-800 bg-slate-900/80 hover:bg-slate-800 transition-all hover:border-slate-700"
+           data-url="../car_hub_light/multi_page/index.html" data-title="パターンB（ライトトーン版）: コーポレート・マルチページ（ライトトーン版）" data-theme="マルチページ構成のまま、トップを白・ライトグレー基調の優しいビジュアルへ変更したバージョン">
+        <div class="flex items-start justify-between mb-1.5">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-600 text-white font-bold">PATTERN B / LIGHT</span>
+          <span class="text-[11px] text-cyan-400 font-mono">multi_page/light</span>
+        </div>
+        <h3 class="text-sm font-bold text-white mb-1">パターンB: マルチページ（ライトトーン版）</h3>
+        <p class="text-xs text-slate-300 leading-relaxed font-light mb-3">
+          マルチページ構成のトップも明るいライトトーンへ刷新。4つの事業カードへの導入を清潔感あるトーンで案内します。
+        </p>
+        <div class="flex items-center gap-1.5">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950/80 text-cyan-300 border border-cyan-700/50">マルチページ</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950/80 text-cyan-300 border border-cyan-700/50">ライトトーン</span>
+          <span class="text-[10px] text-cyan-400 font-mono ml-auto">Light Tone</span>
+        </div>
+      </div>
+
+      <!-- パターンB: コーポレート・マルチページ構成（ダーク現行版） -->
+      <div class="pattern-card cursor-pointer p-4 rounded-xl border-2 border-slate-800 bg-slate-900/80 hover:bg-slate-800 transition-all hover:border-slate-700"
+           data-url="multi_page/index.html" data-title="パターンB（ダーク現行版）: コーポレート・マルチページ構成" data-theme="トップはシンプルな事業案内カードに絞り、各事業の詳細は個別ページで深掘りする企業サイト">
+        <div class="flex items-start justify-between mb-1.5">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-600 text-white font-bold">PATTERN B / DARK</span>
           <span class="text-[11px] text-slate-400 font-mono">multi_page/</span>
         </div>
-        <h3 class="text-sm font-bold text-white mb-1">パターンB: マルチページ構成（下層5ページ完備）</h3>
+        <h3 class="text-sm font-bold text-white mb-1">パターンB: マルチページ（ダーク現行版）</h3>
         <p class="text-xs text-slate-300 leading-relaxed font-light mb-3">
-          トップは各事業へのスマートな導入に絞り、各事業カードから専用ページ（`sales.html` 等）へ遷移。各事業の魅力・強みを1ページずつ深くアピールできます。
+          トップは各事業へのスマートな導入に絞り、各事業カードから専用ページ（`sales.html` 等）へ遷移する現行ダーク構成。
         </p>
         <div class="flex items-center gap-1.5">
           <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-900/60 text-blue-300 border border-blue-700/50">クリーンな事業カード</span>
@@ -80,20 +116,19 @@
         </div>
       </div>
 
-      <!-- パターンA: 1枚完結LP型（理研巧業スタイル / シングルページ） -->
+      <!-- パターンA: 1枚完結LP型（ダーク現行版） -->
       <div class="pattern-card cursor-pointer p-4 rounded-xl border-2 border-slate-800 bg-slate-900/80 hover:bg-slate-800 transition-all hover:border-slate-700"
-           data-url="../car_hub_sample/index.html" data-title="パターンA: 1枚完結LP型（理研巧業スタイル / シングルページ）" data-theme="5大事業を「OUR BUSINESS」1枠に集約。ページ内スクロールですべて完結するスッキリ型LP">
+           data-url="../car_hub_sample/index.html" data-title="パターンA（ダーク現行版）: 1枚完結LP型（シングルページ）" data-theme="4大事業を1枠に集約。ページ内スクロールですべて完結するスッキリ型LP">
         <div class="flex items-start justify-between mb-1.5">
-          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-700 text-slate-200 font-bold">PATTERN A</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-700 text-slate-200 font-bold">PATTERN A / DARK</span>
           <span class="text-[11px] text-slate-400 font-mono">car_hub_sample/</span>
         </div>
-        <h3 class="text-sm font-bold text-white mb-1">パターンA: 1枚完結LP型（理研巧業スタイル）</h3>
+        <h3 class="text-sm font-bold text-white mb-1">パターンA: 1枚完結LP型（ダーク現行版）</h3>
         <p class="text-xs text-slate-300 leading-relaxed font-light mb-3">
-          理研巧業オマージュの洗練された1ページ構成。事業内容をコンパクトに集約し、Instagramスナップや問い合わせへ流れるような導線。
+          理研巧業スタイルの洗練された1ページ構成（ダークテーマ版）。
         </p>
         <div class="flex items-center gap-1.5">
           <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">1枚完結</span>
-          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">コンパクト集約</span>
           <span class="text-[10px] text-slate-400 font-mono ml-auto">Single-Page</span>
         </div>
       </div>
