@@ -141,11 +141,15 @@ function printShareBanner(publicUrl) {
   console.log(`\n  🔗 ポータルTOP（全体一覧）:`);
   console.log(`     \x1b[1m\x1b[36m${publicUrl}/\x1b[0m\n`);
   console.log(`  📱 各案件ダイレクトリンク:`);
+  console.log(`     - ONE LEAGUE 2027 本番版  : ${publicUrl}/oneleague/`);
+  console.log(`     - ONE LEAGUE 2027 確認版  : ${publicUrl}/oneleague_sample/`);
   console.log(`     - 車屋 (car_hub) ライト新装: ${publicUrl}/car_hub_light/`);
   console.log(`     - 車屋 (car_hub) 確認版    : ${publicUrl}/car_hub_sample/`);
   console.log(`     - 車屋 (car_hub) 本番版    : ${publicUrl}/car_hub/`);
-  console.log(`     - bar Mano a Mano 確認版   : ${publicUrl}/manoamano_sample/`);
-  console.log(`     - bar Mano a Mano 本番版   : ${publicUrl}/manoamano/`);
+  console.log(`     - bar Mano a Mano v2 本番版: ${publicUrl}/manoamano_v2/`);
+  console.log(`     - bar Mano a Mano v2 確認版: ${publicUrl}/manoamano_v2_sample/`);
+  console.log(`     - bar Mano a Mano v1 確認版: ${publicUrl}/manoamano_sample/`);
+  console.log(`     - bar Mano a Mano v1 本番版: ${publicUrl}/manoamano/`);
   console.log(`     - 唐揚げ いけだ屋 確認版   : ${publicUrl}/ikedaya_sample/`);
   console.log(`     - 唐揚げ いけだ屋 本番版   : ${publicUrl}/ikedaya/`);
   console.log(`     - 住宅 スマイト (sumaito)  : [共有終了 / 閉鎖中]`);

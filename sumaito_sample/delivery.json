@@ -1,0 +1,8 @@
+{
+  "projectName": "sumaito",
+  "productionUrl": "https://yuutasv-maker.github.io/sumaito/",
+  "allowIndex": true,
+  "formEndpoint": null,
+  "allowTailwindCdn": true,
+  "notes": "sumaito LP 納品設定。LINE相談主導線（Webフォームなし）。"
+}

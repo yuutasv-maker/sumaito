@@ -421,5 +421,161 @@ test.describe('株式会社Livre アサヒワークス LP (car_hub) の UI・整
   });
 });
 
+// ==========================================
+// 5. ONE LEAGUE 2027 (oneleague) のテスト
+// ==========================================
+test.describe('ONE LEAGUE 2027 (oneleague) の UI 操作・整合性テスト', () => {
+
+  test('サンプル版 (oneleague_sample) でタブ切替（順位表 / 日程・対戦 / 試合結果）が正しく動作すること', async ({ page }) => {
+    await page.goto('/oneleague_sample/index.html');
+
+    const tabStandings = page.locator('#tab-standings');
+    const tabSchedule = page.locator('#tab-schedule');
+    const tabResults = page.locator('#tab-results');
+
+    const panelStandings = page.locator('#panel-standings');
+    const panelSchedule = page.locator('#panel-schedule');
+    const panelResults = page.locator('#panel-results');
+
+    // 初期状態: 順位表が表示、日程・結果は非表示
+    await expect(panelStandings).toBeVisible();
+    await expect(panelSchedule).toBeHidden();
+    await expect(panelResults).toBeHidden();
+    await expect(tabStandings).toHaveAttribute('aria-selected', 'true');
+
+    // 日程・対戦タブをクリック
+    await tabSchedule.click();
+    await expect(panelStandings).toBeHidden();
+    await expect(panelSchedule).toBeVisible();
+    await expect(panelResults).toBeHidden();
+    await expect(tabSchedule).toHaveAttribute('aria-selected', 'true');
+
+    // 試合結果タブをクリック
+    await tabResults.click();
+    await expect(panelStandings).toBeHidden();
+    await expect(panelSchedule).toBeHidden();
+    await expect(panelResults).toBeVisible();
+    await expect(tabResults).toHaveAttribute('aria-selected', 'true');
+
+    // 再度順位表タブをクリック
+    await tabStandings.click();
+    await expect(panelStandings).toBeVisible();
+    await expect(panelSchedule).toBeHidden();
+    await expect(panelResults).toBeHidden();
+    await expect(tabStandings).toHaveAttribute('aria-selected', 'true');
+  });
+
+  test('チームカードクリックでモーダルダイアログが展開され、閉じるボタンで閉じられること', async ({ page }) => {
+    await page.goto('/oneleague_sample/index.html');
+
+    const teamDialog = page.locator('#team-dialog');
+    await expect(teamDialog).not.toHaveAttribute('open');
+
+    // チームカードをクリック（データ取得後にレンダリングされるので待機）
+    const firstTeamCard = page.locator('.team-card').first();
+    await expect(firstTeamCard).toBeVisible();
+    await firstTeamCard.click();
+
+    // ダイアログが開く
+    await expect(teamDialog).toHaveAttribute('open', '');
+    await expect(teamDialog).toBeVisible();
+    const dialogTitle = page.locator('#team-dialog-title');
+    await expect(dialogTitle).not.toBeEmpty();
+
+    // 閉じるボタンを押下
+    const closeBtn = teamDialog.locator('.dialog-close');
+    await closeBtn.click();
+
+    // ダイアログが閉じる
+    await expect(teamDialog).not.toHaveAttribute('open');
+  });
+
+  test('リーク検証: 本番クリーン版 (oneleague) に注記が含まれず、確認版 (oneleague_sample) には注記が存在すること', async ({ page }) => {
+    // 1. 確認版 (oneleague_sample) の注記存在確認
+    await page.goto('/oneleague_sample/index.html');
+    const sampleTips = page.locator('.review-tip');
+    await expect(sampleTips).toHaveCount(3);
+    const sampleBodyText = await page.locator('body').innerText();
+    expect(sampleBodyText).toContain('赤入れポイント');
+
+    // 2. 本番クリーン版 (oneleague) のリークなし確認
+    await page.goto('/oneleague/index.html');
+    const prodTips = page.locator('.review-tip');
+    await expect(prodTips).toHaveCount(0);
+
+    const prodBodyText = await page.locator('body').innerText();
+    expect(prodBodyText).not.toContain('review-tip');
+    expect(prodBodyText).not.toContain('赤入れポイント');
+    expect(prodBodyText).not.toContain('要ヒアリング');
+    expect(prodBodyText).not.toContain('修正反映済み');
+  });
+
+  test('ポータル (index.html) に ONE LEAGUE 2027 の各リンクが存在すること', async ({ page }) => {
+    await page.goto('/index.html');
+    const cleanLink = page.locator('a[href="oneleague/index.html"]');
+    const sampleLink = page.locator('a[href="oneleague_sample/index.html"]');
+    await expect(cleanLink).toBeVisible();
+    await expect(sampleLink).toBeVisible();
+  });
+});
+
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const REPO_ROOT = path.resolve(__dirname, '..');
+
+// リポジトリ内の全 *_sample を動的に検出
+const detectedProjects = fs.readdirSync(REPO_ROOT, { withFileTypes: true })
+  .filter((e) => e.isDirectory() && e.name.endsWith('_sample'))
+  .map((e) => e.name.replace(/_sample$/, ''));
+
+test.describe('全LP案件の納品前品質保証（QA）共通テスト', () => {
+  const devKeywords = ['TODO', 'FIXME', 'HACK', 'DEBUG', '仮置き', '要確認', 'ダミー', 'テスト用', '確認用'];
+
+  for (const project of detectedProjects) {
+    test(`本番クリーン版 (${project}) に注記（.review-tip）や差分タグが混入していないこと (DELIVERY_CHECKLIST 2.2)`, async ({ page }) => {
+      await page.goto(`/${project}/index.html`);
+      const reviewTips = page.locator('.review-tip');
+      await expect(reviewTips).toHaveCount(0);
+
+      const bodyText = await page.locator('body').innerText();
+      expect(bodyText).not.toContain('赤入れポイント');
+      expect(bodyText).not.toContain('要ヒアリング');
+      expect(bodyText).not.toContain('修正反映済み');
+    });
+
+    test(`本番クリーン版 (${project}) に開発中コメント・未確定メモが残存していないこと (DELIVERY_CHECKLIST 2.5)`, async ({ page }) => {
+      await page.goto(`/${project}/index.html`);
+      const htmlContent = await page.content();
+
+      for (const kw of devKeywords) {
+        expect(htmlContent).not.toContain(kw);
+      }
+    });
+
+    test(`本番クリーン版 (${project}) で複数画面幅（375〜1440px）において水平スクロール（横はみ出し）が発生しないこと (DELIVERY_CHECKLIST 4.1)`, async ({ page }) => {
+      const viewports = [
+        { width: 375, height: 667 },  // iPhone SE
+        { width: 390, height: 844 },  // iPhone 12/13/14
+        { width: 768, height: 1024 }, // iPad
+        { width: 1440, height: 900 }, // Desktop
+      ];
+
+      for (const vp of viewports) {
+        await page.setViewportSize(vp);
+        await page.goto(`/${project}/index.html`);
+        const scrollWidth = await page.evaluate(() => document.documentElement.scrollWidth);
+        const clientWidth = await page.evaluate(() => document.documentElement.clientWidth);
+        expect(scrollWidth, `横はみ出し検知: ${project} at ${vp.width}px`).toBeLessThanOrEqual(clientWidth + 1);
+      }
+    });
+  }
+});
+
+
+
 
 

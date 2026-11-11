@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー｜サービス名（BRAND）</title>
+  <meta name="description" content="個人情報の取扱い方針（プライバシーポリシー）をご案内いたします。">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Noto Serif JP / Noto Sans JP / Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            mincho: ['"Noto Serif JP"', 'serif'],
+            en: ['"Montserrat"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      color: #1a1a1a;
+      background-color: #fafafa;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-zinc-800 selection:text-white flex flex-col min-h-screen">
+
+  <!-- ==============================================
+       グローバルヘッダー
+  =============================================== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-zinc-100">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
+      <!-- ロゴ（ブランドロゴ画像がある場合は <img>、ない場合はテキスト） -->
+      <a href="index.html" class="flex flex-col group">
+        <!-- ロゴ画像差し替え例: <img src="images/logo.png" alt="ブランドロゴ" class="h-8 w-auto"> -->
+        <span class="font-en text-2xl font-bold tracking-widest text-zinc-900 group-hover:text-zinc-600 transition-colors">BRAND LOGO / SERVICE</span>
+        <span class="text-[10px] tracking-wider text-zinc-400 font-normal -mt-1">ここにタグライン・サブコピーを書く</span>
+      </a>
+
+      <!-- デスクトップ ナビゲーション -->
+      <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
+        <a href="index.html#philosophy" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">理念</a>
+        <a href="index.html#service" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">サービス</a>
+        <a href="index.html#why-free" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">仕組み</a>
+        <a href="index.html#cases" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">ご紹介事例</a>
+        <a href="index.html#contact" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">ご紹介の流れ</a>
+        <a href="index.html#faq" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">よくある質問</a>
+        <a href="company.html" class="text-xs font-medium tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">運営会社</a>
+      </nav>
+
+      <!-- ヘッダー右 CTA -->
+      <div class="hidden md:flex items-center space-x-3">
+        <a href="#" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center px-4 py-2 rounded-full text-xs font-medium tracking-widest text-zinc-700 hover:text-zinc-950 border border-zinc-200 hover:border-zinc-400 transition-all duration-300">
+          <svg class="w-3.5 h-3.5 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          SNSを見る
+        </a>
+        <a href="index.html#contact"
+           class="inline-flex items-center px-5 py-2 rounded-full text-xs font-medium tracking-widest bg-zinc-900 text-white hover:bg-zinc-700 transition-all duration-300 shadow-sm hover:shadow-md">
+          <svg class="w-3.5 h-3.5 mr-2 fill-current" viewBox="0 0 24 24">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.089.495.25l2.462 3.33v-2.95c0-.347.282-.63.63-.63.345 0 .625.283.625.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+          </svg>
+          LINEで相談する
+        </a>
+      </div>
+
+      <!-- モバイルメニューボタン -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-zinc-800 focus:outline-none" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- モバイルメニュー展開部 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-zinc-100 px-6 py-6 space-y-4">
+      <a href="index.html#philosophy" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">理念</a>
+      <a href="index.html#service" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">サービス</a>
+      <a href="index.html#why-free" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">サービスの仕組み</a>
+      <a href="index.html#cases" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">ご紹介事例</a>
+      <a href="index.html#contact" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">ご紹介の流れ</a>
+      <a href="index.html#faq" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">よくある質問</a>
+      <a href="company.html" class="block text-sm font-medium tracking-wider text-zinc-700 hover:text-zinc-950 py-1">運営会社について</a>
+      <div class="pt-2 space-y-2">
+        <a href="index.html#contact"
+           class="flex items-center justify-center w-full py-3 rounded-full text-xs font-medium tracking-widest bg-zinc-900 text-white hover:bg-zinc-800 transition-colors">
+          <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.089.495.25l2.462 3.33v-2.95c0-.347.282-.63.63-.63.345 0 .625.283.625.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+          </svg>
+          LINEで無料相談する
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer"
+           class="flex items-center justify-center w-full py-3 rounded-full text-xs font-medium tracking-widest border border-zinc-200 text-zinc-700 hover:border-zinc-400 transition-colors">
+          <svg class="w-3.5 h-3.5 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          SNSを見る
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==============================================
+       メインコンテンツ
+  =============================================== -->
+  <main class="flex-grow pt-28 pb-20 md:pt-36 md:pb-32">
+    <div class="max-w-3xl mx-auto px-6 sm:px-8">
+      
+      <!-- パンくずリスト -->
+      <nav class="text-xs text-zinc-400 mb-10 flex items-center space-x-2 font-light">
+        <a href="index.html" class="hover:text-zinc-700 transition-colors">ホーム</a>
+        <span>&gt;</span>
+        <span class="text-zinc-600">プライバシーポリシー</span>
+      </nav>
+
+      <!-- ページヘッダー -->
+      <div class="text-center mb-16">
+        <span class="text-xs font-en font-medium tracking-[0.25em] text-zinc-400 uppercase block mb-3">Privacy Policy</span>
+        <h1 class="font-mincho text-2xl md:text-4xl font-normal tracking-widest text-zinc-900 mb-4">
+          プライバシーポリシー
+        </h1>
+        <p class="text-xs sm:text-sm text-zinc-500 font-light max-w-lg mx-auto leading-relaxed">
+          当サービス（以下「当サービス」）は、お客様の個人情報の適切な保護と取り扱いを重要事項と位置づけ、以下のとおりプライバシーポリシーを定めます。
+        </p>
+      </div>
+
+      <!-- ポリシー本文 -->
+      <div class="bg-white border border-zinc-200/80 rounded-3xl p-8 sm:p-12 shadow-sm text-zinc-700 text-sm leading-relaxed space-y-10 font-light">
+
+        <!-- 前文 -->
+        <p>
+          株式会社〇〇（以下「当社」といいます。）は、当社が提供するサービス（以下「当社サービス」といいます。）における、個人情報を含むお客様に関する情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。
+        </p>
+
+        <!-- 第1条 -->
+        <section class="space-y-3">
+          <h2 class="font-bold text-zinc-900 text-base tracking-wide border-b border-zinc-100 pb-2">
+            1. 関連法令・ガイドラインの遵守等
+          </h2>
+          <p>
+            当社は、個人情報保護法その他の関係法令、「個人情報の保護に関する法律についてのガイドライン」その他のガイドライン及び本ポリシーを遵守して、当社サービスを提供します。
+          </p>
+          <p>
+            当社は、当社サービスに関する個別の利用規約等においてお客様の情報の取扱いについて規定することがあります。個別の利用規約等において本ポリシーと異なる内容が定められている場合、個別の利用規約等の定めが優先して適用されます。
+          </p>
+        </section>
+
+        <!-- 第2条 -->
+        <section class="space-y-3">
+          <h2 class="font-bold text-zinc-900 text-base tracking-wide border-b border-zinc-100 pb-2">
+            2. お客様情報の取得
+          </h2>
+          <div class="space-y-2">
+            <p>(1) 当社は、個人情報（個人情報保護法により定義されたものをいいます。）を取得する際には、利用目的を公表または通知し、適法かつ公正な手段によって取得します。</p>
+            <p>(2) 当社は、当社サービスにおいて、以下のお客様情報を取得します。「お客様情報」とは、個人情報を含む、お客様が当社サービスを通じて提供した一切の情報、その他お客様のスマートフォン、PC 等の端末においてお客様またはお客様の端末に関連して生成または蓄積された情報であって、本ポリシーに基づき当社が取得するものを意味するものとします。</p>
+            
+            <div class="pl-4 space-y-2 mt-2">
+              <div>
+                <span class="font-medium text-zinc-900">a. お客様からご提供頂く情報</span>
+                <ul class="list-disc pl-5 mt-1 text-zinc-600 text-xs sm:text-sm space-y-0.5">
+                  <li>お客様が当社サービス上で入力・記録された情報（氏名、住所、電話番号、メールアドレス、職歴、学歴、所属等）</li>
+                  <li>クレジットカード番号その他の当社サービスの決済に必要な情報</li>
+                  <li>その他、取得に際して当社サービス上でお客様から取得する旨を記載した情報</li>
+                </ul>
+              </div>
+
+              <div>
+                <span class="font-medium text-zinc-900">b. 当社サービス利用時に、当社がお客様から取得することがある情報</span>
+                <ul class="list-disc pl-5 mt-1 text-zinc-600 text-xs sm:text-sm space-y-0.5">
+                  <li>サービス利用状況に関する情報</li>
+                  <li>ログ情報（IPアドレス、端末の個体識別番号等を含みます）</li>
+                  <li>Cookie</li>
+                </ul>
+              </div>
+
+              <div>
+                <span class="font-medium text-zinc-900">c. その他の情報</span>
+                <ul class="list-disc pl-5 mt-1 text-zinc-600 text-xs sm:text-sm space-y-0.5">
+                  <li>お客様から当社への問い合わせ・ご連絡に関する情報等</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="pt-2">(3) 当社は、お客様情報を、偽りその他の不正な手段によらず、適正な手段により取得します。当社が適正な手段に基づきお客様情報を取得した場合には、当社が本ポリシーに従ってお客様情報を利用することをお客様が許諾したものとします。</p>
+          </div>
+        </section>
+
+        <!-- 第3条 -->
+        <section class="space-y-3">
+          <h2 class="font-bold text-zinc-900 text-base tracking-wide border-b border-zinc-100 pb-2">
+            3. 利用目的
+          </h2>
+          <p>(1) 当社は、お客様情報を、以下の目的で利用します。</p>
+          
+          <div class="pl-4 space-y-3 mt-2 text-xs sm:text-sm">
+            <div>
+              <span class="font-medium text-zinc-900 block mb-1">a. お客様へのサービス提供・維持等のための利用</span>
+              <ul class="list-disc pl-5 text-zinc-600 space-y-0.5">
+                <li>お客様の本人確認・認証</li>
+                <li>当社サービス上でお客様の同意を頂いた利用目的のための利用</li>
+                <li>本サービスの提供にあたり必要なご連絡の実施</li>
+                <li>お客様とのお取引の実行・処理</li>
+                <li>当社サービスの開発、提供、改善・向上及びサポート</li>
+                <li>お客様からのご要望・お問合せ・苦情等への対応</li>
+                <li>お客様に対するアンケート調査の実施</li>
+                <li>当社の規約、本ポリシー、当社との契約等に違反する行為に対する対応</li>
+                <li>当社の規約、本ポリシー等の変更のお客様に対する通知</li>
+                <li>法令に基づく記録作成などの当社の管理の実施</li>
+              </ul>
+            </div>
+
+            <div>
+              <span class="font-medium text-zinc-900 block mb-1">b. サービス等の案内に関する利用</span>
+              <p class="text-zinc-600 pl-5">
+                当社または当社のグループ会社その他の第三者の商品またはサービスに関する情報の提供、広告または宣伝の実施（当社サービスの利用履歴等の情報を分析し、お客様の興味・関心に応じた行動ターゲティング広告を行うことがあります）
+              </p>
+            </div>
+
+            <div>
+              <span class="font-medium text-zinc-900 block mb-1">c. 研究・分析に関する利用</span>
+              <ul class="list-disc pl-5 text-zinc-600 space-y-0.5">
+                <li>お客様個人を特定できないように匿名加工した情報や統計データの作成、及びこれらを利用した調査、統計、分析</li>
+                <li>上記のデータの当社における商品・サービス開発等のための利用、または第三者への提供</li>
+              </ul>
+            </div>
+
+            <div>
+              <span class="font-medium text-zinc-900 block mb-1">d. その他の利用</span>
+              <ul class="list-disc pl-5 text-zinc-600 space-y-0.5">
+                <li>当社または第三者があらかじめお客様に利用目的を告げて取得したお客様情報について、当該利用目的のため</li>
+                <li>上記の利用目的に附随する利用目的のため</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="pt-2">
+            (2) 当社は、上記(1)の利用目的の達成に必要な範囲を超えて、お客様情報を取り扱うことはいたしません。但し、お客様からあらかじめ同意を得ていた場合または次の各号のいずれかに掲げる場合は、この限りではありません。
+          </p>
+          <ul class="list-disc pl-9 text-xs sm:text-sm text-zinc-600 space-y-0.5">
+            <li>法令に基づく場合</li>
+            <li>人の生命、身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき</li>
+            <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難であるとき</li>
+            <li>国の機関若しくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき</li>
+          </ul>
+        </section>
+
+        <!-- 第4条 -->
+        <section class="space-y-3">
+          <h2 class="font-bold text-zinc-900 text-base tracking-wide border-b border-zinc-100 pb-2">
+            4. 個人データの第三者提供
+          </h2>
+          <p>当社は、お客様情報のうち個人データ（個人情報保護法により定義されたものをいいます。）について、以下の場合を除き第三者に提供しません。</p>
+          <ol class="list-decimal pl-5 text-xs sm:text-sm text-zinc-600 space-y-1.5">
+            <li>あらかじめお客様ご本人の同意を得た場合</li>
+            <li>お客様が利用に同意した提携サービスの登録・提供等に必要な情報を、当該サービスの運営者に提供する場合。サービス運営者及び主要な提供情報は、提携サービスの初回利用時に、確認画面にて表示されます。この際、一部の情報については、提供しないことを選択できる場合があります。</li>
+            <li>提携サービスの運営者のウェブサイトまたはアプリケーション内で本サービスをご利用いただけるようにするために、お客様の同意を得て、提携サービスの運営者に提供する場合</li>
+            <li>お客様への当社サービス提供のために当社が業務委託先に対して開示する場合（委託業務には、注文処理、商品の発送、支払処理、カスタマーサービス、広告配信、講演、コンサルティング、マーケティングデータの分析などが含まれます。委託業者は、業務を遂行するために必要な範囲で個人情報を利用しますが、それ以外の目的で利用することはありません。）</li>
+            <li>第5項に基づき共同利用する場合</li>
+            <li>法令に基づく場合</li>
+            <li>人の生命、身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき</li>
+            <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難であるとき</li>
+            <li>国の機関若しくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき</li>
+            <li>合併その他の事由による事業の承継に伴って個人情報が提供される場合</li>
+          </ol>
+        </section>
+
+        <!-- 第5条 -->
+        <section class="space-y-3">
+          <h2 class="font-bold text-zinc-900 text-base tracking-wide border-b border-zinc-100 pb-2">
+            5. 個人データの共同利用
+          </h2>
+          <p>当社は、お客様への充実したサービスの提供・ご案内のため、法令及び以下の定めに従って、以下のとおり、保有する個人データ（個人情報保護法の定めるもの）の共同利用を行います。</p>
+          
+          <div class="space-y-2 text-xs sm:text-sm pl-2">
+            <p><span class="font-medium text-zinc-900">(1) 共同利用する項目：</span><br>氏名、住所、生年月日、電話番号、Eメールアドレス、所属、役職、取引履歴、その他ご提供及びお問い合わせいただいた内容等</p>
+            <p><span class="font-medium text-zinc-900">(2) 共同利用者の範囲：</span><br>当社とともにお客様にサービスを提供する事業者として、当該サービスに係るウェブサイト等においてお客様に対し表示した事業者（ご紹介する提携先ハウスメーカー・工務店等の事業者。※具体的な提携事業者一覧は、個別のご案内時または当社サービスサイト等においてあらかじめ明示いたします）</p>
+            <p><span class="font-medium text-zinc-900">(3) 共同利用の目的：</span><br>上記第3項記載の利用目的の範囲内で共同利用します。</p>
+            <div>
+              <span class="font-medium text-zinc-900">(4) 共同利用の管理責任者：</span><br>
+              株式会社〇〇<br>
+              住所：大阪府大阪市東淀川区東中島1丁目17-5<br>
+              代表者：代表取締役
+            </div>
+          </div>
+        </section>
+
+        <!-- 第6条 -->
+        <section class="space-y-3">
+          <h2 class="font-bold text-zinc-900 text-base tracking-wide border-b border-zinc-100 pb-2">
+            6. 個人情報の安全管理等
+          </h2>
+          <p>当社は、個人情報を保護し、個人情報への不正アクセスを防止するため、取得した個人情報の管理について、以下のような対策を講じています。</p>
+          <ul class="list-disc pl-5 text-xs sm:text-sm text-zinc-600 space-y-1">
+            <li>(1) 個人情報の適正な取扱いの確保のため、個人情報の取扱いに関するルールを策定しています。</li>
+            <li>(2) 個人情報の取扱いに関する責任者を設置するとともに、個人情報の利用を、業務上必要な社員だけに限定しています。また、社員から、個人情報の取扱いを適正に行う旨の誓約書を取得しています。</li>
+            <li>(3) システムに保存している個人情報については、業務上必要な社員だけが利用できるようアカウントとパスワードを用意し、アクセス権限管理を実施しています。</li>
+            <li>(4) 個人データを取り扱う情報システムを外部からの不正アクセス又は不正ソフトウェアから保護する仕組みを導入しています。</li>
+          </ul>
+        </section>
+
+        <!-- 第7条 -->
+        <section class="space-y-3">
+          <h2 class="font-bold text-zinc-900 text-base tracking-wide border-b border-zinc-100 pb-2">
+            7. Cookie（クッキー）その他の技術の利用
+          </h2>
+          <p>(1) 当社は、当社のサービス向上に資する目的で、お客様のコンピュータ等の記憶装置に Cookie と呼ばれるテキストファイルを送付し、保存・利用し、またはこれに類する技術を利用することがあります。Cookie 情報は、以下の目的のために利用されます。</p>
+          <ul class="list-disc pl-5 text-xs sm:text-sm text-zinc-600 space-y-0.5">
+            <li>お客様のサービス利用時の認証のため</li>
+            <li>お客様の利用履歴や興味関心に応じた情報の提供のため</li>
+            <li>お客様のデータ（アカウント情報や利用履歴等）やウェブサイトの安全を保つため</li>
+          </ul>
+          <p class="pt-1">(2) お客様は、ウェブブラウザーの設定を変更することにより、Cookie を無効化することができますが、Cookie を無効化すると、当社サービスの全部または一部の機能をご利用いただけなくなることがあります。</p>
+        </section>
+
+        <!-- 第8条 -->
+        <section class="space-y-3">
+          <h2 class="font-bold text-zinc-900 text-base tracking-wide border-b border-zinc-100 pb-2">
+            8. Google Analytics の利用
+          </h2>
+          <p>
+            当社サービス（当社のウェブサイトを含みます）では、お客様の当社サイトの訪問状況を把握するために Google 社のサービスである Google Analytics を利用しています。<br>
+            当社サービスで Google Analytics を利用しますと、当社が発行する Cookie をもとにして、Google 社がお客様の当社サービスの利用履歴を収集、記録、分析します。<br>
+            当社は、Google 社からその分析結果を受け取り、お客様の当社サービスの利用状況を把握します。<br>
+            Google Analytics により収集、記録、分析されたお客様の情報には、特定の個人を識別する情報は一切含まれません。また、それらの情報は、Google 社により同社のプライバシー・ポリシーに基づいて管理されます。<br>
+            Google Analytics の利用規約に関する説明については Google Analytics のサイトを、Google 社のプライバシー・ポリシーについては同社のサイトをご覧下さい。
+          </p>
+          <div class="text-xs space-y-1 text-zinc-500 pt-1">
+            <p>Google Analytics の利用規約：<a href="https://www.google.com/analytics/terms/jp.html" target="_blank" rel="noopener noreferrer" class="underline hover:text-zinc-900">https://www.google.com/analytics/terms/jp.html</a></p>
+            <p>Google のプライバシー・ポリシー：<a href="https://www.google.com/intl/ja/policies/privacy/" target="_blank" rel="noopener noreferrer" class="underline hover:text-zinc-900">https://www.google.com/intl/ja/policies/privacy/</a></p>
+          </div>
+        </section>
+
+        <!-- 第9条 -->
+        <section class="space-y-3">
+          <h2 class="font-bold text-zinc-900 text-base tracking-wide border-b border-zinc-100 pb-2">
+            9. 個人情報の開示
+          </h2>
+          <p>(1) 当社は、お客様から、個人情報保護法の定めに基づき個人情報等の開示を求められたときは、お客様ご本人からのご請求であることを確認の上で、お客様に対し、遅滞なく開示を行います（当該個人情報等が存在しないときは、その旨を通知いたします。）。ただし、個人情報保護法その他の法令により、当社が開示の義務を負わない場合は、この限りではありません。</p>
+          <p>(2) 個人情報の開示をご請求されるお客様は、当社所定の個人情報開示請求書及び次に掲げる本人確認書類をご提出いただくとともに、手数料として、1 件あたり 1,000 円（税抜）をお支払いいただきます。</p>
+          <div class="pl-4 text-xs sm:text-sm text-zinc-600 space-y-1">
+            <p class="font-medium text-zinc-900">a. 以下の書類からいずれか１点：</p>
+            <p class="pl-4">マイナンバーカードのコピー（個人番号を含まないもの）、パスポートのコピー、運転免許証（両面）のコピー</p>
+            <p class="font-medium text-zinc-900 pt-1">b. 以下の書類からいずれか２点：</p>
+            <p class="pl-4">健康保険証のコピー、年金手帳のコピー、住民票の原本、印鑑証明書の原本</p>
+            <p class="pl-4 text-[11px] text-zinc-500 mt-1">
+              ※健康保険証のコピーをご提出いただく場合は、記号・番号・保険者番号およびQRコードをあらかじめ黒塗り（マスキング）した状態でご提出ください。
+            </p>
+          </div>
+        </section>
+
+        <!-- 第10条 -->
+        <section class="space-y-3">
+          <h2 class="font-bold text-zinc-900 text-base tracking-wide border-b border-zinc-100 pb-2">
+            10. 個人情報の訂正等
+          </h2>
+          <p>(1) 当社は、お客様から、個人情報が事実でないという理由によって、個人情報保護法の定めに基づきその内容の訂正、追加または削除（以下「訂正等」といいます）を求められた場合には、お客様ご本人からのご請求であることを確認の上で、利用目的の達成に必要な範囲内において、遅滞なく必要な調査を行い、その結果に基づき、個人情報の内容の訂正等を行い、その旨をお客様に通知します（訂正等を行わない旨の決定をしたときは、お客様に対し、遅滞なくその旨を通知します。）。但し、個人情報保護法その他の法令により、当社が訂正等の義務を負わない場合は、この限りではありません。</p>
+          <p>(2) 個人情報の訂正等を請求されるお客様は、当社所定の個人情報訂正等請求書及び前項(2)に掲げる本人確認書類をご提出いただきます。なお、個人情報の訂正等の請求については手数料をいただきません。</p>
+        </section>
+
+        <!-- 第11条 -->
+        <section class="space-y-3">
+          <h2 class="font-bold text-zinc-900 text-base tracking-wide border-b border-zinc-100 pb-2">
+            11. 個人情報の利用停止等
+          </h2>
+          <p>(1) 当社は、お客様から、お客様の個人情報が、あらかじめ公表された利用目的の範囲を超えて取り扱われているという理由または偽りその他不正の手段により取得されたものであるという理由によって、個人情報保護法の定めに基づきその利用の停止または消去（以下この項において「利用停止等」といいます。）を求められた場合において、そのご請求に理由があることが判明したときは、お客様ご本人からのご請求であることを確認の上で、遅滞なく個人情報の利用停止等を行い、その旨をお客様に通知いたします（利用停止等を行わない旨の決定をしたときは、お客様に対し、遅滞なくその旨を通知いたします。）。但し、個人情報保護法その他の法令により、当社が利用停止等の義務を負わない場合は、この限りではありません。</p>
+          <p>(2) 個人情報の利用停止等を請求されるお客様は、当社所定の個人情報利用停止等請求書及び第9項(2)に掲げる本人確認書類をご提出いただきます。なお、個人情報の利用停止等の請求については手数料をいただきません。</p>
+        </section>
+
+        <!-- 第12条 -->
+        <section class="space-y-3">
+          <h2 class="font-bold text-zinc-900 text-base tracking-wide border-b border-zinc-100 pb-2">
+            12. お問合せ窓口
+          </h2>
+          <p>開示等のお申し出、ご意見、ご質問、苦情のお申し出その他個人情報の取扱いに関するお問い合わせは、以下の窓口までお願いいたします。</p>
+          <div class="bg-zinc-50 p-4 rounded-xl text-xs sm:text-sm space-y-1.5 text-zinc-600">
+            <p><span class="font-medium text-zinc-800">運営会社:</span> 株式会社〇〇（運営事務局）</p>
+            <p><span class="font-medium text-zinc-800">窓口:</span> 公式LINE または 公式SNS</p>
+            <p><span class="font-medium text-zinc-800">代表番号:</span> 06-6398-7750</p>
+            <p><span class="font-medium text-zinc-800">所在地:</span> 大阪府大阪市東淀川区東中島1丁目17-5</p>
+            <p class="text-[11px] text-zinc-500 pt-1 leading-relaxed">
+              ※本人確認書類の提出を伴う個人情報の開示・訂正・利用停止等のご請求につきましては、安全なデータ管理のため、公式LINEまたは郵送窓口にてご案内いたします。
+            </p>
+          </div>
+        </section>
+
+        <!-- 第13条 -->
+        <section class="space-y-3">
+          <h2 class="font-bold text-zinc-900 text-base tracking-wide border-b border-zinc-100 pb-2">
+            13. 本ポリシーの変更
+          </h2>
+          <p>当社は、お客様情報の取扱いに関する運用状況を適宜見直し、継続的な改善に努めるものとし、必要に応じて、本ポリシーを変更することがあります。変更した場合には、当社ウェブサイトへの掲示等によりお客様に通知いたします。ただし、法令上お客様の同意が必要となるような内容の変更の場合は、当社所定の方法でお客様の同意を得るものとします。</p>
+        </section>
+
+        <!-- 第14条 -->
+        <section class="space-y-3">
+          <h2 class="font-bold text-zinc-900 text-base tracking-wide border-b border-zinc-100 pb-2">
+            14. 当社の概要
+          </h2>
+          <div class="bg-zinc-50 p-4 rounded-xl text-xs sm:text-sm space-y-1 text-zinc-600">
+            <p><span class="font-medium text-zinc-800">会社名称:</span> 株式会社〇〇</p>
+            <p><span class="font-medium text-zinc-800">住所:</span> 大阪府大阪市東淀川区東中島1丁目17-5</p>
+            <p><span class="font-medium text-zinc-800">代表者:</span> 代表取締役</p>
+          </div>
+        </section>
+
+        <div class="text-right text-xs text-zinc-400 pt-4">
+          制定日：2026年10月1日
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==============================================
+       フッター
+  =============================================== -->
+  <footer class="py-14 bg-white border-t border-zinc-100 text-center">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 space-y-6">
+      <!-- ロゴ（ブランドロゴ画像がある場合は <img>、ない場合はテキスト） -->
+      <a href="index.html" class="inline-flex flex-col items-center">
+        <!-- ロゴ画像差し替え例: <img src="images/logo.png" alt="ブランドロゴ" class="h-8 w-auto mb-1"> -->
+        <span class="font-en text-2xl font-bold tracking-widest text-zinc-900">BRAND LOGO / SERVICE</span>
+        <span class="text-[10px] tracking-wider text-zinc-400 font-normal -mt-1">ここにタグライン・サブコピーを書く</span>
+      </a>
+
+      <!-- ナビゲーションリンク -->
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-xs tracking-wider text-zinc-500">
+        <a href="index.html#philosophy" class="hover:text-zinc-900 transition-colors">理念</a>
+        <a href="index.html#service" class="hover:text-zinc-900 transition-colors">サービス</a>
+        <a href="index.html#why-free" class="hover:text-zinc-900 transition-colors">サービスの仕組み</a>
+        <a href="index.html#cases" class="hover:text-zinc-900 transition-colors">ご紹介事例</a>
+        <a href="index.html#contact" class="hover:text-zinc-900 transition-colors">ご紹介の流れ</a>
+        <a href="index.html#faq" class="hover:text-zinc-900 transition-colors">よくある質問</a>
+        <a href="company.html" class="hover:text-zinc-900 transition-colors">運営会社について</a>
+        <a href="privacy.html" class="text-zinc-900 font-medium">プライバシーポリシー</a>
+      </div>
+
+      <!-- SNSリンク -->
+      <div class="pt-2">
+        <a href="#" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center text-xs tracking-widest text-zinc-600 hover:text-zinc-950 transition-colors">
+          <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          公式SNSアカウント
+        </a>
+      </div>
+
+      <!-- コピーライト -->
+      <p class="text-[11px] tracking-widest text-zinc-400 pt-4">
+        &copy; 2026 BRAND / SERVICE. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- モバイルメニュースクリプト -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,5 +1,4 @@
 .DS_Store
-*.md
 node_modules/
 .agents/
 test-results/
@@ -7,3 +6,9 @@ playwright-report/
 blob-report/
 playwright/.cache/
 /livre/
+scratch/
+
+# 作業用プロンプト・一時メモのみ除外（規約や一次情報ドキュメントは Git 管理）
+*_PROMPT.md
+*REPAIR_PROMPT.md
+*_delivery_*.zip

@@ -1,0 +1,8 @@
+{
+  "projectName": "oneleague",
+  "productionUrl": "https://yuutasv-maker.github.io/sumaito/oneleague/",
+  "allowIndex": true,
+  "formEndpoint": null,
+  "allowTailwindCdn": false,
+  "notes": "ONE LEAGUE 2027 LP 納品設定。Vanilla CSS 構成。"
+}

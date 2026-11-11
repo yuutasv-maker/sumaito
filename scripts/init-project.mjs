@@ -61,6 +61,18 @@ for (const d of dirs) {
   }
 }
 
+// <project>_sample/delivery.json の初期生成
+const deliveryJsonPath = path.join(REPO_ROOT, `${projectName}_sample`, 'delivery.json');
+const deliveryJsonContent = {
+  projectName,
+  productionUrl: `https://yuutasv-maker.github.io/sumaito/${projectName}/`,
+  allowIndex: true,
+  formEndpoint: null,
+  allowTailwindCdn: true,
+  notes: `${projectName} 納品設定（本番公開URL、noindex解除、フォーム送信先定義）。`,
+};
+fs.writeFileSync(deliveryJsonPath, JSON.stringify(deliveryJsonContent, null, 2), 'utf-8');
+
 console.log(`
 ============================================================
 Initialized 3-directory structure for project: "${projectName}"

@@ -1,0 +1,8 @@
+{
+  "projectName": "car_hub",
+  "productionUrl": "https://yuutasv-maker.github.io/sumaito/car_hub/",
+  "allowIndex": true,
+  "formEndpoint": null,
+  "allowTailwindCdn": true,
+  "notes": "株式会社Livre アサヒワークス LP 納品設定。WEBフォーム送信先はクライアント回答待ち。"
+}

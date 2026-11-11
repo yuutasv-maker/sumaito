@@ -1,0 +1,36 @@
+{
+  "mode": "demo",
+  "season": 2027,
+  "leagueName": "ONE LEAGUE",
+  "updatedAt": null,
+  "points": {"win": 3, "draw": 1, "loss": 0},
+  "contact": {"lineUrl": null, "email": null},
+  "teams": [
+    {"id":"verde","name":"FC VERDE","short":"VER","color":"#577646","mark":"V","comment":"仲間と一緒に、毎試合を楽しもう。"},
+    {"id":"azul","name":"AZUL TOKYO","short":"AZL","color":"#466b9a","mark":"A","comment":"青いユニフォームで、ひとつになる。"},
+    {"id":"sol","name":"SOL UNITED","short":"SOL","color":"#bb793b","mark":"S","comment":"週末の楽しみは、いつもこのコートに。"},
+    {"id":"roots","name":"ROOTS FC","short":"RTS","color":"#795e8e","mark":"R","comment":"地元の仲間から広がる、フットサルの輪。"},
+    {"id":"libre","name":"FC LIBRE","short":"LIB","color":"#4b817d","mark":"L","comment":"自由に、楽しく、自分たちらしく。"},
+    {"id":"unite","name":"UNITE","short":"UNT","color":"#8c644e","mark":"U","comment":"ひとつのパスから、チームをつなぐ。"},
+    {"id":"nova","name":"NOVA FC","short":"NOV","color":"#6a7392","mark":"N","comment":"新しい仲間と、新しい一歩を。"},
+    {"id":"buddy","name":"BUDDY'S","short":"BDY","color":"#9a626d","mark":"B","comment":"勝っても負けても、また一緒に。"}
+  ],
+  "matches": [
+    {"id":"m01","round":1,"date":"2027-02-14","time":"10:00","venue":"サンプルコート A","home":"verde","away":"buddy","homeScore":4,"awayScore":1,"status":"finished"},
+    {"id":"m02","round":1,"date":"2027-02-14","time":"10:45","venue":"サンプルコート A","home":"azul","away":"nova","homeScore":3,"awayScore":0,"status":"finished"},
+    {"id":"m03","round":1,"date":"2027-02-14","time":"11:30","venue":"サンプルコート A","home":"sol","away":"unite","homeScore":2,"awayScore":2,"status":"finished"},
+    {"id":"m04","round":1,"date":"2027-02-14","time":"12:15","venue":"サンプルコート A","home":"roots","away":"libre","homeScore":2,"awayScore":1,"status":"finished"},
+    {"id":"m05","round":2,"date":"2027-03-14","time":"10:00","venue":"サンプルコート A","home":"verde","away":"nova","homeScore":3,"awayScore":1,"status":"finished"},
+    {"id":"m06","round":2,"date":"2027-03-14","time":"10:45","venue":"サンプルコート A","home":"buddy","away":"unite","homeScore":1,"awayScore":2,"status":"finished"},
+    {"id":"m07","round":2,"date":"2027-03-14","time":"11:30","venue":"サンプルコート A","home":"azul","away":"libre","homeScore":2,"awayScore":2,"status":"finished"},
+    {"id":"m08","round":2,"date":"2027-03-14","time":"12:15","venue":"サンプルコート A","home":"sol","away":"roots","homeScore":3,"awayScore":1,"status":"finished"},
+    {"id":"m09","round":3,"date":"2027-04-11","time":"10:00","venue":"サンプルコート A","home":"verde","away":"unite","homeScore":2,"awayScore":2,"status":"finished"},
+    {"id":"m10","round":3,"date":"2027-04-11","time":"10:45","venue":"サンプルコート A","home":"nova","away":"libre","homeScore":1,"awayScore":3,"status":"finished"},
+    {"id":"m11","round":3,"date":"2027-04-11","time":"11:30","venue":"サンプルコート A","home":"buddy","away":"roots","homeScore":0,"awayScore":2,"status":"finished"},
+    {"id":"m12","round":3,"date":"2027-04-11","time":"12:15","venue":"サンプルコート A","home":"azul","away":"sol","homeScore":3,"awayScore":2,"status":"finished"},
+    {"id":"m13","round":4,"date":"2027-05-09","time":"10:00","venue":"サンプルコート A","home":"verde","away":"libre","homeScore":null,"awayScore":null,"status":"scheduled"},
+    {"id":"m14","round":4,"date":"2027-05-09","time":"10:45","venue":"サンプルコート A","home":"unite","away":"roots","homeScore":null,"awayScore":null,"status":"scheduled"},
+    {"id":"m15","round":4,"date":"2027-05-09","time":"11:30","venue":"サンプルコート A","home":"nova","away":"sol","homeScore":null,"awayScore":null,"status":"scheduled"},
+    {"id":"m16","round":4,"date":"2027-05-09","time":"12:15","venue":"サンプルコート A","home":"buddy","away":"azul","homeScore":null,"awayScore":null,"status":"scheduled"}
+  ]
+}

@@ -2,12 +2,17 @@
   "name": "sumaito-lp",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Sumaito LP & Client Review Portal",
   "scripts": {
     "sync": "node scripts/sync-clean.mjs",
+    "qa": "node scripts/qa.mjs",
+    "package": "node scripts/package.mjs",
+    "draft-status": "node scripts/draft-status.mjs",
     "init-project": "node scripts/init-project.mjs",
     "share": "node scripts/share.mjs",
     "test": "playwright test",
+    "test:league": "node --test oneleague_sample/tests/league.test.mjs",
     "test:headed": "playwright test --headed",
     "test:report": "playwright show-report"
   },
