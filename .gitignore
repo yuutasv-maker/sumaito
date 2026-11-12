@@ -7,6 +7,7 @@ blob-report/
 playwright/.cache/
 /livre/
 scratch/
+repos/
 
 # 作業用プロンプト・一時メモのみ除外（規約や一次情報ドキュメントは Git 管理）
 *_PROMPT.md
